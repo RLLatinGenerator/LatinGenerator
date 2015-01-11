@@ -1,0 +1,2 @@
+# LatinGenerator
+Generates Latin Sentences
