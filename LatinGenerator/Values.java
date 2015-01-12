@@ -8,5 +8,8 @@ public class Values {
 	public static final int CASE_VOCATIVE= 5;
 	public static final int CASE_LOCATIVE = 6;
 	
+	public static final int PLURALITY_PLURAL = 1;
+	public static final int PLURALITY_SINGULAR = 0;
+	
 	public static String[][] DECLENSION_SECOND = new String[][]{{"us", "i", "o", "um", "o"}, {"i", "orum", "is", "os", "is"}};
 }
