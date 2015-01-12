@@ -1,10 +1,12 @@
 
 public class Values {
 	public static final int CASE_NOMINATIVE = 0;
-	public static final int CASE_GENTIVE = 0;
-	public static final int CASE_DATIVE= 0;
-	public static final int CASE_ACCUSATIVE= 0;
-	public static final int CASE_ABLATIVE = 0;
-	public static final int CASE_VOCATIVE= 0;
-	public static final int CASE_LOCATIVE = 0;
+	public static final int CASE_GENTIVE = 1;
+	public static final int CASE_DATIVE= 2;
+	public static final int CASE_ACCUSATIVE= 3;
+	public static final int CASE_ABLATIVE = 4;
+	public static final int CASE_VOCATIVE= 5;
+	public static final int CASE_LOCATIVE = 6;
+	
+	public static String[][]{{"us", "i", "o", "um", "o"}, {"i", "orum", "is", "os", "is"}};
 }
