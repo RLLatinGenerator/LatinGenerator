@@ -8,5 +8,5 @@ public class Values {
 	public static final int CASE_VOCATIVE= 5;
 	public static final int CASE_LOCATIVE = 6;
 	
-	public static String[][]{{"us", "i", "o", "um", "o"}, {"i", "orum", "is", "os", "is"}};
+	public static String[][] DECLENSION_SECOND = new String[][]{{"us", "i", "o", "um", "o"}, {"i", "orum", "is", "os", "is"}};
 }
