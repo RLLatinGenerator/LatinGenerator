@@ -16,4 +16,8 @@ public class Noun extends Word{
 	public static String addEnding(String ending){
 		return base + ending;
 	}
+	
+	public toString(){
+		return base;
+	}
 }
