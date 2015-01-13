@@ -19,5 +19,11 @@ public class Values {
 	public static String[][] DECLENSION_THIRD_I_N = new String[][]{{"", "is", "i", "", "i"}, {"ia", "ium", "ibus", "ia", "ibus"}};
 	public static String[][] DECLENSION_FOURTH = new String[][]{{"us", "us", "ui", "um", "u"}, {"us", "uum", "ibus", "us", "ibus"}};
 	public static String[][] DECLENSION_FOURTH_N = new String[][]{{"u", "us", "u", "u", "u"}, {"ua", "uum", "ibus", "ua", "ibus"}};
-	public static String[][] DECLENSION_FIFTH = new String[][]{{"es","ei","ei","em","e"}{"es","erum","ebus","es","ebus"}}	//TODO: fifth
+	public static String[][] DECLENSION_FIFTH = new String[][]{{"es","ei","ei","em","e"}{"es","erum","ebus","es","ebus"}};	//TODO: fifth
+	
+	public static String[][] CONJUGATION_FIRST = new String[][]{{"o","as","at"}{"amus","atis","ant"}};
+	public static String[][] CONJUGATION_SECOND = new String[][]{{"eo","es","et"}{"emus","etis","ent"}};
+	public static String[][] CONJUGATION_THIRD = new String[][]{{"o","is","it"}{"imus","itis","unt"}};
+	public static String[][] CONJUGATION_THIRD_IO = new String[][]{{"io","is","it"}{"imus","itis","iunt"}};
+	public static String[][] CONJUGATION_FOURTH = new String[][]{{"io","is","it"}{"imus","itis","iunt"}};
 	}
