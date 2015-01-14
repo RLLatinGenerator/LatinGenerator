@@ -23,7 +23,17 @@ public class Values {
 	public static String[][] DECLENSION_FOURTH_N = new String[][]{{"u", "us", "u", "u", "u"}, {"ua", "uum", "ibus", "ua", "ibus"}};
 	public static String[][] DECLENSION_FIFTH = new String[][]{{"es","ei","ei","em","e"}, {"es","erum","ebus","es","ebus"}};	//TODO: fifth
 	
-	public static String[][][] = new String[][][]{DECLENSION_FIRST, };
+	public static String[][][] DECLENSION_NOUNS = new String[][][]{DECLENSION_FIRST, DECLENSION_SECOND, DECLENSION_SECOND_N, DECLENSION_THIRD, DECLENSION_THIRD_I, DECLENSION_THIRD_I_N, DECLENSION_FOURTH, DECLENSION_FOURTH_N, DECLENSION_FIFTH};
+	
+	public static final int INDEX_DECLENSION_FIRST = 0;
+	public static final int INDEX_DECLENSION_SECOND = 1;
+	public static final int INDEX_DECLENSION_SECOND_N = 2;
+	public static final int INDEX_DECLENSION_THIRD = 3;
+	public static final int INDEX_DECLENSION_THIRD_N = 4;
+	public static final int INDEX_DECLENSION_THIRD_I_N = 5;
+	public static final int INDEX_DECLENSION_FOURTH = 6;
+	public static final int INDEX_DECLENSION_FORTH_N = 7;
+	public static final int INDEX_DECLENSION_FIFTH = 8;
 	
 	//Verb land
 	public static String[][] CONJUGATION_FIRST = new String[][]{{"o","as","at"}, {"amus","atis","ant"}};

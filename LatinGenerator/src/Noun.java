@@ -8,9 +8,7 @@ public class Noun extends Word{
 	}
 	
 	public ConjugatedNoun decline(int Case, int plurality){
-		if(declension == 2){
-			return new ConjugatedNoun(addEnding(Values.DECLENSION_SECOND[Case][plurality]));
-		}
+			return new ConjugatedNoun(addEnding(Values.DECLENSION_NOUNS[declension][Case][plurality]));
 	}
 	
 	public String addEnding(String ending){
