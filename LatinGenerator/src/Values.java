@@ -10,6 +10,10 @@ public class Values {
 	//public static final int CASE_VOCATIVE= 5;
 	//public static final int CASE_LOCATIVE = 6;
 	
+	public static final int GENDER_MASCULINE = 0;
+	public static final int GENDER_FEMININE = 1;
+	public static final int GENDER_NEUTER = 2;
+	
 	public static final int PLURALITY_PLURAL = 1;
 	public static final int PLURALITY_SINGULAR = 0;
 	
@@ -32,7 +36,7 @@ public class Values {
 	public static final int INDEX_DECLENSION_THIRD_N = 4;
 	public static final int INDEX_DECLENSION_THIRD_I_N = 5;
 	public static final int INDEX_DECLENSION_FOURTH = 6;
-	public static final int INDEX_DECLENSION_FORTH_N = 7;
+	public static final int INDEX_DECLENSION_FOURTH_N = 7;
 	public static final int INDEX_DECLENSION_FIFTH = 8;
 	
 	//Verb land
