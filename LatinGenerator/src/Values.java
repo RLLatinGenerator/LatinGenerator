@@ -1,12 +1,14 @@
 
 public class Values {
+	
+	//Noun land
 	public static final int CASE_NOMINATIVE = 0;
 	public static final int CASE_GENTIVE = 1;
 	public static final int CASE_DATIVE= 2;
 	public static final int CASE_ACCUSATIVE= 3;
 	public static final int CASE_ABLATIVE = 4;
-	public static final int CASE_VOCATIVE= 5;
-	public static final int CASE_LOCATIVE = 6;
+	//public static final int CASE_VOCATIVE= 5;
+	//public static final int CASE_LOCATIVE = 6;
 	
 	public static final int PLURALITY_PLURAL = 1;
 	public static final int PLURALITY_SINGULAR = 0;
@@ -19,11 +21,22 @@ public class Values {
 	public static String[][] DECLENSION_THIRD_I_N = new String[][]{{"", "is", "i", "", "i"}, {"ia", "ium", "ibus", "ia", "ibus"}};
 	public static String[][] DECLENSION_FOURTH = new String[][]{{"us", "us", "ui", "um", "u"}, {"us", "uum", "ibus", "us", "ibus"}};
 	public static String[][] DECLENSION_FOURTH_N = new String[][]{{"u", "us", "u", "u", "u"}, {"ua", "uum", "ibus", "ua", "ibus"}};
-	public static String[][] DECLENSION_FIFTH = new String[][]{{"es","ei","ei","em","e"}{"es","erum","ebus","es","ebus"}};	//TODO: fifth
+	public static String[][] DECLENSION_FIFTH = new String[][]{{"es","ei","ei","em","e"}, {"es","erum","ebus","es","ebus"}};	//TODO: fifth
 	
-	public static String[][] CONJUGATION_FIRST = new String[][]{{"o","as","at"}{"amus","atis","ant"}};
-	public static String[][] CONJUGATION_SECOND = new String[][]{{"eo","es","et"}{"emus","etis","ent"}};
-	public static String[][] CONJUGATION_THIRD = new String[][]{{"o","is","it"}{"imus","itis","unt"}};
-	public static String[][] CONJUGATION_THIRD_IO = new String[][]{{"io","is","it"}{"imus","itis","iunt"}};
-	public static String[][] CONJUGATION_FOURTH = new String[][]{{"io","is","it"}{"imus","itis","iunt"}};
-	}
+	public static String[][][] = new String[][][]{DECLENSION_FIRST, };
+	
+	//Verb land
+	public static String[][] CONJUGATION_FIRST = new String[][]{{"o","as","at"}, {"amus","atis","ant"}};
+	public static String[][] CONJUGATION_SECOND = new String[][]{{"eo","es","et"}, {"emus","etis","ent"}};
+	public static String[][] CONJUGATION_THIRD = new String[][]{{"o","is","it"}, {"imus","itis","unt"}};
+	public static String[][] CONJUGATION_THIRD_IO = new String[][]{{"io","is","it"}, {"imus","itis","iunt"}};
+	public static String[][] CONJUGATION_FOURTH = new String[][]{{"io","is","it"}, {"imus","itis","iunt"}};
+	
+	public static String[][][] CONJUGATION_VERBS = new String[][][]{CONJUGATION_FIRST, CONJUGATION_SECOND, CONJUGATION_THIRD, CONJUGATION_THIRD_IO, CONJUGATION_FOURTH};
+	
+	public static final int INDEX_CONJUGATION_FIRST = 0;
+	public static final int INDEX_CONJUGATION_SECOND = 1;
+	public static final int INDEX_CONJUGATION_THIRD = 2;
+	public static final int INDEX_CONJUGATION_THIRDIO = 3;
+	public static final int INDEX_CONJUGATION_FOURTH = 4;
+}
