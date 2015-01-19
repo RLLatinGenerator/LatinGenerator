@@ -40,13 +40,15 @@ public class Values {
 	public static final int INDEX_DECLENSION_FIFTH = 8;
 	
 	//Verb land
-	public static String[][] CONJUGATION_FIRST = new String[][]{{"o","as","at"}, {"amus","atis","ant"}};
-	public static String[][] CONJUGATION_SECOND = new String[][]{{"eo","es","et"}, {"emus","etis","ent"}};
-	public static String[][] CONJUGATION_THIRD = new String[][]{{"o","is","it"}, {"imus","itis","unt"}};
-	public static String[][] CONJUGATION_THIRD_IO = new String[][]{{"io","is","it"}, {"imus","itis","iunt"}};
-	public static String[][] CONJUGATION_FOURTH = new String[][]{{"io","is","it"}, {"imus","itis","iunt"}};
+	public static String[][] PRESENT_CONJUGATION_FIRST = new String[][]{{"o","as","at"}, {"amus","atis","ant"}};
+	public static String[][] PRESENT_CONJUGATION_SECOND = new String[][]{{"eo","es","et"}, {"emus","etis","ent"}};
+	public static String[][] PRESENT_CONJUGATION_THIRD = new String[][]{{"o","is","it"}, {"imus","itis","unt"}};
+	public static String[][] PRESENT_CONJUGATION_THIRD_IO = new String[][]{{"io","is","it"}, {"imus","itis","iunt"}};
+	public static String[][] PRESENT_CONJUGATION_FOURTH = new String[][]{{"io","is","it"}, {"imus","itis","iunt"}};
 	
-	public static String[][][] CONJUGATION_VERBS = new String[][][]{CONJUGATION_FIRST, CONJUGATION_SECOND, CONJUGATION_THIRD, CONJUGATION_THIRD_IO, CONJUGATION_FOURTH};
+	public static String[][] PERFECT_CONJUGATION = new String[][]{{"i", "isti", "it"}, {"imus", "istis", "erunt"}};
+	
+	public static String[][][] CONJUGATION_VERBS = new String[][][][]{{PRESENT_CONJUGATION_FIRST, PRESENT_CONJUGATION_SECOND, PRESENT_CONJUGATION_THIRD, PRESENT_CONJUGATION_THIRD_IO, PRESENT_CONJUGATION_FOURTH}, {PERFECT_CONJUGATION}};
 	
 	public static final int INDEX_CONJUGATION_FIRST = 0;
 	public static final int INDEX_CONJUGATION_SECOND = 1;
