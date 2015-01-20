@@ -45,17 +45,41 @@ public class Values {
 	public static String[][] PRESENT_CONJUGATION_THIRD = new String[][]{{"o","is","it"}, {"imus","itis","unt"}};
 	public static String[][] PRESENT_CONJUGATION_THIRD_IO = new String[][]{{"io","is","it"}, {"imus","itis","iunt"}};
 	public static String[][] PRESENT_CONJUGATION_FOURTH = new String[][]{{"io","is","it"}, {"imus","itis","iunt"}};
+	
+	public static String[][] FUTURE_CONJUGATION_FIRST = new String[][]{{"bo", "bis", "bit"}, {"bimus", "bitis", "bunt"}};
+	public static String[][] FUTURE_CONJUGATION_SECOND = new String[][]{{"bo", "bis", "bit"}, {"bimus", "bitis", "bunt"}};
+	public static String[][] FUTURE_CONJUGATION_THIRD = new String[][]{{"am", "es", "et"}, {"emus", "etis", "ent"}};
+	public static String[][] FUTURE_CONJUGATION_THIRD_IO = new String[][]{{"iam", "ies", "iet"}, {"iemus", "ietis", "ient"}};
+	public static String[][] FUTURE_CONJUGATION_FOURTH = new String[][]{{"iam", "ies", "iet"}, {"iemus", "ietis", "ient"}};
+	
+	public static String[][] IMPERFECT_CONJUGATION_FIRST = new String[][]{{"bam", "bas", "bat"}, {"bamus", "batis", "bant"}};
+	public static String[][] IMPERFECT_CONJUGATION_SECOND = new String[][]{{"bam", "bas", "bat"}, {"bamus", "batis", "bant"}};
+	public static String[][] IMPERFECT_CONJUGATION_THIRD = new String[][]{{"ebam", "ebas", "ebat"}, {"ebamus", "ebatis", "ebant"}};
+	public static String[][] IMPERFECT_CONJUGATION_THIRD_IO = new String[][]{{"iebam", "iebas", "iebat"}, {"iebamus", "iebatis", "iebant"}};
+	public static String[][] IMPERFECT_CONJUGATION_FOURTH = new String[][]{{"iebam", "iebas", "iebat"}, {"iebamus", "iebatis", "iebant"}};
+	
 	public static String[][] PERFECT_CONJUGATION = new String[][]{{"i", "isti", "it"}, {"imus", "istis", "erunt"}};
+	
 	public static String[][] PLUPERFECT_CONJUGATION = new String[][]{{"eram", "eras", "erat"}, {"eramus", "eratis", "erant"}};
 	
+	public static String[][] FUTURE_PERFECT_CONJUGATION = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
 	
-	public static String[][] PRESENT_CONJUGATION = new String [][][]{PRESENT_CONJUGATION_FIRST, PRESENT_CONJUGATION_SECOND, PRESENT_CONJUGATION_THIRD, PRESENT_CONJUGATION_THIRD_IO, PRESENT_CONJUGATION_FOURTH};
+	public static String[][][] PRESENT_CONJUGATION = new String[][][]{PRESENT_CONJUGATION_FIRST, PRESENT_CONJUGATION_SECOND, PRESENT_CONJUGATION_THIRD, PRESENT_CONJUGATION_THIRD_IO, PRESENT_CONJUGATION_FOURTH};
+	public static String[][][] FUTURE_CONJUGATION = new String[][][]{FUTURE_CONJUGATION_FIRST, FUTURE_CONJUGATION_SECOND, FUTURE_CONJUGATION_THIRD, FUTURE_CONJUGATION_THIRD_IO, FUTURE_CONJUGATION_FOURTH};
+	public static String[][][] IMPERFECT_CONJUGATION = new String[][][]{IMPERFECT_CONJUGATION_FIRST, IMPERFECT_CONJUGATION_SECOND, IMPERFECT_CONJUGATION_THIRD, IMPERFECT_CONJUGATION_THIRD_IO, IMPERFECT_CONJUGATION_FOURTH};
 
-	public static String[][][] CONJUGATION_VERBS = new String[][][][]{PRESENT_CONJUGTION, PERFECT_CONJUGATION, PLUPERFECT_CONJUGATION};
+	public static String[][][][] CONJUGATION_VERBS = new String[][][][]{PRESENT_CONJUGTION, PERFECT_CONJUGATION, FUTURE_CONJUGATION, IMPERFECT_CONJUGATION, PLUPERFECT_CONJUGATION, FUTURE_PERFECT_CONJUGATION};
 	
 	public static final int INDEX_CONJUGATION_FIRST = 0;
 	public static final int INDEX_CONJUGATION_SECOND = 1;
 	public static final int INDEX_CONJUGATION_THIRD = 2;
-	public static final int INDEX_CONJUGATION_THIRDIO = 3;
+	public static final int INDEX_CONJUGATION_THIRD_IO = 3;
 	public static final int INDEX_CONJUGATION_FOURTH = 4;
+	
+	public static final int INDEX_PRESENT_CONJUGATION = 0
+	public static final int INDEX_FUTURE_CONJUGATION = 1
+	public static final int INDEX_IMPERFECT_CONJUGATION = 2
+	public static final int INDEX_PERFECT_CONJUGATION = 3
+	public static final int INDEX_PLUFECT_CONJUGATION = 4
+	public static final int INDEX_FUTURE_PERFECT_CONJUGATION = 5
 }
