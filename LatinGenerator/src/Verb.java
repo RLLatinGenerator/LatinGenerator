@@ -18,12 +18,12 @@ public class Verb extends Word{
 	
 	public String presentConjugate(String secondPP, int conjugation, int number, int person){
 		String presentRoot = secondPP.substring(0, secondPP.length() - 3);
-		String conjugatedPresent = presentRoot + CONJUGATION_VERBS[0][conjugation][number][person];
+		String conjugatedPresent = presentRoot + Values.CONJUGATION_VERBS[0][conjugation][number][person];
 		return conjugatedPresent;
 	}
 	public String perfectConjugate(String thirdPP, int number, int person){
 		Sring perfectRoot = thirdPP.substring.(0, thirdPP.length() - 2);
-		String conjugatedPerfect = perfectRoot + CONJUGATION_VERBS[1][0][number][person];
+		String conjugatedPerfect = perfectRoot + Values.CONJUGATION_VERBS[1][0][number][person];
 		return conjugatedPerfect;
 	}
 
