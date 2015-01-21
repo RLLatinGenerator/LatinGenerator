@@ -39,6 +39,8 @@ public class Values {
 	public static final int INDEX_DECLENSION_FOURTH_N = 7;
 	public static final int INDEX_DECLENSION_FIFTH = 8;
 	
+	public static final int CHAPTER_VOID = 100; //we're giving words that don't have a chapter in jenney this "chapter" value.
+	
 	//Verb land
 	public static String[][] PRESENT_CONJUGATION_FIRST = new String[][]{{"o","as","at"}, {"amus","atis","ant"}};
 	public static String[][] PRESENT_CONJUGATION_SECOND = new String[][]{{"eo","es","et"}, {"emus","etis","ent"}};
@@ -76,10 +78,10 @@ public class Values {
 	public static final int INDEX_CONJUGATION_THIRD_IO = 3;
 	public static final int INDEX_CONJUGATION_FOURTH = 4;
 	
-	public static final int INDEX_PRESENT_CONJUGATION = 0
-	public static final int INDEX_FUTURE_CONJUGATION = 1
-	public static final int INDEX_IMPERFECT_CONJUGATION = 2
-	public static final int INDEX_PERFECT_CONJUGATION = 3
-	public static final int INDEX_PLUFECT_CONJUGATION = 4
-	public static final int INDEX_FUTURE_PERFECT_CONJUGATION = 5
+	public static final int INDEX_PRESENT_CONJUGATION = 0; //technically, these should be INDEX_CONJUGATION_PRESENT, etc.
+	public static final int INDEX_FUTURE_CONJUGATION = 1;
+	public static final int INDEX_IMPERFECT_CONJUGATION = 2;
+	public static final int INDEX_PERFECT_CONJUGATION = 3;
+	public static final int INDEX_PLUFECT_CONJUGATION = 4;
+	public static final int INDEX_FUTURE_PERFECT_CONJUGATION = 5;
 }
