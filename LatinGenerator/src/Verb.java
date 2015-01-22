@@ -16,6 +16,7 @@ public class Verb extends Word{
 		this.fourthPP = fourthPP;
 	}
 	
+	//temporary statix
 	public static String presentConjugate(String secondPP, int conjugation, int number, int person){
 		String root = secondPP.substring(0, secondPP.length() - 3);
 		String conjugatedPresent = root + Values.CONJUGATION_VERBS[Values.INDEX_TENSE_PRESENT][conjugation][number][person];
