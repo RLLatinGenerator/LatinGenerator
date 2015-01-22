@@ -22,7 +22,7 @@ public class Verb extends Word{
 		return conjugatedPresent;
 	}
 	public String perfectConjugate(String thirdPP, int number, int person){
-		Sring perfectRoot = thirdPP.substring.(0, thirdPP.length() - 2);
+		String perfectRoot = thirdPP.substring(0, thirdPP.length() - 3);
 		String conjugatedPerfect = perfectRoot + Values.CONJUGATION_VERBS[1][0][number][person];
 		return conjugatedPerfect;
 	}
