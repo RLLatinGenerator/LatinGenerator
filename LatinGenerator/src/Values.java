@@ -46,8 +46,8 @@ public class Values {
 	public static String[][] PRESENT_CONJUGATION_THIRD_IO = new String[][]{{"io","is","it"}, {"imus","itis","iunt"}};
 	public static String[][] PRESENT_CONJUGATION_FOURTH = new String[][]{{"io","is","it"}, {"imus","itis","iunt"}};
 	
-	public static String[][] FUTURE_CONJUGATION_FIRST = new String[][]{{"bo", "bis", "bit"}, {"bimus", "bitis", "bunt"}};
-	public static String[][] FUTURE_CONJUGATION_SECOND = new String[][]{{"bo", "bis", "bit"}, {"bimus", "bitis", "bunt"}};
+	public static String[][] FUTURE_CONJUGATION_FIRST = new String[][]{{"abo", "abis", "abit"}, {"abimus", "abitis", "abunt"}};
+	public static String[][] FUTURE_CONJUGATION_SECOND = new String[][]{{"ebo", "ebis", "ebit"}, {"ebimus", "ebitis", "ebunt"}};
 	public static String[][] FUTURE_CONJUGATION_THIRD = new String[][]{{"am", "es", "et"}, {"emus", "etis", "ent"}};
 	public static String[][] FUTURE_CONJUGATION_THIRD_IO = new String[][]{{"iam", "ies", "iet"}, {"iemus", "ietis", "ient"}};
 	public static String[][] FUTURE_CONJUGATION_FOURTH = new String[][]{{"iam", "ies", "iet"}, {"iemus", "ietis", "ient"}};

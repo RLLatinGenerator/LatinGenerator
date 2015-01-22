@@ -16,43 +16,43 @@ public class Verb extends Word{
 		this.fourthPP = fourthPP;
 	}
 	
-	public String presentConjugate(String secondPP, int conjugation, int number, int person){
+	public static String presentConjugate(String secondPP, int conjugation, int number, int person){
 		String root = secondPP.substring(0, secondPP.length() - 3);
 		String conjugatedPresent = root + Values.CONJUGATION_VERBS[Values.INDEX_TENSE_PRESENT][conjugation][number][person];
 		return conjugatedPresent;
 	}
 	
-	public String futureConjugate(String secondPP, int conjugation, int number, int person){
+	public static String futureConjugate(String secondPP, int conjugation, int number, int person){
 		String root  = secondPP.substring(0, secondPP.length() - 3);
 		String conjugatedFuture = root + Values.CONJUGATION_VERBS[Values.INDEX_TENSE_FUTURE][conjugation][number][person];
 		return conjugatedFuture;
 	}
 	
-	public String imperfectConjugate(String secondPP, int conjugation, int number, int person){
+	public static String imperfectConjugate(String secondPP, int conjugation, int number, int person){
 		String root  = secondPP.substring(0, secondPP.length() - 3);
 		String conjugatedImperfect = root + Values.CONJUGATION_VERBS[Values.INDEX_TENSE_IMPERFECT][conjugation][number][person];
 		return conjugatedImperfect;
 	}
 	
-	public String perfectConjugate(String thirdPP, int number, int person){
-		String root = thirdPP.substring(0, thirdPP.length() - 2);
+	public static String perfectConjugate(String thirdPP, int number, int person){
+		String root = thirdPP.substring(0, thirdPP.length() - 1);
 		String conjugatedPerfect = root + Values.CONJUGATION_VERBS[Values.INDEX_TENSE_PERFECT][0][number][person]; //0 because conjugation doesn't matter
 		return conjugatedPerfect;
 	}
 	
-	public String pluperfectConjugate(String thirdPP, int number, int person){
-		String root = thirdPP.substring(0, thirdPP.length() - 2);
+	public static String pluperfectConjugate(String thirdPP, int number, int person){
+		String root = thirdPP.substring(0, thirdPP.length() - 1);
 		String conjugatedPluperfect = root + Values.CONJUGATION_VERBS[Values.INDEX_TENSE_PLUPERFECT][0][number][person]; //0 because conjugation doesn't matter
 		return conjugatedPluperfect;
 	}
 	
-	public String futurePerfectConjugate(String thirdPP, int number, int person){
-		String root = thirdPP.substring(0, thirdPP.length() - 2);
+	public static String futurePerfectConjugate(String thirdPP, int number, int person){
+		String root = thirdPP.substring(0, thirdPP.length() - 1);
 		String conjugatedFuturePerfect = root + Values.CONJUGATION_VERBS[Values.INDEX_TENSE_FUTURE_PERFECT][0][number][person]; //0 because conjugation doesn't matter
 		return conjugatedFuturePerfect;
 	}
 
-	public String presentSysConjugate(int tense, String secondPP, int conjugation, int number, int person){
+	public static String presentSysConjugate(int tense, String secondPP, int conjugation, int number, int person){
 		//Present system (present, future, and imperfect
 		if (tense == Values.INDEX_TENSE_PRESENT){
 			String conjugatedPresent  = presentConjugate(secondPP, conjugation, number, person);
@@ -69,7 +69,7 @@ public class Verb extends Word{
 		else{return "Error. Tense doesn't exist";}
 	}
 	
-	public String perfectSysConjugate(int tense, String thirdPP, int number, int person){
+	public static String perfectSysConjugate(int tense, String thirdPP, int number, int person){
 		if (tense == Values.INDEX_TENSE_PERFECT){
 			String conjugatedPerfect = perfectConjugate(thirdPP, number, person);
 			return conjugatedPerfect;
@@ -85,7 +85,7 @@ public class Verb extends Word{
 		else{return "Error. Tense doesn't exist";}
 	}
 	
-	public String conjugate(int tense, String secondPP, String thirdPP, int conjugation, int number, int person)	{
+	public static String conjugate(int tense, String secondPP, String thirdPP, int conjugation, int number, int person)	{
 		if (tense < 3){
 			String conjugated  = presentSysConjugate(tense, secondPP, conjugation, number, person);
 			return conjugated;
