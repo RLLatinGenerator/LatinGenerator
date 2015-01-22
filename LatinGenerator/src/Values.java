@@ -58,17 +58,32 @@ public class Values {
 	public static String[][] IMPERFECT_CONJUGATION_THIRD_IO = new String[][]{{"iebam", "iebas", "iebat"}, {"iebamus", "iebatis", "iebant"}};
 	public static String[][] IMPERFECT_CONJUGATION_FOURTH = new String[][]{{"iebam", "iebas", "iebat"}, {"iebamus", "iebatis", "iebant"}};
 	
-	public static String[][] PERFECT_CONJUGATION = new String[][]{{"i", "isti", "it"}, {"imus", "istis", "erunt"}};
+	public static String[][] PERFECT_CONJUGATION_FIRST = new String[][]{{"i", "isti", "it"}, {"imus", "istis", "erunt"}};
+	public static String[][] PERFECT_CONJUGATION_SECOND= new String[][]{{"i", "isti", "it"}, {"imus", "istis", "erunt"}};
+	public static String[][] PERFECT_CONJUGATION_THIRD = new String[][]{{"i", "isti", "it"}, {"imus", "istis", "erunt"}};
+	public static String[][] PERFECT_CONJUGATION_THIRD_IO = new String[][]{{"i", "isti", "it"}, {"imus", "istis", "erunt"}};
+	public static String[][] PERFECT_CONJUGATION_FOURTH = new String[][]{{"i", "isti", "it"}, {"imus", "istis", "erunt"}};
 	
-	public static String[][] PLUPERFECT_CONJUGATION = new String[][]{{"eram", "eras", "erat"}, {"eramus", "eratis", "erant"}};
+	public static String[][] PLUPERFECT_CONJUGATION_FIRST = new String[][]{{"eram", "eras", "erat"}, {"eramus", "eratis", "erant"}};
+	public static String[][] PLUPERFECT_CONJUGATION_SECOND = new String[][]{{"eram", "eras", "erat"}, {"eramus", "eratis", "erant"}};
+	public static String[][] PLUPERFECT_CONJUGATION_THIRD = new String[][]{{"eram", "eras", "erat"}, {"eramus", "eratis", "erant"}};
+	public static String[][] PLUPERFECT_CONJUGATION_THIRD_IO = new String[][]{{"eram", "eras", "erat"}, {"eramus", "eratis", "erant"}};
+	public static String[][] PLUPERFECT_CONJUGATION_FOURTH = new String[][]{{"eram", "eras", "erat"}, {"eramus", "eratis", "erant"}};
 	
-	public static String[][] FUTURE_PERFECT_CONJUGATION = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
+	public static String[][] FUTURE_PERFECT_CONJUGATION_FIRST = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
+	public static String[][] FUTURE_PERFECT_CONJUGATION_SECOND = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
+	public static String[][] FUTURE_PERFECT_CONJUGATION_THIRD = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
+	public static String[][] FUTURE_PERFECT_CONJUGATION_THIRD_IO = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
+	public static String[][] FUTURE_PERFECT_CONJUGATION_FOURTH = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
 	
 	public static String[][][] PRESENT_CONJUGATION = new String[][][]{PRESENT_CONJUGATION_FIRST, PRESENT_CONJUGATION_SECOND, PRESENT_CONJUGATION_THIRD, PRESENT_CONJUGATION_THIRD_IO, PRESENT_CONJUGATION_FOURTH};
 	public static String[][][] FUTURE_CONJUGATION = new String[][][]{FUTURE_CONJUGATION_FIRST, FUTURE_CONJUGATION_SECOND, FUTURE_CONJUGATION_THIRD, FUTURE_CONJUGATION_THIRD_IO, FUTURE_CONJUGATION_FOURTH};
 	public static String[][][] IMPERFECT_CONJUGATION = new String[][][]{IMPERFECT_CONJUGATION_FIRST, IMPERFECT_CONJUGATION_SECOND, IMPERFECT_CONJUGATION_THIRD, IMPERFECT_CONJUGATION_THIRD_IO, IMPERFECT_CONJUGATION_FOURTH};
-
-	public static String[][][][] CONJUGATION_VERBS = new String[][][][]{PRESENT_CONJUGTION, PERFECT_CONJUGATION, FUTURE_CONJUGATION, IMPERFECT_CONJUGATION, PLUPERFECT_CONJUGATION, FUTURE_PERFECT_CONJUGATION};
+	public static String[][][] PERFECT_CONJUGATION = new String[][][]{PERFECT_CONJUGATION_FIRST, PERFECT_CONJUGATION_SECOND, PERFECT_CONJUGATION_THIRD, PERFECT_CONJUGATION_THIRD_IO, PERFECT_CONJUGATION_FOURTH};
+	public static String[][][] PLUPERFECT_CONJUGATION = new String[][][]{PLUPERFECT_CONJUGATION_FIRST, PLUPERFECT_CONJUGATION_SECOND, PLUPERFECT_CONJUGATION_THIRD, PLUPERFECT_CONJUGATION_THIRD_IO, PLUPERFECT_CONJUGATION_FOURTH};
+	public static String[][][] FUTURE_PERFECT_CONJUGATION = new String[][][]{FUTURE_PERFECT_CONJUGATION_FIRST, FUTURE_PERFECT_CONJUGATION_SECOND, FUTURE_PERFECT_CONJUGATION_THIRD, FUTURE_PERFECT_CONJUGATION_THIRD_IO, FUTURE_PERFECT_CONJUGATION_FOURTH};
+	
+	public static String[][][][] CONJUGATION_VERBS = new String[][][][]{PRESENT_CONJUGATION, PERFECT_CONJUGATION, FUTURE_CONJUGATION, IMPERFECT_CONJUGATION, PLUPERFECT_CONJUGATION, FUTURE_PERFECT_CONJUGATION};
 	
 	public static final int INDEX_CONJUGATION_FIRST = 0;
 	public static final int INDEX_CONJUGATION_SECOND = 1;
@@ -76,10 +91,10 @@ public class Values {
 	public static final int INDEX_CONJUGATION_THIRD_IO = 3;
 	public static final int INDEX_CONJUGATION_FOURTH = 4;
 	
-	public static final int INDEX_PRESENT_CONJUGATION = 0
-	public static final int INDEX_FUTURE_CONJUGATION = 1
-	public static final int INDEX_IMPERFECT_CONJUGATION = 2
-	public static final int INDEX_PERFECT_CONJUGATION = 3
-	public static final int INDEX_PLUFECT_CONJUGATION = 4
-	public static final int INDEX_FUTURE_PERFECT_CONJUGATION = 5
+	public static final int INDEX_PRESENT_CONJUGATION = 0;
+	public static final int INDEX_FUTURE_CONJUGATION = 1;
+	public static final int INDEX_IMPERFECT_CONJUGATION = 2;
+	public static final int INDEX_PERFECT_CONJUGATION = 3;
+	public static final int INDEX_PLUFECT_CONJUGATION = 4;
+	public static final int INDEX_FUTURE_PERFECT_CONJUGATION = 5;
 }
