@@ -91,10 +91,11 @@ public class Values {
 	public static final int INDEX_CONJUGATION_THIRD_IO = 3;
 	public static final int INDEX_CONJUGATION_FOURTH = 4;
 	
-	public static final int INDEX_PRESENT_CONJUGATION = 0;
-	public static final int INDEX_FUTURE_CONJUGATION = 1;
-	public static final int INDEX_IMPERFECT_CONJUGATION = 2;
-	public static final int INDEX_PERFECT_CONJUGATION = 3;
-	public static final int INDEX_PLUFECT_CONJUGATION = 4;
-	public static final int INDEX_FUTURE_PERFECT_CONJUGATION = 5;
+	public static final int INDEX_TENSE_PRESENT = 0;
+	public static final int INDEX_TENSE_FUTURE = 1;
+	public static final int INDEX_TENSE_IMPERFECT = 2;
+	public static final int INDEX_TENSE_PERFECT = 3;
+	public static final int INDEX_TENSE_PLUPERFECT = 4;
+	public static final int INDEX_TENSE_FUTURE_PERFECT = 5;
+	
 }

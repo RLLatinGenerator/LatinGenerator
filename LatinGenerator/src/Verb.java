@@ -21,10 +21,10 @@ public class Verb extends Word{
 		String conjugatedPresent = presentRoot + Values.CONJUGATION_VERBS[0][conjugation][number][person];
 		return conjugatedPresent;
 	}
+	public String futureConjugate(String secondPP, int conjugation, int number)
 	public String perfectConjugate(String thirdPP, int number, int person){
 		String perfectRoot = thirdPP.substring(0, thirdPP.length() - 3);
 		String conjugatedPerfect = perfectRoot + Values.CONJUGATION_VERBS[1][0][number][person];
 		return conjugatedPerfect;
 	}
-
 }
