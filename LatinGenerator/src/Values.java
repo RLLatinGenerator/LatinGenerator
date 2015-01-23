@@ -19,6 +19,10 @@ public class Values {
 	
 	public static final int CHAPTER_VOID = 100; //we're giving words that don't have a chapter in jenney this "chapter" value.
 	
+	public static final char GENDER_NEUTER_CHAR = 'n';
+	public static final char GENDER_MASCULINE_CHAR = 'm';
+	public static final char GENDER_FEMININE_CHAR = 'f';
+	
 	public static String[][] DECLENSION_FIRST =  new String[][]{{"a", "ae", "ae", "am", "a"}, {"ae", "arum", "is", "as", "is"}};
 	public static String[][] DECLENSION_SECOND = new String[][]{{"us", "i", "o", "um", "o"}, {"i", "orum", "is", "os", "is"}};
 	public static String[][] DECLENSION_SECOND_N = new String [][]{{"um", "i", "o", "um", "o"}, {"a", "orum", "is", "a", "is"}};
@@ -100,4 +104,23 @@ public class Values {
 	public static final int INDEX_TENSE_PLUPERFECT = 4;
 	public static final int INDEX_TENSE_FUTURE_PERFECT = 5;
 	
+	public static final int NOUN_DATA_ARRAY_LENGTH_CORRECT = 3; //[chapter] [nom, gen, gender] [definition]. Based on tabs.
+	
+	public static int getGenderIndex(char gender){
+		if(gender == Values.GENDER_MASCULINE_CHAR){
+			return Values.GENDER_MASCULINE;
+		} else if(gender == Values.GENDER_FEMININE_CHAR){
+			return Values.GENDER_FEMININE;
+		} else if(gender == Values.GENDER_NEUTER_CHAR){
+			return Values.GENDER_NEUTER;
+		} else return -1;
+	}
+	
+	public static void betterStringArrayPrint(String[] input){
+		System.out.println("=======");
+		for(String s : input){
+			System.out.println(s);
+		}
+		System.out.println("=======");
+	}
 }

@@ -2,9 +2,12 @@
 public class Noun extends Word{
 	private String base;
 	private int declension;
-	public Noun(String nominative, String genitive){ //WHO THE F MADE THE NOUN DELCARATOR STATIC FUFUFUFUFUUFUFUFUFUFUFUFUFU
-		declension = 2;
-		base = genitive.substring(0, genitive.length()); //take off the last i.
+	private int gender;
+	public Noun(String nominative, String genitive, int chapter, int gender, int declension){ //WHO THE F MADE THE NOUN DELCARATOR STATIC FUFUFUFUFUUFUFUFUFUFUFUFUFU
+		this.declension = declension;
+		base = genitive.substring(0, genitive.length()); //take off the last i. TODO 
+		this.gender = gender;
+		this.chapter = chapter;
 	}
 	
 	public ConjugatedNoun decline(int Case, int plurality){
