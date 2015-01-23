@@ -2,8 +2,8 @@
 public class Noun extends Word{
 	private String base;
 	private int declension;
-	public Noun(String nominative, String genitive){ //WHO THE F MADE THE NOUN DELCARATOR STATIC FUFUFUFUFUUFUFUFUFUFUFUFUFU
-		declension = 2;
+	public Noun(String nominative, String genitive, int gender){ //WHO THE F MADE THE NOUN DELCARATOR STATIC FUFUFUFUFUUFUFUFUFUFUFUFUFU
+		declension = getDeclension(nominative, genetive, gender);
 		base = genitive.substring(0, genitive.length()); //take off the last i.
 	}
 	
