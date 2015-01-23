@@ -10,6 +10,8 @@ public class Values {
 	//public static final int CASE_VOCATIVE= 5;
 	//public static final int CASE_LOCATIVE = 6;
 	
+	public static final String[] CASE_NAMES_BY_INDEX = new String[]{"Nominative", "Genitive", "Dative", "Accusative", "Ablative"};
+	
 	public static final int GENDER_MASCULINE = 0;
 	public static final int GENDER_FEMININE = 1;
 	public static final int GENDER_NEUTER = 2;
@@ -105,6 +107,16 @@ public class Values {
 	public static final int INDEX_TENSE_FUTURE_PERFECT = 5;
 	
 	public static final int NOUN_DATA_ARRAY_LENGTH_CORRECT = 3; //[chapter] [nom, gen, gender] [definition]. Based on tabs.
+	public static final int VERB_DATA_ARRAY_LENGTH_CORRECT = 3;
+	public static final int PREPOSITION_DATA_ARRAY_LENGTH_CORRECT = 3;
+	
+	public static final String CASE_NOMINATIVE_SHORTHAND = "nom";
+	public static final String CASE_GENITIVE_SHORTHAND = "gen";
+	public static final String CASE_DATIVE_SHORTHAND = "dat";
+	public static final String CASE_ACCUSATIVE_SHORTHAND = "acc";
+	public static final String CASE_ABLATIVE_SHORTHAND = "abl";
+	
+	public static final String[] CASE_SHORTHAND = new String[]{CASE_NOMINATIVE_SHORTHAND, CASE_GENITIVE_SHORTHAND, CASE_DATIVE_SHORTHAND, CASE_ACCUSATIVE_SHORTHAND, CASE_ABLATIVE_SHORTHAND};
 	
 	public static int getGenderIndex(char gender){
 		if(gender == Values.GENDER_MASCULINE_CHAR){
@@ -122,5 +134,14 @@ public class Values {
 			System.out.println(s);
 		}
 		System.out.println("=======");
+	}
+	
+	public static int getCaseFromString(String shorthand){ //passed "acc.", will return Values.CASE_ACCUSATIVE
+		for(int i = 0; i < 5; i++){
+		if(shorthand.toLowerCase().contains(Values.CASE_SHORTHAND[i]))
+			return i;
+		}
+		System.out.println("Could not find an appropriate case for String: " + shorthand);
+		return -1;
 	}
 }

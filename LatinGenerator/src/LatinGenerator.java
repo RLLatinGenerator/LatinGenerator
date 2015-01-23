@@ -8,7 +8,8 @@ public class LatinGenerator {
 		//System.out.println(n);
 		String testVerb = Verb.conjugate(3, "portare", "portavi", 0, 0, 1);
 		System.out.println(testVerb);
-		System.out.println(FileParser.parseFromDirectory(new File("M:\\Documents\\Text Files\\Data\\Nouns1.txt")));
+		System.out.println(FileParser.parseFromDirectory(new File("M:\\Documents\\Text Files\\Data\\Prepositions.txt")));
+		Values.betterStringArrayPrint(new String("teserino, derp; hai").split(", |; "));
 	}
 
 }
