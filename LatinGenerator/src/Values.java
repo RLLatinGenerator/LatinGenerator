@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 
 public class Values {
 	
@@ -41,11 +43,12 @@ public class Values {
 	public static final int INDEX_DECLENSION_SECOND = 1;
 	public static final int INDEX_DECLENSION_SECOND_N = 2;
 	public static final int INDEX_DECLENSION_THIRD = 3;
-	public static final int INDEX_DECLENSION_THIRD_N = 4;
-	public static final int INDEX_DECLENSION_THIRD_I_N = 5;
-	public static final int INDEX_DECLENSION_FOURTH = 6;
-	public static final int INDEX_DECLENSION_FOURTH_N = 7;
-	public static final int INDEX_DECLENSION_FIFTH = 8;
+	public static final int INDEX_DECLENSION_THIRD_I = 4;
+	public static final int INDEX_DECLENSION_THIRD_N = 5;
+	public static final int INDEX_DECLENSION_THIRD_I_N = 6;
+	public static final int INDEX_DECLENSION_FOURTH = 7;
+	public static final int INDEX_DECLENSION_FOURTH_N = 8;
+	public static final int INDEX_DECLENSION_FIFTH = 9;
 	
 	//Verb land
 	public static String[][] PRESENT_CONJUGATION_FIRST = new String[][]{{"o","as","at"}, {"amus","atis","ant"}};
@@ -119,6 +122,12 @@ public class Values {
 	public static final String CASE_ACCUSATIVE_SHORTHAND = "acc";
 	public static final String CASE_ABLATIVE_SHORTHAND = "abl";
 	
+	public static final int DELCENSION_ADJECTIVE_FIRST_AND_SECOND = 0;
+	public static final int DELCENSION_ADJECTIVE_THIRD_1 = 1;//based on how many forms are given; acer, acris, acre is a 3.
+	public static final int DELCENSION_ADJECTIVE_THIRD_2 = 2;
+	public static final int DELCENSION_ADJECTIVE_THIRD_3 = 3;
+	
+	
 	public static final String[] CASE_SHORTHAND = new String[]{CASE_NOMINATIVE_SHORTHAND, CASE_GENITIVE_SHORTHAND, CASE_DATIVE_SHORTHAND, CASE_ACCUSATIVE_SHORTHAND, CASE_ABLATIVE_SHORTHAND};
 	
 	public static int getGenderIndex(char gender){
@@ -132,6 +141,14 @@ public class Values {
 	}
 	
 	public static void betterStringArrayPrint(String[] input){
+		System.out.println("=======");
+		for(String s : input){
+			System.out.println(s);
+		}
+		System.out.println("=======");
+	}
+	
+	public static void betterStringArrayPrint(ArrayList<String> input){
 		System.out.println("=======");
 		for(String s : input){
 			System.out.println(s);

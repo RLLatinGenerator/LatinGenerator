@@ -5,9 +5,11 @@ public class Adjective extends Word{
 	String masculine;
 	String feminine;
 	String neuter;
+	int declension; //first& second, or third.
 	
-	public Adjective(String masculine, String feminine, String neuter, int chapter, ArrayList<String> definitions) {
+	public Adjective(String masculine, String feminine, String neuter, int chapter, int declension, ArrayList<String> definitions) {
 		super(chapter, definitions);
+		this.declension = declension;
 		this.masculine = masculine;
 		this.feminine = feminine;
 		this.neuter = neuter;
