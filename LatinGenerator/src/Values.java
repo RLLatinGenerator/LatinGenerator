@@ -109,6 +109,9 @@ public class Values {
 	public static final int NOUN_DATA_ARRAY_LENGTH_CORRECT = 3; //[chapter] [nom, gen, gender] [definition]. Based on tabs.
 	public static final int VERB_DATA_ARRAY_LENGTH_CORRECT = 3;
 	public static final int PREPOSITION_DATA_ARRAY_LENGTH_CORRECT = 3;
+	public static final int ADJECTIVE_DATA_ARRAY_LENGTH_CORRECT = 3;
+	public static final int CONJUNCTION_DATA_ARRAY_LENGTH_CORRECT = 3;
+	public static final int ADVERB_DATA_ARRAY_LENGTH_CORRECT = 3;
 	
 	public static final String CASE_NOMINATIVE_SHORTHAND = "nom";
 	public static final String CASE_GENITIVE_SHORTHAND = "gen";

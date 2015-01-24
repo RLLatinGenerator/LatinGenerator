@@ -20,7 +20,8 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 			System.err.println("Error opening passed file!");
 			return null;
 		}
-		ArrayList<Preposition> output = parsePrepositions(data);
+		ArrayList<Preposition> output = null;
+		parseConjunctions(data);
 
 
 		data.close();
@@ -28,6 +29,8 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 		return output;
 
 	}
+
+
 
 	static ArrayList<Preposition> parsePrepositions(Scanner data){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
 		ArrayList<String[]> raw = parseDataToArray(data);
@@ -41,16 +44,16 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 			}
 
 			//System.out.println("Raw: " + Arrays.toString(current));
-			
+
 			//current[] contains a split based on tabs. Generally {chapter, nom/gen/gender, definition}.
-			
+
 			int chapter = 0;
 			String Preposition;
 			int caseTaken = 0;
 			ArrayList<String> definitions = new ArrayList<String>();
-			
+
 			//Values.betterStringArrayPrint(current);
-			
+
 			try{ //try to read a noun, assuming that the chapter IS specified
 				chapter = Integer.parseInt(current[0]);
 				Preposition = current[1].split(" \\+ ")[0];
@@ -75,7 +78,49 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 
 		return output;
 	}
-	
+
+	static ArrayList<Adjective> parseAdjective12(Scanner data, int declension){ //use ADJECTIVE_DECLENSION, not declensions for nouns. Can parse 1st and 2nd declension.
+		ArrayList<String[]> raw = parseDataToArray(data);
+		ArrayList<Adjective> output = new ArrayList<Adjective>();
+
+		for(String[] current : raw){ //iterate over each line from the original file.
+
+			if(current.length != Values.ADJECTIVE_DATA_ARRAY_LENGTH_CORRECT){
+				System.err.println("Error parsing a line.");
+				continue;
+			}
+
+			//System.out.println("Raw: " + Arrays.toString(current));
+
+			//current[] contains a split based on tabs. Generally {chapter, nom/gen/gender, definition}.
+
+			int chapter = 0;
+			String masculine;
+			String feminine;
+			String neuter;
+			ArrayList<String> definitions = new ArrayList<String>();
+
+			//Values.betterStringArrayPrint(current);
+
+			try{ //try to read a noun, assuming that the chapter IS specified
+				chapter = Integer.parseInt(current[0]);
+				masculine = current[1].split(", ")[0];
+				feminine = current[1].split(", ")[1];
+				neuter = current[1].split(", ")[2];
+				List<String> tempDefinitions = Arrays.asList(current[2].split(",|;")); //definitions
+				definitions.addAll(tempDefinitions);
+			} catch(Exception e){
+				System.err.println("Could not read a line!");
+				continue; //We can't make a noun out of the botrked line.
+			}
+			Adjective currentAdjective = new Adjective(masculine, feminine, neuter, chapter, definitions);
+			System.out.println("Added: " + currentAdjective);
+			output.add(currentAdjective);
+		}
+
+		return output;
+	}
+
 	static ArrayList<Noun> parseNouns(Scanner data, int declension){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
 		ArrayList<String[]> raw = parseDataToArray(data);
 		ArrayList<Noun> output = new ArrayList<Noun>();
@@ -88,17 +133,17 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 			}
 
 			//System.out.println("Raw: " + Arrays.toString(current));
-			
+
 			//current[] contains a split based on tabs. Generally {chapter, nom/gen/gender, definition}.
-			
+
 			int chapter = 0;
 			String nominative = null;
 			String genitive = null;
 			char gender = '-';
 			ArrayList<String> definitions = new ArrayList<String>();
-			
+
 			//Values.betterStringArrayPrint(current);
-			
+
 			try{ //try to read a noun, assuming that the chapter IS specified
 				chapter = Integer.parseInt(current[0]);
 				nominative = current[1].split(", ")[0];
@@ -126,6 +171,82 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 		return output;
 	}
 	
+	static ArrayList<Conjunction> parseConjunctions(Scanner data){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
+		ArrayList<String[]> raw = parseDataToArray(data);
+		ArrayList<Conjunction> output = new ArrayList<Conjunction>();
+
+		for(String[] current : raw){ //iterate over each line from the original file.
+
+			if(current.length != Values.CONJUNCTION_DATA_ARRAY_LENGTH_CORRECT){
+				System.err.println("Error parsing a line.");
+				continue;
+			}
+
+			//System.out.println("Raw: " + Arrays.toString(current));
+
+			//current[] contains a split based on tabs. Generally {chapter, nom/gen/gender, definition}.
+
+			int chapter = 0;
+			String Conjunction = null;
+			ArrayList<String> definitions = new ArrayList<String>();
+
+			//Values.betterStringArrayPrint(current);
+
+			try{ //try to read a noun, assuming that the chapter IS specified
+				chapter = Integer.parseInt(current[0]);
+				Conjunction = current[1];
+				List<String> tempDefinitions = Arrays.asList(current[2].split(",|;")); //definitions
+				definitions.addAll(tempDefinitions);
+			} catch(Exception e){
+				System.err.println("Could not read a line!");
+				continue; //We can't make a noun out of the botrked line.
+			}
+			Conjunction currentConjunction = new Conjunction(Conjunction, chapter, definitions);
+			System.out.println("Added: " + currentConjunction);
+			output.add(currentConjunction);
+		}
+
+		return output;
+	}
+	
+	static ArrayList<Adverb> parseAdverbs(Scanner data){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
+		ArrayList<String[]> raw = parseDataToArray(data);
+		ArrayList<Adverb> output = new ArrayList<Adverb>();
+
+		for(String[] current : raw){ //iterate over each line from the original file.
+
+			if(current.length != Values.ADVERB_DATA_ARRAY_LENGTH_CORRECT){
+				System.err.println("Error parsing a line.");
+				continue;
+			}
+
+			//System.out.println("Raw: " + Arrays.toString(current));
+
+			//current[] contains a split based on tabs. Generally {chapter, nom/gen/gender, definition}.
+
+			int chapter = 0;
+			String Adverb = null;
+			ArrayList<String> definitions = new ArrayList<String>();
+
+			//Values.betterStringArrayPrint(current);
+
+			try{ //try to read a noun, assuming that the chapter IS specified
+				chapter = Integer.parseInt(current[0]);
+				Adverb = current[1];
+				List<String> tempDefinitions = Arrays.asList(current[2].split(",|;")); //definitions
+				definitions.addAll(tempDefinitions);
+			} catch(Exception e){
+				System.err.println("Could not read a line!");
+				continue; //We can't make a noun out of the botrked line.
+			}
+			Adverb currentAdverb = new Adverb(Adverb, chapter, definitions);
+			System.out.println("Added: " + currentAdverb);
+			output.add(currentAdverb);
+		}
+
+		return output;
+	}
+
 	static ArrayList<Verb> parseVerbs(Scanner data, int conjugation){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
 		ArrayList<String[]> raw = parseDataToArray(data);
 		ArrayList<Verb> output = new ArrayList<Verb>();
@@ -138,27 +259,27 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 			}
 
 			//System.out.println("Raw: " + Arrays.toString(current));
-			
+
 			//current[] contains a split based on tabs. Generally {chapter, nom/gen/gender, definition}.
-			
+
 			int chapter = 0;
 			String PP1 = null;
 			String PP2 = null;
 			String PP3 = null;
 			String PP4 = null;
-			
+
 			String[] PPs = current[1].split(", ");
 			ArrayList<String> definitions = new ArrayList<String>();
-			
+
 			//Values.betterStringArrayPrint(current);
-			
+
 			try{ //try to read a noun, assuming that the chapter IS specified
 				chapter = Integer.parseInt(current[0].trim());
 				PP1 = PPs[0];
 				PP2 = PPs[1];
 				PP3 = PPs[2];
 				try{
-				PP4 = PPs[3];
+					PP4 = PPs[3];
 				} catch (ArrayIndexOutOfBoundsException e){
 					//deponent verb.
 				}
@@ -170,7 +291,7 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 				continue; //We can't make a noun out of the botrked line.
 			}
 			Verb currentVerb = new Verb(PP1, PP2, PP3, PP4, conjugation, chapter, definitions);
-				
+
 			System.out.println("Added: " + currentVerb);
 			output.add(currentVerb);
 		}
