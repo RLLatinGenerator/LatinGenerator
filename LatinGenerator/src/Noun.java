@@ -1,10 +1,16 @@
+import java.util.ArrayList;
+
 
 public class Noun extends Word{
 	private String base;
 	private int declension;
-	public Noun(String nominative, String genitive, int gender){ //WHO THE F MADE THE NOUN DELCARATOR STATIC FUFUFUFUFUUFUFUFUFUFUFUFUFU
-		declension = getDeclension(nominative, genetive, gender);
-		base = genitive.substring(0, genitive.length()); //take off the last i.
+
+	private int gender;
+	public Noun(String nominative, String genitive, int chapter, int gender, int declension, ArrayList<String> definition){ //WHO THE F MADE THE NOUN DELCARATOR STATIC FUFUFUFUFUUFUFUFUFUFUFUFUFU
+		super(chapter, definition);
+		this.declension = declension;
+		base = genitive.substring(0, genitive.length()); //take off the last i. TODO 
+		this.gender = gender;
 	}
 	
 	public ConjugatedNoun decline(int Case, int plurality){

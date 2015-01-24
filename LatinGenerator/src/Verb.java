@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 
 public class Verb extends Word{
 	private String firstPP;
@@ -8,12 +10,20 @@ public class Verb extends Word{
 	//Third principal part
 	private String fourthPP;
 	//Fourth principal part
+	int conjugation; 
 	
-	public Verb(String firstPP, String secondPP, String thirdPP, String fourthPP){
+	public Verb(String firstPP, String secondPP, String thirdPP, String fourthPP, int conjugation, int chapter, ArrayList<String> definition){
+		super(chapter, definition);
+		this.conjugation = conjugation;
 		this.firstPP = firstPP;
 		this.secondPP = secondPP;
 		this.thirdPP = thirdPP;
 		this.fourthPP = fourthPP;
+		this.definitions = definition;
+	}
+	
+	public String toString(){
+		return firstPP + ", " + secondPP + ", " + thirdPP + ", " + fourthPP + ": " + definitions;
 	}
 	
 	//temporary statix
@@ -59,11 +69,11 @@ public class Verb extends Word{
 			String conjugatedPresent  = presentConjugate(secondPP, conjugation, number, person);
 			return conjugatedPresent;
 		}
-		if (tense == Values.INDEX_TENSE_FUTURE){
+		else if (tense == Values.INDEX_TENSE_FUTURE){
 			String conjugatedFuture = futureConjugate(secondPP, conjugation, number, person);
 			return conjugatedFuture;
 		}
-		if (tense == Values.INDEX_TENSE_IMPERFECT){
+		else if (tense == Values.INDEX_TENSE_IMPERFECT){
 			String conjugatedImperfect = imperfectConjugate(secondPP, conjugation, number, person);
 			return conjugatedImperfect;
 		}
@@ -75,11 +85,11 @@ public class Verb extends Word{
 			String conjugatedPerfect = perfectConjugate(thirdPP, number, person);
 			return conjugatedPerfect;
 		}
-		if (tense == Values.INDEX_TENSE_PLUPERFECT){
+		else if (tense == Values.INDEX_TENSE_PLUPERFECT){
 			String conjugatedPluperfect = pluperfectConjugate(thirdPP, number, person);
 			return conjugatedPluperfect;
 		}
-		if (tense == Values.INDEX_TENSE_FUTURE_PERFECT){
+		else if (tense == Values.INDEX_TENSE_FUTURE_PERFECT){
 			String conjugatedFuturePerfect = futurePerfectConjugate(thirdPP, number, person);
 			return conjugatedFuturePerfect;
 		}
@@ -91,7 +101,7 @@ public class Verb extends Word{
 			String conjugated  = presentSysConjugate(tense, secondPP, conjugation, number, person);
 			return conjugated;
 		}
-		if (tense > 2 && tense < 6){
+		else if (tense > 2 && tense < 6){
 			String conjugated = perfectSysConjugate(tense, thirdPP, number, person);
 			return conjugated;
 		}

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 
 public class Values {
 	
@@ -10,6 +12,8 @@ public class Values {
 	//public static final int CASE_VOCATIVE= 5;
 	//public static final int CASE_LOCATIVE = 6;
 	
+	public static final String[] CASE_NAMES_BY_INDEX = new String[]{"Nominative", "Genitive", "Dative", "Accusative", "Ablative"};
+	
 	public static final int GENDER_MASCULINE = 0;
 	public static final int GENDER_FEMININE = 1;
 	public static final int GENDER_NEUTER = 2;
@@ -18,6 +22,10 @@ public class Values {
 	public static final int PLURALITY_SINGULAR = 0;
 	
 	public static final int CHAPTER_VOID = 100; //we're giving words that don't have a chapter in jenney this "chapter" value.
+	
+	public static final char GENDER_NEUTER_CHAR = 'n';
+	public static final char GENDER_MASCULINE_CHAR = 'm';
+	public static final char GENDER_FEMININE_CHAR = 'f';
 	
 	public static String[][] DECLENSION_FIRST =  new String[][]{{"a", "ae", "ae", "am", "a"}, {"ae", "arum", "is", "as", "is"}};
 	public static String[][] DECLENSION_SECOND = new String[][]{{"us", "i", "o", "um", "o"}, {"i", "orum", "is", "os", "is"}};
@@ -35,11 +43,12 @@ public class Values {
 	public static final int INDEX_DECLENSION_SECOND = 1;
 	public static final int INDEX_DECLENSION_SECOND_N = 2;
 	public static final int INDEX_DECLENSION_THIRD = 3;
-	public static final int INDEX_DECLENSION_THIRD_N = 4;
-	public static final int INDEX_DECLENSION_THIRD_I_N = 5;
-	public static final int INDEX_DECLENSION_FOURTH = 6;
-	public static final int INDEX_DECLENSION_FOURTH_N = 7;
-	public static final int INDEX_DECLENSION_FIFTH = 8;
+	public static final int INDEX_DECLENSION_THIRD_I = 4;
+	public static final int INDEX_DECLENSION_THIRD_N = 5;
+	public static final int INDEX_DECLENSION_THIRD_I_N = 6;
+	public static final int INDEX_DECLENSION_FOURTH = 7;
+	public static final int INDEX_DECLENSION_FOURTH_N = 8;
+	public static final int INDEX_DECLENSION_FIFTH = 9;
 	
 	//Verb land
 	public static String[][] PRESENT_CONJUGATION_FIRST = new String[][]{{"o","as","at"}, {"amus","atis","ant"}};
@@ -100,4 +109,59 @@ public class Values {
 	public static final int INDEX_TENSE_PLUPERFECT = 4;
 	public static final int INDEX_TENSE_FUTURE_PERFECT = 5;
 	
+	public static final int NOUN_DATA_ARRAY_LENGTH_CORRECT = 3; //[chapter] [nom, gen, gender] [definition]. Based on tabs.
+	public static final int VERB_DATA_ARRAY_LENGTH_CORRECT = 3;
+	public static final int PREPOSITION_DATA_ARRAY_LENGTH_CORRECT = 3;
+	public static final int ADJECTIVE_DATA_ARRAY_LENGTH_CORRECT = 3;
+	public static final int CONJUNCTION_DATA_ARRAY_LENGTH_CORRECT = 3;
+	public static final int ADVERB_DATA_ARRAY_LENGTH_CORRECT = 3;
+	
+	public static final String CASE_NOMINATIVE_SHORTHAND = "nom";
+	public static final String CASE_GENITIVE_SHORTHAND = "gen";
+	public static final String CASE_DATIVE_SHORTHAND = "dat";
+	public static final String CASE_ACCUSATIVE_SHORTHAND = "acc";
+	public static final String CASE_ABLATIVE_SHORTHAND = "abl";
+	
+	public static final int DELCENSION_ADJECTIVE_FIRST_AND_SECOND = 0;
+	public static final int DELCENSION_ADJECTIVE_THIRD_1 = 1;//based on how many forms are given; acer, acris, acre is a 3.
+	public static final int DELCENSION_ADJECTIVE_THIRD_2 = 2;
+	public static final int DELCENSION_ADJECTIVE_THIRD_3 = 3;
+	
+	
+	public static final String[] CASE_SHORTHAND = new String[]{CASE_NOMINATIVE_SHORTHAND, CASE_GENITIVE_SHORTHAND, CASE_DATIVE_SHORTHAND, CASE_ACCUSATIVE_SHORTHAND, CASE_ABLATIVE_SHORTHAND};
+	
+	public static int getGenderIndex(char gender){
+		if(gender == Values.GENDER_MASCULINE_CHAR){
+			return Values.GENDER_MASCULINE;
+		} else if(gender == Values.GENDER_FEMININE_CHAR){
+			return Values.GENDER_FEMININE;
+		} else if(gender == Values.GENDER_NEUTER_CHAR){
+			return Values.GENDER_NEUTER;
+		} else return -1;
+	}
+	
+	public static void betterStringArrayPrint(String[] input){
+		System.out.println("=======");
+		for(String s : input){
+			System.out.println(s);
+		}
+		System.out.println("=======");
+	}
+	
+	public static void betterStringArrayPrint(ArrayList<String> input){
+		System.out.println("=======");
+		for(String s : input){
+			System.out.println(s);
+		}
+		System.out.println("=======");
+	}
+	
+	public static int getCaseFromString(String shorthand){ //passed "acc.", will return Values.CASE_ACCUSATIVE
+		for(int i = 0; i < 5; i++){
+		if(shorthand.toLowerCase().contains(Values.CASE_SHORTHAND[i]))
+			return i;
+		}
+		System.out.println("Could not find an appropriate case for String: " + shorthand);
+		return -1;
+	}
 }
