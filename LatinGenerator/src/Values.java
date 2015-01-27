@@ -103,11 +103,10 @@ public class Values {
 	public static String[][][][] CONJUGATION_VERBS = new String[][][][]{PRESENT_CONJUGATION, FUTURE_CONJUGATION, IMPERFECT_CONJUGATION, PERFECT_CONJUGATION, PLUPERFECT_CONJUGATION, FUTURE_PERFECT_CONJUGATION};
 	
 	public static final int INDEX_CONJUGATION_FIRST = 0;
-	public static final int INDEX_CONJUGATION_SECOND = 1;c final int DELCENSION_ADJECTIVE_THIRD_2 = 2;
-	public static final int DELCENSION_ADJECTIVE_THIRD_3 = 3;
-	
-	
-	public static final String[] CASE_SHORTHAND = new String[]{CASE_NOMINATIVE_SHORTHAND, CASE_GENITIVE_SHORTHAND, CASE_DATIVE_SHORTHAND, CASE_ACCUSATIVE_SHORTHAND, CASE_ABLATIVE_SHORTHAND};
+	public static final int INDEX_CONJUGATION_SECOND = 1;
+	public static final int INDEX_CONJUGATION_THIRD = 2;
+	public static final int INDEX_CONJUGATION_THIRD_IO = 3;
+	public static final int INDEX_CONJUGATION_FOURTH = 4;
 	
 	public static int getGenderIndex(char gender){
 		if(gender == Values.GENDER_MASCULINE_CHAR){
