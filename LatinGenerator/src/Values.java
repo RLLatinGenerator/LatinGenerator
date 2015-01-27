@@ -87,6 +87,12 @@ public class Values {
 	public static String[][] FUTURE_PERFECT_CONJUGATION_THIRD_IO = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
 	public static String[][] FUTURE_PERFECT_CONJUGATION_FOURTH = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
 	
+	public static String[][] PRESENT_PASSIVE_CONJUGATION_FIRST = new String[][]{{"or", "ris", "tur"}, {"mur", "mini", "ntur"}};
+	public static String[][] PRESENT_PASSIVE_CONJUGATION_SECOND = new String[][]{{"or", "ris", "tur"}, {"mur", "mini", "ntur"}};
+	public static String[][] PRESENT_PASSIVE_CONJUGATION_THIRD = new String[][]{{"or", "eris", "itur"}, {"imur", "imini", "untur"}};
+	public static String[][] PRESENT_PASSIVE_CONJUGATION_THIRD_IO = new String[][]{{"ior", "eris", "itur"}, {"imur", "imini", "iuntur"}};
+	
+	
 	public static String[][][] PRESENT_CONJUGATION = new String[][][]{PRESENT_CONJUGATION_FIRST, PRESENT_CONJUGATION_SECOND, PRESENT_CONJUGATION_THIRD, PRESENT_CONJUGATION_THIRD_IO, PRESENT_CONJUGATION_FOURTH};
 	public static String[][][] FUTURE_CONJUGATION = new String[][][]{FUTURE_CONJUGATION_FIRST, FUTURE_CONJUGATION_SECOND, FUTURE_CONJUGATION_THIRD, FUTURE_CONJUGATION_THIRD_IO, FUTURE_CONJUGATION_FOURTH};
 	public static String[][][] IMPERFECT_CONJUGATION = new String[][][]{IMPERFECT_CONJUGATION_FIRST, IMPERFECT_CONJUGATION_SECOND, IMPERFECT_CONJUGATION_THIRD, IMPERFECT_CONJUGATION_THIRD_IO, IMPERFECT_CONJUGATION_FOURTH};
@@ -97,34 +103,7 @@ public class Values {
 	public static String[][][][] CONJUGATION_VERBS = new String[][][][]{PRESENT_CONJUGATION, FUTURE_CONJUGATION, IMPERFECT_CONJUGATION, PERFECT_CONJUGATION, PLUPERFECT_CONJUGATION, FUTURE_PERFECT_CONJUGATION};
 	
 	public static final int INDEX_CONJUGATION_FIRST = 0;
-	public static final int INDEX_CONJUGATION_SECOND = 1;
-	public static final int INDEX_CONJUGATION_THIRD = 2;
-	public static final int INDEX_CONJUGATION_THIRD_IO = 3;
-	public static final int INDEX_CONJUGATION_FOURTH = 4;
-	
-	public static final int INDEX_TENSE_PRESENT = 0;
-	public static final int INDEX_TENSE_FUTURE = 1;
-	public static final int INDEX_TENSE_IMPERFECT = 2;
-	public static final int INDEX_TENSE_PERFECT = 3;
-	public static final int INDEX_TENSE_PLUPERFECT = 4;
-	public static final int INDEX_TENSE_FUTURE_PERFECT = 5;
-	
-	public static final int NOUN_DATA_ARRAY_LENGTH_CORRECT = 3; //[chapter] [nom, gen, gender] [definition]. Based on tabs.
-	public static final int VERB_DATA_ARRAY_LENGTH_CORRECT = 3;
-	public static final int PREPOSITION_DATA_ARRAY_LENGTH_CORRECT = 3;
-	public static final int ADJECTIVE_DATA_ARRAY_LENGTH_CORRECT = 3;
-	public static final int CONJUNCTION_DATA_ARRAY_LENGTH_CORRECT = 3;
-	public static final int ADVERB_DATA_ARRAY_LENGTH_CORRECT = 3;
-	
-	public static final String CASE_NOMINATIVE_SHORTHAND = "nom";
-	public static final String CASE_GENITIVE_SHORTHAND = "gen";
-	public static final String CASE_DATIVE_SHORTHAND = "dat";
-	public static final String CASE_ACCUSATIVE_SHORTHAND = "acc";
-	public static final String CASE_ABLATIVE_SHORTHAND = "abl";
-	
-	public static final int DELCENSION_ADJECTIVE_FIRST_AND_SECOND = 0;
-	public static final int DELCENSION_ADJECTIVE_THIRD_1 = 1;//based on how many forms are given; acer, acris, acre is a 3.
-	public static final int DELCENSION_ADJECTIVE_THIRD_2 = 2;
+	public static final int INDEX_CONJUGATION_SECOND = 1;c final int DELCENSION_ADJECTIVE_THIRD_2 = 2;
 	public static final int DELCENSION_ADJECTIVE_THIRD_3 = 3;
 	
 	

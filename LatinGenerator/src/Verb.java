@@ -36,7 +36,7 @@ public class Verb extends Word{
 		return new ConjugatedVerb(root + Values.CONJUGATION_VERBS[tense][0][number][person], tense, number, person);
 	}
 	
-	public ConjugatedVerb conjugate(int conjugation, int tense, int number, int person){
+	public ConjugatedVerb conjugate(int tense, int number, int person){
 		ConjugatedVerb conjugated;
 		if (tense < 3){
 			conjugated = presentSysConjugate(conjugation, tense, number, person);
