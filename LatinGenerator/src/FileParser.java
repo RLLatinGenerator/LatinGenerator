@@ -9,24 +9,44 @@ import java.util.Scanner;
 
 public class FileParser { //this is a personal WIP; I'm anticipating finishing it up within the next few days. 
 	public static ArrayList<Preposition> parseFromDirectory(File input){ //input is a directory containing the data files.
-		//if(!input.isDirectory()){
-		//	throw new IllegalArgumentException("Input file was not a directory!");
-		//}
-
-		Scanner data = null;
-		try {
-			data = new Scanner(input);
-		} catch (FileNotFoundException e) {
-			System.err.println("Error opening passed file!");
-			return null;
+		if(!input.isDirectory()){
+			throw new IllegalArgumentException("Input file was not a directory!");
 		}
+		
+		String inputLocation = input.getAbsolutePath();
+		
+		try {
+			Scanner nouns1 = new Scanner(new File(inputLocation+"\\Nouns1.txt"));
+			Scanner nouns2 = new Scanner(new File(inputLocation+"\\Nouns2.txt"));
+			Scanner nouns3 = new Scanner(new File(inputLocation+"\\Nouns3.txt"));
+			Scanner nouns4 = new Scanner(new File(inputLocation+"\\Nouns4.txt"));
+			Scanner nouns5 = new Scanner(new File(inputLocation+"\\Nouns5.txt"));
+			
+			Scanner verbs1 = new Scanner(new File(inputLocation+"\\Verbs1.txt"));
+			Scanner verbs2 = new Scanner(new File(inputLocation+"\\Verbs2.txt"));
+			Scanner verbs3 = new Scanner(new File(inputLocation+"\\Verbs3.txt"));
+			Scanner verbs3IO = new Scanner(new File(inputLocation+"\\Verbs3IO.txt"));
+			Scanner verbs4 = new Scanner(new File(inputLocation+"\\Verbs4.txt"));
+			
+			Scanner adjectives12 = new Scanner(new File(inputLocation+"\\Adjectives12.txt"));
+			Scanner adjectives3 = new Scanner(new File(inputLocation+"\\Adjectives3.txt"));
+			
+			Scanner adverbs = new Scanner(new File(inputLocation+"\\Adverbs.txt"));
+			Scanner prepositions = new Scanner(new File(inputLocation + "\\Prepositions.txt"));
+			Scanner conjunctions = new Scanner(new File(inputLocation+"\\Conjuctions.txt"));
+			
+			//Everything except irregular verbs
+			
+			
+			
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		}
+		
 		ArrayList<Preposition> output = null;
 
-		System.out.println(parseAdjective3(data));
-
-
-		data.close();
-
+		nouns1.close();
+		
 		return output;
 
 	}
