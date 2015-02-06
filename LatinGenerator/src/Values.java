@@ -39,16 +39,29 @@ public class Values {
 	
 	public static String[][][] DECLENSION_NOUNS = new String[][][]{DECLENSION_FIRST, DECLENSION_SECOND, DECLENSION_SECOND_N, DECLENSION_THIRD, DECLENSION_THIRD_I, DECLENSION_THIRD_I_N, DECLENSION_FOURTH, DECLENSION_FOURTH_N, DECLENSION_FIFTH};
 	
-	public static final int INDEX_DECLENSION_FIRST = 0;
-	public static final int INDEX_DECLENSION_SECOND = 1;
-	public static final int INDEX_DECLENSION_SECOND_N = 2;
-	public static final int INDEX_DECLENSION_THIRD = 3;
-	public static final int INDEX_DECLENSION_THIRD_I = 4;
-	public static final int INDEX_DECLENSION_THIRD_N = 5;
-	public static final int INDEX_DECLENSION_THIRD_I_N = 6;
-	public static final int INDEX_DECLENSION_FOURTH = 7;
-	public static final int INDEX_DECLENSION_FOURTH_N = 8;
-	public static final int INDEX_DECLENSION_FIFTH = 9;
+	public static final int INDEX_ENDINGS_DECLENSION_FIRST = 0;
+	public static final int INDEX_ENDINGS_DECLENSION_SECOND = 1;
+	public static final int INDEX_ENDINGS_DECLENSION_SECOND_N = 2;
+	public static final int INDEX_ENDINGS_DECLENSION_THIRD = 3;
+	public static final int INDEX_ENDINGS_DECLENSION_THIRD_I = 4;
+	public static final int INDEX_ENDINGS_DECLENSION_THIRD_N = 5;
+	public static final int INDEX_ENDINGS_DECLENSION_THIRD_I_N = 6;
+	public static final int INDEX_ENDINGS_DECLENSION_FOURTH = 7;
+	public static final int INDEX_ENDINGS_DECLENSION_FOURTH_N = 8;
+	public static final int INDEX_ENDINGS_DECLENSION_FIFTH = 9;
+	
+	public static final int INDEX_NOUN_TYPE_DECLENSION_FIRST = 0;
+	public static final int INDEX_NOUN_TYPE_DECLENSION_SECOND = 1;
+	public static final int INDEX_NOUN_TYPE_DECLENSION_THIRD = 2;
+	public static final int INDEX_NOUN_TYPE_DECLENSION_THIRD_I = 3;
+	public static final int INDEX_NOUN_TYPE_DECLENSION_FOURTH = 4;
+	public static final int INDEX_NOUN_TYPE_DECLENSION_FIFTH = 5;
+	
+	public static final int INDEX_VERB_TYPE_CONJUGATION_FIRST = 0;
+	public static final int INDEX_VERB_TYPE_CONJUGATION_SECOND = 1;
+	public static final int INDEX_VERB_TYPE_CONJUGATION_THIRD = 2;
+	public static final int INDEX_VERB_TYPE_CONJUGATION_THIRDIO = 3;
+	public static final int INDEX_VERB_TYPE_CONJUGATION_FOURTH = 4;
 	
 	//Verb land
 	public static String[][] PRESENT_CONJUGATION_FIRST = new String[][]{{"o","as","at"}, {"amus","atis","ant"}};

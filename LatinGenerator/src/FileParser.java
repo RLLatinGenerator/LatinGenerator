@@ -1,14 +1,42 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class FileParser { //this is a personal WIP; I'm anticipating finishing it up within the next few days. 
-	public static ArrayList<Preposition> parseFromDirectory(File input){ //input is a directory containing the data files.
+	
+	private static ArrayList<Noun> allNouns;
+	private static ArrayList<Verb> allVerbs;
+	private static ArrayList<Adjective> allAdjectives;
+	private static ArrayList<Adverb> allAdverbs;
+	private static ArrayList<Conjunction> allConjunctions;
+	private static ArrayList<Preposition> allPrepositions;
+	
+	public static void parseFromDirectory(File input){ //input is a directory containing the data files.
+		
+		long timer = System.currentTimeMillis();
+		
+		Scanner nouns1;
+		Scanner nouns2;
+		Scanner nouns3;
+		Scanner nouns4;
+		Scanner nouns5;
+		
+		Scanner verbs1;
+		Scanner verbs2;
+		Scanner verbs3;
+		Scanner verbs3IO;
+		Scanner verbs4;
+		
+		Scanner adjectives12;
+		Scanner adjectives3;
+		
+		Scanner adverbs;
+		Scanner prepositions;
+		Scanner conjunctions;
+		
 		if(!input.isDirectory()){
 			throw new IllegalArgumentException("Input file was not a directory!");
 		}
@@ -16,39 +44,82 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 		String inputLocation = input.getAbsolutePath();
 		
 		try {
-			Scanner nouns1 = new Scanner(new File(inputLocation+"\\Nouns1.txt"));
-			Scanner nouns2 = new Scanner(new File(inputLocation+"\\Nouns2.txt"));
-			Scanner nouns3 = new Scanner(new File(inputLocation+"\\Nouns3.txt"));
-			Scanner nouns4 = new Scanner(new File(inputLocation+"\\Nouns4.txt"));
-			Scanner nouns5 = new Scanner(new File(inputLocation+"\\Nouns5.txt"));
+			//Initialize everything
+			nouns1 = new Scanner(new File(inputLocation+"\\Nouns1.txt"));
+			nouns2 = new Scanner(new File(inputLocation+"\\Nouns2.txt"));
+			nouns3 = new Scanner(new File(inputLocation+"\\Nouns3.txt"));
+			nouns4 = new Scanner(new File(inputLocation+"\\Nouns4.txt"));
+			nouns5 = new Scanner(new File(inputLocation+"\\Nouns5.txt"));
 			
-			Scanner verbs1 = new Scanner(new File(inputLocation+"\\Verbs1.txt"));
-			Scanner verbs2 = new Scanner(new File(inputLocation+"\\Verbs2.txt"));
-			Scanner verbs3 = new Scanner(new File(inputLocation+"\\Verbs3.txt"));
-			Scanner verbs3IO = new Scanner(new File(inputLocation+"\\Verbs3IO.txt"));
-			Scanner verbs4 = new Scanner(new File(inputLocation+"\\Verbs4.txt"));
+			verbs1 = new Scanner(new File(inputLocation+"\\Verbs1.txt"));
+			verbs2 = new Scanner(new File(inputLocation+"\\Verbs2.txt"));
+			verbs3 = new Scanner(new File(inputLocation+"\\Verbs3.txt"));
+			verbs3IO = new Scanner(new File(inputLocation+"\\Verbs3IO.txt"));
+			verbs4 = new Scanner(new File(inputLocation+"\\Verbs4.txt"));
 			
-			Scanner adjectives12 = new Scanner(new File(inputLocation+"\\Adjectives12.txt"));
-			Scanner adjectives3 = new Scanner(new File(inputLocation+"\\Adjectives3.txt"));
+			adjectives12 = new Scanner(new File(inputLocation+"\\Adjectives12.txt"));
+			adjectives3 = new Scanner(new File(inputLocation+"\\Adjectives3.txt"));
 			
-			Scanner adverbs = new Scanner(new File(inputLocation+"\\Adverbs.txt"));
-			Scanner prepositions = new Scanner(new File(inputLocation + "\\Prepositions.txt"));
-			Scanner conjunctions = new Scanner(new File(inputLocation+"\\Conjuctions.txt"));
+			adverbs = new Scanner(new File(inputLocation+"\\Adverbs.txt"));
+			prepositions = new Scanner(new File(inputLocation + "\\Prepositions.txt"));
+			conjunctions = new Scanner(new File(inputLocation+"\\Conjunctions.txt"));
+
+			//Make the arraylists to hold data
+			allNouns = new ArrayList<Noun>();
+			allVerbs = new ArrayList<Verb>();
+			allAdjectives = new ArrayList<Adjective>();
+			allAdverbs = new ArrayList<Adverb>();
+			allConjunctions = new ArrayList<Conjunction>();
+			allPrepositions = new ArrayList<Preposition>();
 			
-			//Everything except irregular verbs
+			allNouns.addAll(parseNouns(nouns1, Values.INDEX_NOUN_TYPE_DECLENSION_FIRST));
+			allNouns.addAll(parseNouns(nouns2, Values.INDEX_NOUN_TYPE_DECLENSION_SECOND));
+			allNouns.addAll(parse3rdNouns(nouns3));
+			allNouns.addAll(parseNouns(nouns4, Values.INDEX_NOUN_TYPE_DECLENSION_FOURTH));
+			allNouns.addAll(parseNouns(nouns5, Values.INDEX_NOUN_TYPE_DECLENSION_FIFTH));
 			
+			allVerbs.addAll(parseVerbs(verbs1, Values.INDEX_VERB_TYPE_CONJUGATION_FIRST));
+			allVerbs.addAll(parseVerbs(verbs2, Values.INDEX_VERB_TYPE_CONJUGATION_SECOND));
+			allVerbs.addAll(parseVerbs(verbs3, Values.INDEX_VERB_TYPE_CONJUGATION_THIRD));
+			allVerbs.addAll(parseVerbs(verbs3IO, Values.INDEX_VERB_TYPE_CONJUGATION_THIRDIO));
+			allVerbs.addAll(parseVerbs(verbs4, Values.INDEX_VERB_TYPE_CONJUGATION_FOURTH));
 			
+			allAdjectives.addAll(parseAdjective12(adjectives12));
+			allAdjectives.addAll(parseAdjective3(adjectives3));
+			
+			allAdverbs.addAll(parseAdverbs(adverbs));
+			allPrepositions.addAll(parsePrepositions(prepositions));
+			allConjunctions.addAll(parseConjunctions(conjunctions));
+			
+			//close everything
+			nouns1.close();
+			nouns2.close();
+			nouns3.close();
+			nouns4.close();
+			nouns5.close();
+			
+			verbs1.close();
+			verbs2.close();
+			verbs3.close();
+			verbs3IO.close();
+			verbs4.close();
+			
+			adjectives12.close();
+			adjectives3.close();
+			
+			adverbs.close();
+			prepositions.close();
+			conjunctions.close();
 			
 		} catch (FileNotFoundException e1) {
+			System.out.println("Failed to open files!");
 			e1.printStackTrace();
 		}
 		
-		ArrayList<Preposition> output = null;
-
-		nouns1.close();
+		int totalWords = allAdjectives.size() + allNouns.size() + allVerbs.size() + allAdverbs.size() + allConjunctions.size() + allPrepositions.size();
 		
-		return output;
-
+		System.out.printf("Done in: %d milliseconds! \nParsed %d words. \nFINISHED PARSING. \n", (System.currentTimeMillis()-timer), totalWords);
+		
 	}
 
 
@@ -202,7 +273,7 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 	}
 
 	static ArrayList<Noun> parseNouns(Scanner data, int declension){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
-		assert(declension != Values.INDEX_DECLENSION_THIRD && declension != Values.INDEX_DECLENSION_THIRD_I_N && declension != Values.INDEX_DECLENSION_THIRD_I_N); //there's a separate function for these guys.
+		assert(declension != Values.INDEX_ENDINGS_DECLENSION_THIRD && declension != Values.INDEX_ENDINGS_DECLENSION_THIRD_I_N && declension != Values.INDEX_ENDINGS_DECLENSION_THIRD_I_N); //there's a separate function for these guys.
 		ArrayList<String[]> raw = parseDataToArray(data);
 		ArrayList<Noun> output = new ArrayList<Noun>();
 
@@ -284,8 +355,8 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 					gender = current[1].split(", ")[2].charAt(0);
 					List<String> tempDefinitions = Arrays.asList(current[2].split(",|;")); //definitions
 					definitions.addAll(tempDefinitions);
-					declension = Values.INDEX_DECLENSION_THIRD;
-					System.out.println("No i-stem");
+					declension = Values.INDEX_ENDINGS_DECLENSION_THIRD;
+					//System.out.println("No i-stem");
 				} catch(NumberFormatException e){ //I-Stem.
 					chapter = Integer.parseInt(current[0].substring(0, 2));
 					nominative = current[1].split(", ")[0];
@@ -293,8 +364,8 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 					gender = current[1].split(", ")[2].charAt(0);
 					List<String> tempDefinitions = Arrays.asList(current[2].split(",|;")); //definitions
 					definitions.addAll(tempDefinitions);
-					declension = Values.INDEX_DECLENSION_THIRD_I;
-					System.out.println("i-stem");
+					declension = Values.INDEX_ENDINGS_DECLENSION_THIRD_I;
+					//System.out.println("i-stem");
 				}
 			} catch(Exception e){
 				System.err.println("Could not read a line!");
@@ -462,6 +533,66 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 
 		//System.out.println(fixed);
 		return fixed;
+	}
+
+
+	public static ArrayList<Noun> getAllNouns() {
+		return allNouns;
+	}
+
+
+	public static void setAllNouns(ArrayList<Noun> allNouns) {
+		FileParser.allNouns = allNouns;
+	}
+
+
+	public static ArrayList<Verb> getAllVerbs() {
+		return allVerbs;
+	}
+
+
+	public static void setAllVerbs(ArrayList<Verb> allVerbs) {
+		FileParser.allVerbs = allVerbs;
+	}
+
+
+	public static ArrayList<Adjective> getAllAdjectives() {
+		return allAdjectives;
+	}
+
+
+	public static void setAllAdjectives(ArrayList<Adjective> allAdjectives) {
+		FileParser.allAdjectives = allAdjectives;
+	}
+
+
+	public static ArrayList<Adverb> getAllAdverbs() {
+		return allAdverbs;
+	}
+
+
+	public static void setAllAdverbs(ArrayList<Adverb> allAdverbs) {
+		FileParser.allAdverbs = allAdverbs;
+	}
+
+
+	public static ArrayList<Conjunction> getAllConjunctions() {
+		return allConjunctions;
+	}
+
+
+	public static void setAllConjunctions(ArrayList<Conjunction> allConjunctions) {
+		FileParser.allConjunctions = allConjunctions;
+	}
+
+
+	public static ArrayList<Preposition> getAllPrepositions() {
+		return allPrepositions;
+	}
+
+
+	public static void setAllPrepositions(ArrayList<Preposition> allPrepositions) {
+		FileParser.allPrepositions = allPrepositions;
 	}
 
 }
