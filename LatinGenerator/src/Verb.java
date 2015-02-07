@@ -49,6 +49,21 @@ public class Verb extends Word{
 		}
 		return conjugated;
 	}
+	
+	public static ConjugatedVerb getAgreeingVerb(ConjugatedNoun noun, Verb verb , int tense, int number, int person){
+		ConjugatedVerb conjugated;
+		if (noun.number == Values.NUMBER_SINGULAR){
+			conjugated = verb.conjugate(tense, number, person);
+		}
+		else if (noun.number == Values.NUMBER_PLURAL){
+			conjugated = verb.conjugate(tense, number, person);
+		}
+		else{
+			conjugated = new ConjugatedVerb("Error", -1, -1, -1);
+		}
+		return conjugated;
+	}
+
 
 }
 
