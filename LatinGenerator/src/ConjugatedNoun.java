@@ -1,12 +1,12 @@
 
 public class ConjugatedNoun extends ConjugatedWord{
-	int plurality;
+	int number;
 	int Case;
 	int gender;
 	
-	public ConjugatedNoun(String noun, int plurality, int Case, int gender){
+	public ConjugatedNoun(String noun, int number, int Case, int gender){
 		super(noun);
-		this.plurality = plurality;
+		this.number = number;
 		this.Case = Case;
 		this.gender = gender;
 	}

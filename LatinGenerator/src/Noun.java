@@ -14,8 +14,8 @@ public class Noun extends Word{
 		this.gender = gender;
 	}
 	
-	public ConjugatedNoun decline(int Case, int plurality){
-			return new ConjugatedNoun(addEnding(Values.DECLENSION_NOUNS[declension][Case][plurality]), plurality, Case, gender);
+	public ConjugatedNoun decline(int Case, int number){
+			return new ConjugatedNoun(addEnding(Values.DECLENSION_NOUNS[declension][Case][number]), number, Case, gender);
 	}
 	
 	public int getDeclension(String nominative, String genitive, int gender){ //get the declension of the word with the nominative, genitive(ie: 2, 4)
