@@ -17,15 +17,18 @@ public class Noun extends Word{
 		base = genitive.substring(0, genitive.length()-getGenitiveEndingLength(declension)); //take off the last i. TODO 
 		this.gender = gender;
 	}
-	
+
 	public ConjugatedNoun decline(int Case, int number){
-			return new ConjugatedNoun(addEnding(Values.DECLENSION_NOUNS[declension][Case][number]), number, Case, gender);
+		if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR){
+			return new ConjugatedNoun(nominative, Values.NUMBER_SINGULAR, Values.CASE_NOMINATIVE, gender);
+		}
+		return new ConjugatedNoun(addEnding(Values.DECLENSION_NOUNS[declension][Case][number]), number, Case, gender);
 	}
-	
+
 	public int getDeclension(String nominative, String genitive, int gender){ //get the declension of the word with the nominative, genitive(ie: 2, 4)
 		String lastTwoLettersGen = "" + (genitive.charAt(genitive.length())) + (genitive.charAt(genitive.length()-1));
 		String lastTwoLettersNom = "" + (nominative.charAt(nominative.length())) + (nominative.charAt(nominative.length()-1));
-		
+
 		if(lastTwoLettersGen.equals("ae")) return Values.INDEX_ENDINGS_DECLENSION_FIRST;
 		if(genitive.charAt(genitive.length()) == 'i' && gender != Values.GENDER_NEUTER) return Values.INDEX_ENDINGS_DECLENSION_SECOND;
 		if(genitive.charAt(genitive.length()) == 'i' && gender == Values.GENDER_NEUTER) return Values.INDEX_ENDINGS_DECLENSION_SECOND_N;
@@ -34,24 +37,33 @@ public class Noun extends Word{
 		if(lastTwoLettersGen.equals("us") && lastTwoLettersNom.equals("us")) return Values.INDEX_ENDINGS_DECLENSION_FOURTH;
 		if(lastTwoLettersGen.equals("u") && lastTwoLettersNom.equals("us")) return Values.INDEX_ENDINGS_DECLENSION_FOURTH_N;
 		if(lastTwoLettersNom.equals("ei")) return Values.INDEX_ENDINGS_DECLENSION_FIFTH;
-		
+
 		return -1;
 	}
-	
+
 	public static int getGenitiveEndingLength(int declension){//if it's amicus, amici, returns 1, because the final 'i' is the only thing that needs to be taken off from genitive to get base.
 		return Values.declensionGenitiveLength[declension];
 	}
-	
+
 	public String addEnding(String ending){
 		return base + ending;
 	}
-	
+
 	public String toString(){
 		return nominative;
 	}
-	
+
 	public static Noun getRandomNoun(){
 		Random r = new Random();
 		return FileParser.getAllNouns().get(r.nextInt(FileParser.getAllNouns().size()));
+	}
+
+	public static Clause getRandomNounClause(int Case, int number){
+		Random r = new Random();
+		if(r.nextDouble() < Values.PROBABILITY_ATTACH_GENITIVE){ //chosen to have an attached genitive.
+			return (new Clause(new ConjugatedWord[]{getRandomNoun().decline(Case, number), getRandomNoun().decline(Values.CASE_GENTIVE, Util.getRandomNumber())}));
+		} else {
+			return (new Clause(new ConjugatedWord[]{getRandomNoun().decline(Case, number)}));
+		}
 	}
 }

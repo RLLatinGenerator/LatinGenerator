@@ -18,6 +18,8 @@ public class Values {
 	public static final int GENDER_FEMININE = 1;
 	public static final int GENDER_NEUTER = 2;
 	
+	public static final double PROBABILITY_ATTACH_GENITIVE = 0.1;
+	
 	public static final int NUMBER_PLURAL = 1;
 	public static final int NUMBER_SINGULAR = 0;
 	

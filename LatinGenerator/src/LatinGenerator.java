@@ -11,7 +11,7 @@ public class LatinGenerator {
 		FileParser.parseFromDirectory(new File("M:\\Documents\\Text Files\\Data"));
 		System.out.println(Noun.getRandomNoun());
 		
-		System.out.println(Clause.makeChapter1Sentence());
+		System.out.println(Clause.makeToBeSentence().formatAsSentence());
 	}
 
 }
