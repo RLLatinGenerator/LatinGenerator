@@ -1,13 +1,15 @@
 
-public class ConjugatedNoun {
-	String conjugatedNoun; //for example, would hold "amici".
+public class ConjugatedNoun extends ConjugatedWord{
 	int plurality;
 	int Case;
 	int gender;
+	
 	public ConjugatedNoun(String noun, int plurality, int Case, int gender){
-		this.conjugatedNoun = noun;
+		super(noun);
 		this.plurality = plurality;
 		this.Case = Case;
 		this.gender = gender;
 	}
+	
+
 }

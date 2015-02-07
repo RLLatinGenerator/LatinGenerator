@@ -6,9 +6,12 @@ public class LatinGenerator {
 		//Main function for testing.
 		//Noun n = new Noun("pokemus", "pokemi");
 		//System.out.println(n);
-		String testVerb = Verb.conjugate(3, "portare", "portavi", 0, 0, 1);
-		System.out.println(testVerb);
+		//String testVerb = Verb.conjugate(3, "portare", "portavi", 0, 0, 1);
+		//System.out.println(testVerb);
 		FileParser.parseFromDirectory(new File("M:\\Documents\\Text Files\\Data"));
+		System.out.println(Noun.getRandomNoun());
+		
+		System.out.println(Clause.makeChapter1Sentence());
 	}
 
 }

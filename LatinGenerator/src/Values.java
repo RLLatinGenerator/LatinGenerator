@@ -183,4 +183,6 @@ public class Values {
 		System.out.println("Could not find an appropriate case for String: " + shorthand);
 		return -1;
 	}
+	
+	
 }

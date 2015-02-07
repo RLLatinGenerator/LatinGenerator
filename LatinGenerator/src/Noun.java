@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class Noun extends Word{
@@ -14,7 +15,7 @@ public class Noun extends Word{
 	}
 	
 	public ConjugatedNoun decline(int Case, int plurality){
-			return new ConjugatedNoun(addEnding(Values.DECLENSION_NOUNS[declension][Case][plurality]));
+			return new ConjugatedNoun(addEnding(Values.DECLENSION_NOUNS[declension][Case][plurality]), plurality, Case, gender);
 	}
 	
 	public int getDeclension(String nominative, String genitive, int gender){ //get the declension of the word with the nominative, genitive(ie: 2, 4)
@@ -39,5 +40,10 @@ public class Noun extends Word{
 	
 	public String toString(){
 		return base;
+	}
+	
+	public static Noun getRandomNoun(){
+		Random r = new Random();
+		return FileParser.getAllNouns().get(r.nextInt(FileParser.getAllNouns().size()));
 	}
 }
