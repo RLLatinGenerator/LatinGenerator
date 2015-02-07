@@ -22,11 +22,10 @@ public class Clause {
 		Noun subjectNoun = Noun.getRandomNoun();
 		System.out.println("Subject: " + subjectNoun);
 		Noun predicateNoun = Noun.getRandomNoun();
-		System.out.println("Predicate: " + predicateNoun);
-		int plurality = Util.getRandomPlurality();
-		ConjugatedNoun conjugatedSubject = subjectNoun.decline(Values.CASE_NOMINATIVE, plurality);
-		ConjugatedNoun conjugatedPredicate = predicateNoun.decline(Values.CASE_NOMINATIVE, plurality);
-		ConjugatedVerb toBe = new ConjugatedVerb(plurality==Values.PLURALITY_SINGULAR ? "est" : "sunt", Values.INDEX_TENSE_PRESENT, plurality, 3);
+		int number = Util.getRandomNumber();
+		ConjugatedNoun conjugatedSubject = subjectNoun.decline(Values.CASE_NOMINATIVE, number);
+		ConjugatedNoun conjugatedPredicate = predicateNoun.decline(Values.CASE_NOMINATIVE, number);
+		ConjugatedVerb toBe = new ConjugatedVerb(number==Values.NUMBER_SINGULAR ? "est" : "sunt", Values.INDEX_TENSE_PRESENT, number, 3);
 		
 		words[0] = conjugatedSubject;
 		words[1] = toBe;

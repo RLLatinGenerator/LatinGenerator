@@ -18,8 +18,8 @@ public class Values {
 	public static final int GENDER_FEMININE = 1;
 	public static final int GENDER_NEUTER = 2;
 	
-	public static final int PLURALITY_PLURAL = 1;
-	public static final int PLURALITY_SINGULAR = 0;
+	public static final int NUMBER_PLURAL = 1;
+	public static final int NUMBER_SINGULAR = 0;
 	
 	public static final int CHAPTER_VOID = 100; //we're giving words that don't have a chapter in jenney this "chapter" value.
 	
