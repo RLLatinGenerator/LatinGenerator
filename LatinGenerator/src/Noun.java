@@ -3,14 +3,18 @@ import java.util.Random;
 
 
 public class Noun extends Word{
+	private String nominative;
+	private String genitive;
 	private String base;
 	private int declension;
 
 	private int gender;
 	public Noun(String nominative, String genitive, int chapter, int gender, int declension, ArrayList<String> definition){ //WHO THE F MADE THE NOUN DELCARATOR STATIC FUFUFUFUFUUFUFUFUFUFUFUFUFU
 		super(chapter, definition);
+		this.nominative = nominative;
+		this.genitive = genitive;
 		this.declension = declension;
-		base = genitive.substring(0, genitive.length()); //take off the last i. TODO 
+		base = genitive.substring(0, genitive.length()-getGenitiveEndingLength(declension)); //take off the last i. TODO 
 		this.gender = gender;
 	}
 	
@@ -34,12 +38,16 @@ public class Noun extends Word{
 		return -1;
 	}
 	
+	public static int getGenitiveEndingLength(int declension){//if it's amicus, amici, returns 1, because the final 'i' is the only thing that needs to be taken off from genitive to get base.
+		return Values.declensionGenitiveLength[declension];
+	}
+	
 	public String addEnding(String ending){
 		return base + ending;
 	}
 	
 	public String toString(){
-		return base;
+		return nominative;
 	}
 	
 	public static Noun getRandomNoun(){

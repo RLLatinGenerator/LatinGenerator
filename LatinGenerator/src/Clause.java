@@ -20,7 +20,9 @@ public class Clause {
 	public static Clause makeChapter1Sentence(){
 		ConjugatedWord[] words = new ConjugatedWord[3];
 		Noun subjectNoun = Noun.getRandomNoun();
+		System.out.println("Subject: " + subjectNoun);
 		Noun predicateNoun = Noun.getRandomNoun();
+		System.out.println("Predicate: " + predicateNoun);
 		int plurality = Util.getRandomPlurality();
 		ConjugatedNoun conjugatedSubject = subjectNoun.decline(Values.CASE_NOMINATIVE, plurality);
 		ConjugatedNoun conjugatedPredicate = predicateNoun.decline(Values.CASE_NOMINATIVE, plurality);

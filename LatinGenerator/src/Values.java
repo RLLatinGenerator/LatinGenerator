@@ -50,6 +50,8 @@ public class Values {
 	public static final int INDEX_ENDINGS_DECLENSION_FOURTH_N = 8;
 	public static final int INDEX_ENDINGS_DECLENSION_FIFTH = 9;
 	
+	public static final int[] declensionGenitiveLength = new int[]{2, 1, 1, 2, 2, 2, 2, 2, 2, 2};
+	
 	public static final int INDEX_NOUN_TYPE_DECLENSION_FIRST = 0;
 	public static final int INDEX_NOUN_TYPE_DECLENSION_SECOND = 1;
 	public static final int INDEX_NOUN_TYPE_DECLENSION_THIRD = 2;
