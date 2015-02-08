@@ -61,7 +61,7 @@ public class Noun extends Word{
 	public static Clause getRandomNounClause(int Case, int number){
 		Random r = new Random();
 		if(r.nextDouble() < Values.PROBABILITY_ATTACH_GENITIVE){ //chosen to have an attached genitive.
-			return (new Clause(new ConjugatedWord[]{getRandomNoun().decline(Case, number), getRandomNoun().decline(Values.CASE_GENTIVE, Util.getRandomNumber())}));
+			return (new Clause(new ConjugatedWord[]{getRandomNoun().decline(Case, number), getRandomNoun().decline(Values.CASE_GENTIVE, Util.getRandomPlurality())}));
 		} else {
 			return (new Clause(new ConjugatedWord[]{getRandomNoun().decline(Case, number)}));
 		}

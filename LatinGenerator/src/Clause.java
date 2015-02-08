@@ -22,9 +22,9 @@ public class Clause {
 	
 	public static Clause makeToBeSentence(){
 
-		int subjNumber = Util.getRandomNumber();
+		int subjNumber = Util.getRandomPlurality();
 		Clause conjugatedSubject = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, subjNumber);
-		Clause conjugatedPredicate = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, Util.getRandomNumber());
+		Clause conjugatedPredicate = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, Util.getRandomPlurality());
 		ConjugatedVerb toBe = new ConjugatedVerb(subjNumber==Values.NUMBER_SINGULAR ? "est" : "sunt", Values.INDEX_TENSE_PRESENT, subjNumber, 3);
 		
 		return Clause.appendClauses(new Clause[]{conjugatedSubject, toBe.asClause(), conjugatedPredicate});
