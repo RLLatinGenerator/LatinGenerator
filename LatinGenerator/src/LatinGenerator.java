@@ -19,6 +19,8 @@ public class LatinGenerator {
 			System.out.println(Clause.makeToBeSentence(2).formatAsSentence());
 		}
 		
+		System.out.println(Util.getRandomNounAttachment());
+		
 		//System.out.println(Util.getWordsUpToChapter(FileParser.getAllNouns(), 3));
 		
 	}

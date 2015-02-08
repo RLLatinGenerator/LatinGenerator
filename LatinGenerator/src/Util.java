@@ -19,4 +19,28 @@ public class Util {
 		
 		return output;
 	}
+	
+	public static int arraySum(double[] input){
+		int total = 0;
+		for(double i : input){
+			total+=i;
+		}
+		return total;
+	}
+	
+	public static int getRandomNounAttachment(){
+		Random r = new Random();
+		double total = arraySum(Values.NOUN_CLAUSE_PROBABILITY_ATTACH_TO_NOUN_CLAUSE);
+		double rNum = r.nextDouble()*total;
+		
+		for(int i = 0; i < Values.NOUN_CLAUSE_PROBABILITY_ATTACH_TO_NOUN_CLAUSE.length; i++){
+			
+			rNum -= Values.NOUN_CLAUSE_PROBABILITY_ATTACH_TO_NOUN_CLAUSE[i];
+			if(rNum <= 0){
+				return i;
+			}
+		}
+		
+		return -1;
+	}
 }
