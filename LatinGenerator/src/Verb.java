@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class Verb extends Word{
@@ -50,13 +51,19 @@ public class Verb extends Word{
 		return conjugated;
 	}
 	
-	public static ConjugatedVerb getAgreeingVerb(ConjugatedNoun noun, Verb verb , int tense, int number, int person){
+	public static Verb getRandomVerb(int maxChapter){
+		Random r = new Random();
+		return (Verb) FileParser.getVerbsToChapter(maxChapter).toArray()[r.nextInt(FileParser.getNounsToChapter(maxChapter).size())];
+	}
+	
+	
+	public static ConjugatedVerb getAgreeingVerb(ConjugatedNoun noun, Verb verb , int tense){
 		ConjugatedVerb conjugated;
 		if (noun.number == Values.NUMBER_SINGULAR){
-			conjugated = verb.conjugate(tense, number, person);
+			conjugated = verb.conjugate(tense,0, 2);
 		}
 		else if (noun.number == Values.NUMBER_PLURAL){
-			conjugated = verb.conjugate(tense, number, person);
+			conjugated = verb.conjugate(tense, 1, 2);
 		}
 		else{
 			conjugated = new ConjugatedVerb("Error", -1, -1, -1);

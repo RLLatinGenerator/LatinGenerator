@@ -24,6 +24,7 @@ public class Clause {
 		return output.toString();
 	}
 	
+	
 	public static Clause makeToBeSentence(int maxChapter){
 
 		int number = Util.getRandomPlurality();
@@ -32,6 +33,17 @@ public class Clause {
 		ConjugatedVerb toBe = new ConjugatedVerb(number==Values.NUMBER_SINGULAR ? "est" : "sunt", Values.INDEX_TENSE_PRESENT, number, 3);
 		
 		return Clause.appendClauses(new Clause[]{conjugatedSubject, toBe.asClause(), conjugatedPredicate});
+	}
+	
+	public static Clause makeSubjVerbSentence(int maxChapter, int tense){
+		int number = Util.getRandomPlurality();
+		Noun subject = Noun.getRandomNoun(maxChapter);
+		ConjugatedNoun conjugatedSubject = new ConjugatedNoun(subject.toString(), number, Values.CASE_NOMINATIVE, subject.getGender());
+		Clause subjectClause = Noun.getNounClause(subject, Values.CASE_NOMINATIVE, number);
+		Clause predicateClause = Noun.getRandomNounClause(Values.CASE_ACCUSATIVE, Util.getRandomPlurality(), maxChapter);
+		Verb verb = Verb.getRandomVerb(maxChapter);
+		ConjugatedVerb conjugatedVerb = Verb.getAgreeingVerb(conjugatedSubject, verb, tense);
+		return Clause.appendClauses(new Clause[]{subjectClause, conjugatedVerb.asClause(), predicateClause});
 	}
 	
 	public static Clause appendClauses(Clause[] input){
