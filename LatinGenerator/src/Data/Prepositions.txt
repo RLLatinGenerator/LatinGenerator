@@ -1,0 +1,25 @@
+2	ad + acc.			to, toward, near
+2	cum + abl.			with
+5	a, ab + abl			from, away from; (by)
+5	de + abl			from; down from; about, concerning
+5	e, ex + abl			from; out of; out from
+5	in + abl			in, on
+5	in + acc. 			into, onto
+5	sub + acc (with verbs of motion)	(to go)...under
+5	sub + abl (with verbs of rest)		(to be).... under
+6	sine + abl			without
+8	ante + acc			in front of; before
+8	contra + acc			against, opposite
+8	inter + acc			between, among
+8	ob + acc			because of, on account of
+8	per + acc			through
+8	post + acc			after; behind
+8	propter + acc			because of; on account of
+8	trans + acc			across
+35	prope + acc			near
+39	apud + acc			among, at the house of, in the presence of
+39	circum + acc			around
+39	praeter + acc			beyond, besides, except
+39	pro + abl			in front of, on behalf of, in exchange for, instead of
+	prae + abl			before, in front of
+	super + acc			over, above

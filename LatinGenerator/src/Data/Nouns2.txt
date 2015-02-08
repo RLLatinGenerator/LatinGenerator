@@ -1,0 +1,92 @@
+	brutus, bruti, f.						witch, sorceress
+	lavus, lavi, f.						maid, cleaning woman
+4	ager, agri, m.						field
+4	amicus, amici, m.					friend
+4	annus, anni, m.					year
+4	campus, campi, m.					field, plain
+4	deus, dei, m.						god
+4	equus, equi, m. 					horse
+4	filius, fili, m. 						son
+4	gladius, gladi, m.					sword
+4	legatus, legati, m.					envoy, lieutenant, messenger, ambassador
+4	ludus, ludi, m. 					game, play, show, school
+4	nuntius, nunti, m.					messenger, message
+4	puer, pueri, m.						boy
+4	vir, viri, m.						man; husband
+4	servus, servi, m.					slave
+5	bellum, belli, n.					war
+5 	caelum, caeli, n.					sky
+5	donum, doni, n.					gift
+5	frumentum, frumenti, n.				grain
+5	oppidum, oppidi, n.					town
+5	periculum, periculi, n.					danger
+5	regnum, regni, n.					kingdom
+5	verbum, verbi, n.					word
+11	animus, animi, m.					mind; spirit, soul, courage
+11	arma, armorum, n., pl.				arms, weapons
+11	auxilium, auxili, n.					aid; help
+11	auxilia, auxilorum, n., pl.				auxiliary troops, reinforcements
+11	captivus, captivi, m.					prisoner
+11	castra, castrorum, n., pl.				camp
+11	consilium, consili, n.					plan, advice
+11	impedimentum, impedimenti, n.			hinderance 
+11	impedimenta, impedimentorum, n., pl		baggage
+11	numerus, numeri, m.					number
+11	proelium, proeli, n.					battle
+11	signum, signi, n.					sign, signal; military standard
+11	telum, teli, n.						weapon
+12	carrus, carri, m.					cart; wagon
+12	dominus, domini, m.					lord, master
+12	liber, libri, m.						book (N.B. do not confuse with liberi, liberorum, m. pl. children)
+12 	locus, loci, m.  (loca, locorum, n. pl.)			place
+12	magister, magistri, m.					teacher
+12	populus, populi, m.					people, nation
+12	socius, soci, m.					comrade, ally
+13	Iulius, Iuli, m.						Julius
+13	Lucius, Luci, m.					Lucius
+13 	Marcus, Marci, m.					Marcus
+13	inimicus, inimici, m.					(personal) enemy
+14	imperium, imperi, n.					command, military power, government
+28	cibus, cibi, m.						food
+28	modus, modi, m.					measure, degree; manner, way
+28	murus, muri, m.					wall
+28	nihil, n. (defective noun)				nothing
+28	vinum, vini, n.						wine
+31	lectus, lecti, m.					bed, dining couch
+32	gaudium, gaudi, n.					joy, gladness
+32	officium, offici, n.					duty; office
+32	praemium, praemi, n. 					reward
+32	praesidium, praesidi, n.				guard, protection; garrison
+32	tergum, tergi, n.					back
+37	subsidium, subsidi, n.					aid, support	
+40	liberi, liberorum, m. pl				children
+40	negotium, negoti, n.					trouble; task, business
+40	ventus, venti, m.					wind
+42	aurum, auri, n.						gold
+42	ferrum, ferri, n.					iron, sword
+42	pilum, pili, n.						javelin
+42	scutum, scuti, n.					shield
+42	tribunus, tribuni, m.					tribune
+43	iudicium, iudici, n.					judgment, trial
+43	vadum, vadi, n.					ford, shallows
+44	vallum, valli, n.					rampart
+46	aedificium, aedifici, n.				building
+46	forum, fori, n.						market place, forum
+46	oculus, oculi, m.					eye
+48	satis, n.						enough
+49	spatium, spati, n.					distance, interval (of time or space)
+49	studium, studi, n.					eagerness, enthusiasm, zeal
+50	Corinthus, Corinthi, f.					Corinth
+51	colloquium, colloqui, n.				conference, conversation
+51	initium, initi, n.					beginning
+51	Rhenus, Rheni, m.					Rhine
+54	necessarius, necessari, m.				relative, kinsman
+56	ancora, ancorae, f.					anchor
+56	praeda, praedae, f.					booty
+59	beneficium, benefici, n.				kindness, favor
+59	remus, remi, m.					oar
+59	saxum, saxi, n.						rock, stone
+	otium, oti, n.						leisure
+	finitimus, finitimi, m.					neighbor
+	exemplum, exempli, n.				example
+	supplicium, supplici, n.				punishment

@@ -1,0 +1,66 @@
+2	non			not
+3	ubi			where?
+3	quid			what?
+9	bene			well
+9	cras			tomorrow
+9	cur			why?
+9	diu			for a long time, long
+9	hodie			today
+9	heri (ieri)		yesterday
+9	iam			already, now, soon
+9	ibi			there, in that place
+9 	interim			meanwhile
+9	male			badly
+9 	nunc			now
+9	postea			afterwards
+9	semper			always
+9	saepe			often
+9	tum			then
+9	ubi			where, when (relative); where? (interrogative)
+14	mox			soon
+25	olim			once, formerly, some day
+30	etiam			even, also
+30	tamen			nevertheless, yet, still
+30	nam			for, because
+33	quam			as, than, how?
+35	prope			nearly, almost
+36	cotidie			daily, every day	
+36	deinde			then, next	
+36	eo			there, to that place	
+36 	huc			here, to this place
+36	illuc			there, to that place there
+36	nondum		not yet
+36	numquam		never
+36	paene			almost
+36	quo			where to? to what place?
+36	simul			at the same time
+36	statim			at once, immediately
+36	tandem			at length, at last, finally
+37 	unde 			whence, from where, from which
+37	unde?			whence? where from?
+37	undique		from everywhere, from all sides, on all sides
+42	ne			not
+42	vero			in truth, truly, indeed; but
+43	subito			suddenly
+43	umquam		ever
+45	ergo			therefore
+45	praeterea		besides, besides that
+45	procul			at some distance
+48	ita			so, in such a way, thus
+48	tam			so
+48	sic			so, in this way
+51	rursus			back, again
+53	interea			meanwhile
+53	quidem			at least, at any rate; as a matter of fact, to be sure, indeed
+53	ne.....quidem		not even
+53	quoque			also, too
+55	bis			twice
+55	circiter			about, approximately (with numbers)
+55	fere			almost, nearly (with numbers and words of quantity)
+55	frustra			in vain
+55	item			likewise
+55	omnino		altogether, in all, at all
+55	repente			suddenly
+55	supra			above
+55	vix			hardly, scarcely, with difficulty
+59	inde			from there, thence

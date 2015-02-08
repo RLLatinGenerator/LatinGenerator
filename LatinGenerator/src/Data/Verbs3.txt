@@ -1,0 +1,99 @@
+22	ago, agere, egi, actus					do, drive, live, spend time
+22	cogo, cogere, coegi, coactus				collect; compel
+22	defendo, defendere, defendi, defensus		defend
+22	duco, ducere, duxi, ductus				lead
+22	gero, gerere, gessi, gestus				bear, carry on, wear
+22	mitto, mittere, misi, missus				send; let go
+22	pono, ponere, posui, positus				put, place
+22	rego, regere, rexi, rectus				rule, reign; guide
+22	relinquo, relinquere, reliqui, relictus			leave behind, abandon
+22 	surgo, surgere, surrexi, surrectum			rise, stand up
+22	trado, tradere, tradidi, traditus				give/hand over, surrender
+22	vinco, vincere, vici, victus				conquer, defeat
+23	cedo, cedere, cessi, cessum				move; yield, retreat, give way
+23	constituo, constituere, constitui, constitutum		set up; determine, decide
+23	contendo, contendere, contendi, contentum		struggle, strive; hasten
+23	deligo, deligere, delegi, delectum			choose
+23	discedo, discedere, discessi, discessum		go away, depart, leave
+23	excedo, excedere, excessi, excessum			go out, depart; leave
+23	reduco, reducere, reduxi, reductum			lead back
+25	bibo, bibere, bibi, --------				drink
+25	curro, currere, cucurri, cursum			run 
+25	dico, dicere, dixi, dictum				say, tell
+25	edo, edere, edi, esum					eat
+25	peto, petere, petivi, petitum				seek; beg; ask for; attack; aim at
+25	scribo, scribere, scripsi, scriptus			write
+28	amitto, amittere, amisi, amissus			lose, let go of, send away
+28	committo, committere, commisi, commissum	join together, commit, entrust
+		proelium committere 				to begin a battle, join battle
+28	pello, pellere, pepuli, pulsus				push, drive, defeat
+28	expello, expellere, expuli, expulsum			drive out, drive away
+28	reddo, reddere, reddidi, redditum			give back, restore
+38	claudo, claudere, clausi, clausum			shut, close	
+38	cresco, crescere, crevi, cretum			grow, increase
+38	desisto, desistere, destiti, destitum			leave off, stop
+38	frango, frangere, fregi, fractum			break
+38	instruo, instruere, instruxi, instructum		pile up, draw up; equip
+38	iungo, iungere, iunxi, iunctum			join
+38	ludo, ludere, lusi, lusum				play, mock
+38	premo, premere, pressi, pressum			press; crush, overpower	
+38	remitto, remittere, remisi, remissum			send back, let go back
+38	traho, trahere, traxi, tractum				draw, drag	
+39	accedo, accedere, accessi, accessum			go to; approach
+39	cognosco, cognoscere, cognovi, cognitum		learn, find out
+39	credo, credere, credidi, creditum			believe, trust
+39	intellego, intellegere, intellexi, intellectum		understand
+39	lego, legere, legi, lectum				choose; gather; read
+41 	adduco, adducere, adduxi, adductum			lead to; influence
+41	dimitto, dimittere, dimisi, dimissum			let go away, send away, dismiss
+41	expono, exponere, exposui, expositum		set forth; explain
+41 	intermitto, intermittere, intermisi, intermissum	stop, pause; interrupt; lose (time)
+41 	occido, occidere, occidi, occisum			kill, cut down
+41	opprimo, opprimere, oppressi, oppressum		crush, overpower
+41	traduco, traducere, traduxi, traductum		lead across
+42	consisto, consistere, constiti, constitum		halt; take a stand
+45	quaero, quaerere, quaesivi, quaesitum		seek; inquire, ask (+a + abl)
+45	peto, petere, petivi, petitum				ask (+ a + abl)
+48	accido, accidere, accidi, ---				happen; fall upon
+49	incendo, incendere, incendi, incensum		set on fire; arouse
+49	pello, pellere, pepuli, pulsum				push, drive; rout, defeat
+49	produco, producere, produxi, productum		lead forward, bring forth
+49	propono, proponere, proposui, propositum		set forth, put forth, propose
+50	loquor, loqui, locutus sum				talk
+50	proficiscor, proficisci, profectus sum			set out, depart
+50	permitto, permittere, permisi, permissum		entrust; permit
+51	sequor, sequi, secutus sum				follow
+51	consequor, consequi, consecutus sum			pursue, overtake; obtain, gain
+53	conscribo, conscribere, conscripsi, conscriptum	enroll, enlist
+53	disco, discere, didici, --				learn
+53	instituo, instituere, institui, institutum		build, establish, set up
+53	ostendo, ostendere, ostendi, ostentum			show, display
+53	veho, vehere, vexi, vectum				carry, transport
+54	vendo, vendere, vendidi, venditum			sell (such a great, such a large)
+55	cado, cadere, cecidi, casum				fall
+55	caedo, caedere, cecidi, caesum			cut, cut down, kill, fell
+55	emo, emere, emi, emptum				buy
+55	tango, tangere, tetigi, tactum				touch
+55	utor, uti, usus sum					use (+abl)
+56	consido, considere, consedi, consessum		sit down; settle, encamp
+56	tego, tegere, texi, tectum				cover
+56	vivo, vivere, vixi, victum				live, be alive
+57	confido, confidere, confisus sum			trust
+57	consulo, consulere, consului, consultum		consult; consult the interests of, take counsel for
+57	parco, parcere, peperci, parsum			spare
+57	resisto, resistere, restiti, ---				resist
+57	solvo, solvere, solvi, solutum				loosen, untie, set free; pay
+58	incolo, incolere, incolui, ----				inhabit, live in; dwell
+58	rumpo, rumpere, rupi, ruptum				burst, break
+58	sumo, sumere, sumpsi, sumptum			take, assume
+58	consuesco, consuescere, consuevi, consuetum	become accustomed
+60	ascendo, ascendere, ascendi, ascensum		climb up
+60	coniungo, congiungere, coniunxi, coniunctum	join together, unite
+60	conscendo, conscendere, conscendi, conscensum	climb; board, go aboard
+60	deduco, deducere, deduxi, deductum			lead down, lead away; launch
+60	descendo, descendere, descendi, descensum		descend
+60	nascor, nasci, natus sum				be born; be found
+60	repello, repellere, reppuli, repulsum			drive back
+60	revertor, reverti, reversus sum			go back, return
+60	tribuo, tribuere, tribui, tributum			assign, grant
+60	verto, vertere, verti, versum				turn

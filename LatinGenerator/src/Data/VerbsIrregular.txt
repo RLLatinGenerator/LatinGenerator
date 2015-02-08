@@ -1,0 +1,32 @@
+3	sum, esse, fui, futurus					be
+32	absum, abesse, afui, afuturus				be away, be distant, be absent
+32	adsum adesse, adfui, adfuturus			be near, be present
+32	possum, posse, potui, -				be able (can/could)
+32	inquam, inquit, inquiunt				say
+52	eo, ire, ii (ivi), itum					go
+52	exeo, exire, exii (exivi), exitum			go out from, exit
+52	redeo, redire, redii (redivi), reditum			go back, return
+52	abeo, abire, abii (abivi), abitum			go away, depart
+52	adeo, adire, adii (adivi), aditum			go towards, approach
+52	ineo, inire, inii (inivi), initum				go in, to enter
+52	transeo, transire, transii (transivi), transitum		cross
+52	fero, ferre, tuli, latum					bear, carry; bring, take; relate
+52	adfero, adferre, attuli, allatum				bring up, bring to; report
+52	confero, conferre, contuli, collatum			bring together, collect; compare
+52	infero, inferre, intuli, illatum				carry onward; bring upon, inflict
+52	refero, referre,rettuli, relatum				bring back; report
+52	tollo, tollere, sustuli, sublatum			raise, lift up; remove
+53	malo, malle, malui, --					wish more, prefer
+53	nolo, nolle, nolui, --					not wish, be unwilling
+53	volo, velle, volui, --					wish, be willing
+54	fio, fieri, factus sum					be made, become; be done, happen
+56	convenit, convenire, convenit				it is convenient
+56	licet, licere, licuit					it is permitted
+56	oportet, oportere, oportuit				it is necessary, it is proper
+57	desum, deesse, defui, defuturus			be lacking
+57	praesum, praeesse, praefui, praefuturus		be in command of; be in charge of (+ dat.)
+58	coepi, coepisse, coeptum				began
+60	defero, deferre, detuli, delatum			carry, bring; report
+60	ineo, inire, inii, initum					enter, begin
+60	consilium inire					to adopt a plan
+	supersum, superesse, superfui, superfuturus		be left (over), survive

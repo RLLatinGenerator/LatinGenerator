@@ -1,0 +1,30 @@
+2	et				and
+2	sed				but
+3 	-ne (joined to end of a word)	(introduces a question)
+3	-que (joined to end of a word)	and 
+10	num				(introduces a question expecting a no answer)
+21	et….et				both… and
+21	atque				and, and even
+21	ac (shortened form of atque)	and
+21	aut				or
+21	aut......aut			either.........or
+21	quod				because
+21	si				if
+30	nam				for
+31	itaque				and so, therefore
+31 	neque (nec)			and not, nor
+31	neque...........neque		neither.........nor
+33	quam				as, than; how?
+34	nisi				unless, if…..not, [except + future or futureperfect]
+36	atque				as
+36	postquam			after
+36 	ut				how, as, when, since
+42	autem				but, however; and, moreover 
+42	enim				for
+42	vel				or
+45	an				or
+45	annon				or not
+47	num				if, whether
+47	utrum...... an			whether.....or
+47	utrum.....necne			whether.....or not
+49	cum				when, since, although

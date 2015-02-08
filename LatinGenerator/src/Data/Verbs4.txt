@@ -1,0 +1,15 @@
+30	audio, audire, audivi, auditus				hear, listen to
+30	convenio, convenire, conveni, conventurus		come together, assemble
+30	dormio, dormire, dormivi, dormitum			sleep
+30	impedio, impedire, impedivi, impeditus		hinder
+30	invenio, invenire, inveni, inventum			find; come upon
+30	munio, munire, munivi, munitus			fortify
+30	pervenio, pervenire, perveni, perventum		reach, arrive
+30	venio, venire, veni, ventum				come
+39	nescio, nescire, nescivi, nescitum			not know
+39	scio, scire, scivi, scitum				know
+39 	sentio, sentire, sensi, sensum				feel, realize
+41	circumvenio, circumvenire, circumveni, circumventum	surround, come around
+55	orior, oriri, ortus sum	rise, 				arise
+55	potior, potiri, potitus sum				get possession of (+abl)
+60	reperio, reperire, repperi, repertum			find, discover

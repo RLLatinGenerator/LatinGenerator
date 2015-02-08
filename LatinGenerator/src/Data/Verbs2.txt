@@ -1,0 +1,44 @@
+17	habeo, habere, habui, habitus				have, hold
+17	maneo, manere, mansi, mansum			remain
+	remaneo, remanere, remansi, remansum		stay behind, remain
+17	moneo, monere, monui, monitum			warn; advise, inform (+acc)
+17	moveo, movere, movi, motus				move
+		castra movere					to break camp		
+17	sedeo, sedere, sedi, sessurus				sit
+17	teneo, tenere, tenui, tentus				hold; keep
+17	timeo, timere, timui, -------				fear; to be afraid (of)
+17	video, videre, vidi, visus				see
+20	debeo, debere, debui, debitus				ought, owe
+20	doceo, docere, docui, doctus				teach; show
+20	prohibeo, prohibere prohibui, prohibitus		prevent, keep…from…..
+20	respondeo, respondere, respondi, responsus		answer
+20	retineo, retinere, retinui, retentus			hold back, keep
+20	terreo, terrere, terrui, territus				scare, frighten
+32	contineo, continere, continui, contentum		hold together, restrain, bound contain
+32	iubeo, iubere, iussi, iussum				order, bid
+32	sustineo, sustinere, sustinui, sustentum		hold up, hold in check, maintain, withstand
+38	removeo, removere, removi, remotum		send back, let go back
+38	valeo, valere, valui, valitum				be well, be strong	
+39	obtineo, obtinere, obtinui, obtentum			hold (against opposition)
+39	pertineo, pertinere, pertinui, -----			pertain; extend
+41	commoveo, commovere, commovi, commotum	move thoroughly, upset, alarm
+41	compleo, complere, complevi, completum		fill up, complete
+42	perterreo, perterrere, perterrui, perterritum		terrify
+45	persuadeo, persuadere, persuasi, persuasum		persuade (+dat)
+49	permoveo, permovere, permovi, permotum		move deeply, alarm
+50	polliceor, polliceri, pollicitus sum			promise
+50	videor, videri, visus sum				seem
+51	vereor, vereri, veritus sum				fear
+53	exerceo, exercere, exercui, exercitum			train, exercise, practice
+55	audeo, audere, ausus sum				dare
+56	augeo, augere, auxi, auctum				increase, strengthen
+56	doleo, dolere, dolui, dolitum				grieve, be sorry; grieve for
+57	noceo, nocere, nocui, nocitum			harm, injure
+57	pareo, parere, parui, paritum				obey
+57	placeo, placere, placui, placitum			please
+57	provideo, providere, providi, provisum		forsee; provide for
+57	studeo, studere, studui, ---				be eager for, desire
+58	iaceo, iacere, iacui, iacitum				lie, lie down
+58	rideo, ridere, risi, risum				smile, laugh; laugh at
+60	mereor, mereri, meritus sum				deserve, earn
+60	taceo, tacere, tacui, tacitum				be silent

@@ -1,0 +1,136 @@
+14	celeritas, celeritatis, f.					speed, swiftness
+14 	consul, consulis, m.					consul
+14	dux, ducis, m.						leader, general
+14	frater, fratris, m.					brother
+14	imperator, imperatoris, m.				commander, general
+14	mater, matris, f.					mother
+14	miles, militis, m.					soldier
+14	pater, patris, m.					father
+14	rex, regis, m.						king
+14	soror, sororis, f.					sister
+15	Caesar, Caesaris, m.					Caesar
+15	caput, capitis, n.					head
+15	carmen, carminis, n.					song, poem
+15	corpus, corporis, n.					body
+15	flumen, fluminis, n.					river
+15	iter, itineris, n.						journey; road, march
+15	nomen nominis, n.					name
+15	tempus, temporis, n.					time
+15	vulnus, vulneris, n.					wound
+16   i	animal, animalis, n.					animal
+16   i	civis, civis, m/f (really only masculine)		citizen
+16   i	finis, finis, m.						end, boundary
+16   i	fines, finium, m., pl.					borders, territory
+16   i	gens, gentis, f.	 					people, nation, family, class
+		(do not confuse with genus, generis, n.    	kind, class, sort) 
+16   i	hostis, hostis, m.					(national) enemy (usually in pl)
+16   i	ignis, ignis, m.						fire
+16   i	mare, maris, n.						sea
+16   i	mons, montis, m.					mountain, hill
+16   i	mors, mortis, f.					death
+16   i	navis, navis, f.						ship
+16   i	panis, panis, m.					bread
+16   i	pons, pontis, m.					bridge
+16   i	urbs, urbis, f.						city
+20	aestas, aestatis, f.					summer
+20	hiems, hiemis, f.					winter
+20	lux, lucis, f.						light 
+20	pax, pacis, f.						peace
+20	salus, salutis, f.					health, safety, welfare
+20	vox, vocis, f.						voice
+25	eques, equitis, m.					horseman, knight
+		equites, equitum, m., pl.			cavalry
+25	pedes, peditis, m.					foot soldier
+		pedites, peditum, m., pl.			infantry
+26	auctoritas, auctoritatis, f.				authority, influence, prestige
+26   i	avis, avis, f.						bird
+26   i 	canis, canis, m. or f.					dog
+26	clamor, clamoris, m.					noise, shouting
+26	iudex, iudicis, m.					juror, judge
+26	lapis, lapidis, m.					stone
+26	legio, legionis, f.					legion
+26	libertas, libertatis, f.					freedom, liberty
+26	nox, noctis, f.						night
+26	princeps, principis, m.					chief
+26	timor, timoris, m.					fear
+27	civitas, civitatis, f.					citizenship, state
+27	homo, hominis, m.					man, human being
+27	labor, laboris, m.					difficulty, hardship; work
+27	lex, legis, f. 						law
+27	multitudo, multitudinis, f.				great number, crowd
+27   i	pars, partis, f. 						part, direction
+27	pes, pedis, m.						foot
+27	virtus, virtutis, f. 					manliness, bravery, courage
+27   i	milia, milium, n. pl. 					thousands
+35	plus, pluris, n.						more, a larger amount
+37	victor, victoris, m.					victor
+40	arbor, arboris, f.					tree	
+40   i	collis, collis, m.					hill
+40	cupiditas, cupiditatis, f.				greed, desire
+40	senator, senatoris, m.					senator
+40	sol, solis, m.						sun
+40   i	turris, turris, f.						tower
+42   i 	valles, vallis, f.					valley
+43	calamitas, calamitatis, f.				disaster, misfortune
+43	condicio, condicionis, f.				terms, condition
+43	consuetudo, consuetudinis, f.				habit, custom
+43	difficultas, difficultatis, f.				difficulty
+43   i	orbis, orbis, m.					circle, wheel, world
+43	potestas, potestatis, f.					power
+43	regio, regionis, f.					direction, district, region
+44	altitudo, altitudinis, f.					height, depth
+44	centurio, centurionis, m.				centurion
+44	dolor, doloris, m.					grief, pain, suffering
+44	flos, floris, m.						flower
+44	genus, generis, n.					kind, sort, class, race
+44	hiberna, hibernorum, n., pl.				winter quarters
+44	ius, iuris, n.						right, justice, law
+44	latitudo, latitudinis, f.					width
+44	magnitudo, magnitudinis, f.				size, greatness
+44	mens, mentis, f.					mind
+44	mercator, mercatoris, m.				merchant, trader
+44	onus, oneris, n.					burden
+44	opus, operis, n.					work
+44	oratio, orationis, f.					speech
+46    i	auris, auris, f.						ear
+46	nemo, neminis, m.					no one
+46    i 	vestis, vestis, f.					clothing
+46    i	vis, vis, f.						force, violence
+46    i	vires, virium, f. pl.					strength
+49	tempestas, tempestatis, f.				weather; storm
+50	Carthago, Carthaginis, f.				Carthage
+50	rus, ruris, n.						country, countryside
+53	aetas, aetatis, f.					age
+53	aestas, aestatis, f.					summer
+53	classis, classis, f.					fleet
+53	facultas, facultatis, f.					opportunity, chance, ability
+53    i	hospes, hospitis, m.					stranger; guest, host
+53    i	 mensis, mensis, m.					month
+53	ordo, ordinis, m.					order
+54    i	aedes, aedis, f.						temple
+54    i	aedes, aedium, f. pl.					house
+54    i	caedes, caedis, f.					slaughter, murder
+54	munitio, munitionis, f.					fortification
+54	obses, obsidis, m.					hostage
+54	ratio, rationis, f.					account; plan; manner; reason
+56	agmen, agminis, n.					line of march, army on the march, column
+56	auctor, auctoris, m.					author, originator, founder, sponsor
+56	latus, lateris, n.					side, flank
+56	os, oris, n.						mouth, face
+56	palus, paludis, f.					swamp, marsh 
+58	adulescens, adulescentis, m.				young man, youth
+58	mos, moris, m.						custom, habit
+58	quies, quietis, f.					rest, sleep
+58	rumor, rumoris, m.					rumor, murmur
+58	sanguis, sanguinis, m.					blood
+58	voluntas, voluntatis, f.					willingness, wish, consent
+59	cohors, cohortis, f.					cohort
+59	custos, custodis, m.					guard
+59	explorator, exploratoris, m.				scout
+59	infans, infantis, m. or f.				baby
+59	laus, laudis, f.						praise
+59	litus, litoris, n.						shore
+59	mulier, mulieris, f.					woman, wife
+59	opinio, opinionis, f.					opinion; expectation; reputation
+59	plebs, plebis, f.					the common people
+59	uxor, uxoris, f.						wife

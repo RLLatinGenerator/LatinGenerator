@@ -1,0 +1,17 @@
+29	adventus, adventus, m.				arrival, approach
+29	cornu, cornus, n.					horn, wing (of an army)
+29	cursus, cursus, m.					running; course, quick motion, voyaging
+29	domus, domus, f.					house, home
+29	exercitus, exercitus, m.				(trained) army
+29	exitus, exitus, m.					departure, way out; end, outcome
+29	fluctus, fluctus, m.					wave
+29	impetus, impetus, m.					attack
+29	manus, manus, f.					hand; band (of men)
+29	occasus, occasus, m.					setting, downfall, a going down
+29	passus, passus, m.					pace
+29	portus, portus, m.					harbor, port
+29	senatus, senatus, m.					senate
+29	usus, usus, m.						use; advantage; practice, experience
+56	casus, casus, m.					fall; chance, accident; fate
+59	equitatus, equitatus, m.				cavalry
+59	magistratus, magistratus, m.				public office, magistracy; magistrate

@@ -1,0 +1,95 @@
+6	altus, alta, altum					high, deep
+6	bonus, bona, bonum					good
+6	ferus, fera, ferum					wild, fierce, savage
+6	latus, lata, latum					wide
+6	longus, longa, longum					long
+6	magnus, magna, magnum				great, large
+6	malus, mala, malum					bad
+6	meus, mea, meum					my, mine
+6	multus, multa, multum				much; many (in plural)
+6	parvus, parva, parvum					small
+6	tuus, tua, tuum						your, yours (when speaking to 1 person)
+8	liber, libera, liberum					free
+	(don’t confuse with the nouns liber, libri, m. = book or with liberi, liberorum, m. pl. = children)
+8	miser, misera, miserum				poor; wretched, unfortunate
+8	noster, nostra, nostrum				our, ours
+8	pulcher, pulchra, pulchrum				beautiful; noble, fine
+8	sacer, sacra, sacrum					sacred, holy
+8	vester, vestra, vestrum					your, yours (when speaking to more than 1)
+13	albus, alba, album					white
+13	amicus, amica, amicum				friendly + dative
+13	gratus, grata, gratum					pleasing, welcome; grateful + dative
+13	inimicus, inimica, inimicum				unfriendly, hostile + dative
+13	niger, nigra, nigrum					black
+13	novus, nova, novum					new; strange
+13	paratus, parata, paratum				ready, prepared
+13	verus, vera, verum					true
+15	Germanus, Germana, Germanum			German
+15	Graecus, Graeca, Graecum				Greek
+15	Hispanus, Hispana, Hispanum			Spanish
+15	Romanus, Romana, Romanum			Roman
+17	Helvetius, Helvetia, Helvetium			Helvetian, of the Helvetians
+18	Britannus, Britanna, Britannum			British
+18	Gallus, Galla, Gallum					Gallic	
+18	Troianus, Troiana, Troianum				Trojan
+31	frumentarius, frumentaria, frumentarium		having to do with grain
+31	publicus, publica, publicum				belonging to the people, public
+33	aequus, aequa, aequum				level; fair, even, just, calm
+33	amplus, ampla, amplum				large, ample
+33	barbarus, barbara, barbarum				foreign, strange, barbarous
+33 	certus, certa, certum					sure, certain
+33	iniquus, iniqua, iniquum				uneven; unfair; unfavorable
+33	iustus, iusta, iustum					right, just, fair
+33 	laetus, laeta, laetum					happy, joyful, glad
+33	notus, nota, notum					famous, well-known + dative
+34	aureus, aurea, aureum					golden
+34	cupidus, cupida, cupidum				eager, desirous
+34	dexter, dextra, dextrum				right
+34	durus, dura, durum					hard
+34	idoneus, idonea, idoneaum				suitable (to/for) + dative
+34	finitimus, finitima, finitimum				neighboring + dative
+34	posterus, postera, posterum				following, next (w/time words)
+34	propinquus, propinqua, propinquum			near, nearby + dative
+34	proximus, proxima, proximum			nearest, next + dative
+34	sinister, sinistra, sinistrum				left
+34	validus, valida, validum				strong
+35	medius, media, medium				middle (of)
+37	alienus, aliena, alienum				belonging to another, another’s
+37	idem, eadem, idem					same
+37	ipse, ipsa, ipsum 					the very, -------self
+37	alius, alia, aliud					other, another
+		alius…..alius					one…..another
+		alii…..alii					some…others
+37	alter, altera, alterum					the other (of 2), the second
+		alter….alter					the one…..the other
+37	uter, utra, utrum					which (of the 2)
+37	uterque, utraque, utrumque				each (of 2)
+37	neuter, neutra, neutrum				neither (of 2)
+37	ullus, ulla, ullum					any
+37	nullus, nulla, nullum					not any,  no .......
+37	solus, sola, solum					only; alone
+37	totus, tota, totum					whole, entire
+37	unus, una, unum					one
+40	suus, sua, suum					his own, her own, its own, their own
+43	calidus, calida, calidum				hot
+43	frigidus, frigida, frigidum				cold
+47	privatus, privata, privatum				private
+47	quantus, quanta, quantum				how great? how much?
+47	quot							how many?
+48	tot							so many
+48	necesse						necessary
+48	tantus, tanta, tantum					so much, so great, so large 
+49	defessus, defessa, defessum				tired
+49	impeditus, impedita, impeditum			hindered, handicapped, in difficulty
+49	mirus, mira, mirum					strange, wonderful
+51	tutus, tuta, tutum					safe
+51	quidam, quaedam, quoddam				certain, some
+54	aeger, aegra, aegrum					sick
+54	apertus, aperta, apertum				open, exposed
+54	egregius, egregia, egregium				outstanding
+54	integer, integra, integrum				untouched, undiminished; whole, entire
+54	maritimus, maritima, maritimum			of the sea
+54	necessarius, necessaria, necessarium			necessary
+56	ceteri, ceterae, cetera					the rest (of); the other
+	reliquus, reliqua, reliquum				remaining, rest (of)
+	pauci, paucae, pauca					few; a few (of

@@ -1,0 +1,32 @@
+24	accipio, accipere, accepi, acceptus			receive, accept
+24	capio, capere, cepi, captum				take; seize, capture
+		consilium capere				to adopt a plan; to form/make a plan
+24	conficio, conficere, confeci, confectus		complete, finish, accomplish
+24	conicio, conicere, conieci, coniectum			hurl; throw together
+24	cupio, cupere, cupivi, cupitum			desire, wish, want
+24	facio, facere, feci, factum				do; make
+24	fugio, fugere, fugi, fugitum				run away, flee
+24	iacio, iacere, ieci, iactus				throw; hurl
+24	incipio, incipere, incepi, inceptus			begin; take to 
+24	interficio, interficere, interfeci, interfectus		kill
+38	recipio, recipere, recepi, receptum			accept, receive; take back, recover
+41	conspicio, conspicere, conspexi, conspectum		look at attentively, observe closely, spot
+41 	deficio, deficere, defeci, defectum			fail; revolt, desert
+42	perficio, perficere perfeci, perfectum			finish, accomplish
+48	efficio, efficere, effeci, effectum			bring about, complete, make
+	afficio, afficere, affeci, affectus			afflict with, influence, have an emotional impact
+50	patior, pati, passus sum				suffer, endure, permit, allow
+51	gradior, gradi, gressus sum				walk
+51	aggredior, aggredi, aggressus sum			go to, approach, attack
+51	ingredior, ingredi, ingressus sum			go into, enter, begin, advance
+51	egredior, egredi, egressus sum			depart, walk out
+51	progredior, progredi, progressus sum			go forth, advance, proceed
+51	congredior, congredi, congressus sum		go together, assemble, meet
+56	suscipio, suscipere, suscepi, susceptum		undertake
+57	eripio, eripere, eripui, ereptum			rescue, snatch away
+57	praeficio, praeficere, praefeci, praefectum		place over, place in command of
+57	rapio, rapere, rapui, raptum				seize; snatch
+58	aperio, aperire, aperui, apertum			open, expose
+60	morior, mori, mortuus sum				die
+60	reficio, reficere, refeci, refectum			repair, restore
+60	reicio, reicere, reieci reiectum				throw back, repulse

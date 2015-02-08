@@ -1,0 +1,85 @@
+1	agricola, agricolae, m.					farmer
+1	aqua, aquae, f.						water
+1 	femina, feminae, f.					woman
+1	fortuna, fortunae, f.					fortune, luck
+1	Gallia, Galliae, f.					Gaul
+1	insula, insulae, f.					island
+1	Italia, Italiae, f.					Italy
+1 	lingua, linguae, f.					tongue, language
+1	littera, litterae, f. 					letter (of alphabet); PL - a letter (epistle)
+1	memoria, memoriae, f.				memory
+1	natura, naturae, f.					nature
+1	poeta, poetae, m.					poet
+1	provincia, provinciae, f. 				province
+1	puella, puellae, f.					girl
+1	silva, silvae, f. 					forest, woods
+1	vita, vitae, f. 						life
+2	amicitia, amicitiae, f.					friendship
+2	patria, patriae, f. 					country, homeland
+3	Europa, Europae, f.					Europe
+3	Germania, Germaniae, f.				Germany
+3	Hispania, Hispaniae, f.				Spain
+3	nauta, nautae, m. 					sailor
+3	porta, portae, f.					gate
+3	Roma, Romae, f.					Rome
+3	terra, terrae, f.						earth, land
+3	tuba, tubae, f.						trumpet
+3	via, viae, f. 						road, way, street
+3	villa, villae, f.						farmhouse
+4	dea, deae, f. *						goddess
+4	filia, filiae, f. *						daughter
+10 	Africa, Africae, f.					Africa
+10	Asia, Asiae, f.						Asia Minor (modern day Turkey mostly)
+11	copia, copiae, f.					plenty, supply, abundance
+11	copiae, copiarum, f.					forces, troops
+11	fama, famae, f.					rumor, report, fame, reputation
+11	fuga, fugae, f. 						flight (in fugam do					put to flight, cause to run away)
+12	audacia, audaciae, f.					daring, boldness
+12	cura, curae, f.						care, anxiety, concern
+12	inopia, inopiae, f.					lack, want
+12	ira, irae, f.						anger
+12 	poena, poenae, f.					punishment, penalty
+13	causa, causae, f.					cause; reason; case
+13	epistula, epistulae, f.					letter, epistle
+13	fabula, fabulae, f.					story
+13	hora, horae, f.						hour
+13	Iulia, Iuliae, f.						Julia
+13	pecunia, pecuniae, f.					money
+13	regina, reginae, f.					queen
+15	diligentia, diligentiae, f.				diligence, care
+21	Britannia, Britanniae, f.				Britain
+21	cena, cenae, f.						dinner
+21	fenestra, fenestrae, f.					window
+21	Graecia, Graeciae, f.					Greece
+21 	Helvetia, Helvetiae, f.					Helvetia (modern Switzerland)
+21	iniuria, iniuriae, f.					injustice, wrong, injury
+21	mensa, mensae, f.					table
+21	pugna, pugnae, f.					fight, battle
+21	sella, sellae, f.						chair, seat
+21	Sicilia, Siciliae, f.					Sicily
+21	Troia, Troiae, f.					Troy
+21	victoria, victoriae, f.					victory
+31	ianua, ianuae, f.					door
+37	herba, herbae, f.					grass
+37	toga, togae, f.						toga
+40	gloria, gloriae, f.					glory
+40	luna, lunae, f.						moon
+40 	mora, morae, f.					delay
+40	stella, stellae, f.					star
+43	insidiae, insidiarum, f., pl.				trap, ambush, plot
+43	sententia, sententiae, f.				opinion
+44	fossa, fossae, f.					ditch
+46	vigilia, vigiliae, f.					wakefulness, watchfulness; watch
+49	sagitta, sagittae, f.					arrow
+50	Athenae, Athenarum, f.				Athens
+54	ripa, ripae, f.						bank (of a stream)
+58	gratia, gratiae, f.					favor, influence; gratitude
+59	lacrima, lacrimae, f.					tear
+	familia, familiae, f. 					family
+	forma, formae, f.					shape
+	unda, undae, f.						wave
+ 	disciplina, disciplinae, f. 				training, instruction
+	materia, materiae, f.					timber, wood, matter
+	casa, casae, f.						house
+	concordia, concordiae, f.				harmony
+	superbia, superbiae, f.					arrogance, pride	

@@ -1,0 +1,61 @@
+2	amo, amare, amavi, amatus				love, like
+2	do, dare, dedi, datus					give
+2	laudo, laudare, laudavi, laudatus 			praise
+2	navigo, navigare, navigavi, navigatus			sail
+2	occupo, occupare, occupavi, occupatus		seize, capture
+2	paro, parare, paravi, paratus				get, get ready, prepare
+2	porto, portare, portavi, portatus			carry
+2	pugno, pugnare, pugnavi, pugnatus			fight
+2	specto, spectare, spectavi, spectatus			look (at); watch
+2	voco, vocare, vocavi, vocatus				call
+7	appello, appellare, appellavi, appellatus		call; name; address
+7	convoco, convocare, convocavi, convocatus		call together
+7	exspecto, exspectare, exspectavi, exspectatus	look out for, await, wait for
+7	habito, habitare, habitavi, habitatus			live, dwell
+7	laboro, laborare, laboravi, laboratus			work
+7	narro, narrare, narravi, narratus			tell, relate
+7	nuntio, nuntiare, nuntiavi, nuntiatus			announce, report
+7	supero, superare, superavi, superatus			surpass, defeat, conquer, excel (get better at)
+7	volo, volare, volavi, volatus				fly
+7	vulnero, vulnerare, vulneravi, vulneratus		wound
+10	ambulo, ambulare, ambulavi, ambulatus		walk
+10	clamo, clamare, clamavi, clamatus			shout, cry out
+10	confirmo, confirmare, confirmavi, confirmatus	strengthen; encourage, declare
+10	(de)monstro, monstrare, monstravi, monstratus 	point out, show
+10	libero, liberare, liberavi, liberatus			free
+10	oppugno, oppugnare, oppugnavi, oppugnatus	attack
+10	servo, servare, servavi, servatus			save; guard, keep
+10	sto, stare, steti, statum					stand, stand up
+10	tempto, temptare, temptavi, temptatum		try, attempt
+14	delecto, delectare, delectavi, delectatum		please
+38	dubito, dubitare, dubitavi, dubitatum			doubt; hesitate
+38	lavo, lavare, lavi, lautum				wash	
+38	probo, probare, probavi, probatum			prove; approve of
+39	existimo, existimare, existimavi, existimatum	think, suppose, consider
+39	iudico, iudicare, iudicavi, iudicatum			judge, consider	
+39	nego, negare, negavi, negatum			deny, say…..not
+39	puto, putare, putavi, putatum				think
+39	spero, sperare, speravi, speratum			hope
+41 	enuntio, enuntiare, enuntiavi, enuntiatum		report, announce
+41	incito, incitare, incitavi, incitatum			stir up, arouse
+42	armo, armare, armavi, armatum			arm, equip
+42	erro, errare, erravi, erratum				wander; make a mistake
+45	impero, imperare, imperavi, imperatum		order, command (+dat)
+45	mando, mandare, mandavi, mandatum		command, instruct; entrust (+dat)
+45	oro, orare, oravi, oratum				beg (+acc)
+45	postulo, postulare, postulavi, postulatum		demand (+ a +abl)
+45	rogo, rogare, rogavi, rogatum				ask (+ acc)
+49	conservo, conservare, conservavi, conservatum	save, keep
+49	vasto, vastare, vastavi, vastatum			lay waste, devastate
+49	renuntio, renuntiare, renuntiavi, renuntiatum		report, bring back word (of)
+50	hortor, hortari, hortatus sum				urge
+50	moror, morari, moratus sum				delay
+50	arbitror, arbitrari, arbitratus sum			think, judge
+50	conor, conari, conatus sum				try
+53	appropinquo, appropinquare, appropinquavi, appropinquatum	approach, draw near
+53	comparo, comparare, comparavi, comparatum	prepare; compare; get
+55	hiemo, hiemare, hiemavi, hiematum			spend the winter
+56	exploro, explorare, exploravi, exploratum		search out, explore, reconnoiter
+56	perturbo, perturbare, perturbavi, perturbatum		alarm, upset, throw into confusion
+58	iuvo, iuvare, iuvi, iutum				help, aid
+60	miror, mirari, miratus sum				wonder at; be surprised

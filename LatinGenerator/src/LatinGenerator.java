@@ -13,11 +13,11 @@ public class LatinGenerator {
 		
 		System.out.println("------------");
 		
-		System.out.println(FileParser.getNounsToChapter(3)); //working on this.
+		//System.out.println(FileParser.getNounsToChapter(3)); //working on this.
 		
-		//for (int i = 0; i < 20; i++) {
-		//	System.out.println(Clause.makeToBeSentence(4).formatAsSentence());
-		//}
+		for (int i = 0; i < 20; i++) {
+			System.out.println(Clause.makeToBeSentence(2).formatAsSentence());
+		}
 		
 		//System.out.println(Util.getWordsUpToChapter(FileParser.getAllNouns(), 3));
 		

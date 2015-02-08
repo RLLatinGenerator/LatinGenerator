@@ -567,5 +567,4 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 		return (TreeSet<Adjective>) allAdjectives.subSet(Values.makeHighestChapterAdjective(0), Values.makeHighestChapterAdjective(chapter));
 	}
 
-
 }
