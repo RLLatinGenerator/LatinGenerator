@@ -26,10 +26,10 @@ public class Clause {
 	
 	public static Clause makeToBeSentence(int maxChapter){
 
-		int subjNumber = Util.getRandomPlurality();
-		Clause conjugatedSubject = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, subjNumber, maxChapter);
-		Clause conjugatedPredicate = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, Util.getRandomPlurality(), maxChapter);
-		ConjugatedVerb toBe = new ConjugatedVerb(subjNumber==Values.NUMBER_SINGULAR ? "est" : "sunt", Values.INDEX_TENSE_PRESENT, subjNumber, 3);
+		int number = Util.getRandomPlurality();
+		Clause conjugatedSubject = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, number, maxChapter);
+		Clause conjugatedPredicate = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, number, maxChapter);
+		ConjugatedVerb toBe = new ConjugatedVerb(number==Values.NUMBER_SINGULAR ? "est" : "sunt", Values.INDEX_TENSE_PRESENT, number, 3);
 		
 		return Clause.appendClauses(new Clause[]{conjugatedSubject, toBe.asClause(), conjugatedPredicate});
 	}
