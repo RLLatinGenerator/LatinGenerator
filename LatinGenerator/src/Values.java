@@ -3,6 +3,10 @@ import java.util.ArrayList;
 
 public class Values {
 	
+	public Values(){
+		highestDefinitions.add("zz");
+	}
+	
 	//Noun land
 	public static final int CASE_NOMINATIVE = 0;
 	public static final int CASE_GENTIVE = 1;
@@ -14,11 +18,13 @@ public class Values {
 	
 	public static final String[] CASE_NAMES_BY_INDEX = new String[]{"Nominative", "Genitive", "Dative", "Accusative", "Ablative"};
 	
+	public static ArrayList<String> highestDefinitions = new ArrayList<String>();
+	
 	public static final int GENDER_MASCULINE = 0;
 	public static final int GENDER_FEMININE = 1;
 	public static final int GENDER_NEUTER = 2;
 	
-	public static final double PROBABILITY_ATTACH_GENITIVE = 0.1;
+	public static final double PROBABILITY_ATTACH_GENITIVE = 0.2;
 	
 	public static final int NUMBER_PLURAL = 1;
 	public static final int NUMBER_SINGULAR = 0;
@@ -152,6 +158,36 @@ public class Values {
 	
 	
 	public static final String[] CASE_SHORTHAND = new String[]{CASE_NOMINATIVE_SHORTHAND, CASE_GENITIVE_SHORTHAND, CASE_DATIVE_SHORTHAND, CASE_ACCUSATIVE_SHORTHAND, CASE_ABLATIVE_SHORTHAND};
+	
+	
+	
+	public static Noun makeHighestChapterNoun(int chapter){
+		return new Noun("aus", "ai", chapter, Values.INDEX_NOUN_TYPE_DECLENSION_SECOND, GENDER_MASCULINE, highestDefinitions);
+	}
+	
+	public static Verb makeHighestChapterVerb(int chapter){
+		return new Verb("ao", "aare", "aavi", "aatus", Values.INDEX_CONJUGATION_FIRST, chapter, highestDefinitions);
+	}
+	
+	public static Adjective makeHighestChapterAdjective(int chapter){
+		return new Adjective("aus", "aa", "aum", chapter, Values.DELCENSION_ADJECTIVE_FIRST_AND_SECOND, highestDefinitions);
+	}
+	
+	public static Adverb makeHighestChapterAdverb(int chapter){
+		return new Adverb("-", chapter, highestDefinitions);
+	}
+	
+	public static Conjunction makeHighestChapterConjunction(int chapter){
+		return new Conjunction("-", chapter, highestDefinitions);
+	}
+	
+	public static Pronoun makeHighestChapterPronoun(int chapter){
+		return new Pronoun(chapter, highestDefinitions);
+	}
+	
+	public static Preposition makeHighestChapterPreposition(int chapter){
+		return new Preposition("-", chapter, Values.CASE_NOMINATIVE, highestDefinitions);
+	}
 	
 	public static int getGenderIndex(char gender){
 		if(gender == Values.GENDER_MASCULINE_CHAR){

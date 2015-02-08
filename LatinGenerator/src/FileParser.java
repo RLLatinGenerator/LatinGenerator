@@ -4,15 +4,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class FileParser { //this is a personal WIP; I'm anticipating finishing it up within the next few days. 
 	
-	private static ArrayList<Noun> allNouns;
-	private static ArrayList<Verb> allVerbs;
-	private static ArrayList<Adjective> allAdjectives;
-	private static ArrayList<Adverb> allAdverbs;
-	private static ArrayList<Conjunction> allConjunctions;
-	private static ArrayList<Preposition> allPrepositions;
+	private static TreeSet<Noun> allNouns;
+	private static TreeSet<Verb> allVerbs;
+	private static TreeSet<Adjective> allAdjectives;
+	private static TreeSet<Adverb> allAdverbs;
+	private static TreeSet<Conjunction> allConjunctions;
+	private static TreeSet<Preposition> allPrepositions;
 	
 	public static void parseFromDirectory(File input){ //input is a directory containing the data files.
 		
@@ -65,12 +66,12 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 			conjunctions = new Scanner(new File(inputLocation+"\\Conjunctions.txt"));
 
 			//Make the arraylists to hold data
-			allNouns = new ArrayList<Noun>();
-			allVerbs = new ArrayList<Verb>();
-			allAdjectives = new ArrayList<Adjective>();
-			allAdverbs = new ArrayList<Adverb>();
-			allConjunctions = new ArrayList<Conjunction>();
-			allPrepositions = new ArrayList<Preposition>();
+			allNouns = new TreeSet<Noun>();
+			allVerbs = new TreeSet<Verb>();
+			allAdjectives = new TreeSet<Adjective>();
+			allAdverbs = new TreeSet<Adverb>();
+			allConjunctions = new TreeSet<Conjunction>();
+			allPrepositions = new TreeSet<Preposition>();
 			
 			allNouns.addAll(parseNouns(nouns1, Values.INDEX_NOUN_TYPE_DECLENSION_FIRST));
 			allNouns.addAll(parseNouns(nouns2, Values.INDEX_NOUN_TYPE_DECLENSION_SECOND));
@@ -90,6 +91,8 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 			allAdverbs.addAll(parseAdverbs(adverbs));
 			allPrepositions.addAll(parsePrepositions(prepositions));
 			allConjunctions.addAll(parseConjunctions(conjunctions));
+			
+			//make sure that everything is sorted by chapter!
 			
 			//close everything
 			nouns1.close();
@@ -124,9 +127,9 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 
 
 
-	static ArrayList<Preposition> parsePrepositions(Scanner data){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
+	static TreeSet<Preposition> parsePrepositions(Scanner data){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
 		ArrayList<String[]> raw = parseDataToArray(data);
-		ArrayList<Preposition> output = new ArrayList<Preposition>();
+		TreeSet<Preposition> output = new TreeSet<Preposition>();
 
 		for(String[] current : raw){ //iterate over each line from the original file.
 
@@ -171,10 +174,10 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 		return output;
 	}
 
-	static ArrayList<Adjective> parseAdjective12(Scanner data){ //use ADJECTIVE_DECLENSION, not declensions for nouns. Can parse 1st and 2nd declension.
+	static TreeSet<Adjective> parseAdjective12(Scanner data){ //use ADJECTIVE_DECLENSION, not declensions for nouns. Can parse 1st and 2nd declension.
 		int declension = Values.DELCENSION_ADJECTIVE_FIRST_AND_SECOND;
 		ArrayList<String[]> raw = parseDataToArray(data);
-		ArrayList<Adjective> output = new ArrayList<Adjective>();
+		TreeSet<Adjective> output = new TreeSet<Adjective>();
 
 		for(String[] current : raw){ //iterate over each line from the original file.
 
@@ -214,11 +217,11 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 		return output;
 	}
 
-	static ArrayList<Adjective> parseAdjective3(Scanner data){ //use ADJECTIVE_DECLENSION, not declensions for nouns. Can parse 3rd declension. 
+	static TreeSet<Adjective> parseAdjective3(Scanner data){ //use ADJECTIVE_DECLENSION, not declensions for nouns. Can parse 3rd declension. 
 		
 		int declension = -1;
 		ArrayList<String[]> raw = parseDataToArray(data);
-		ArrayList<Adjective> output = new ArrayList<Adjective>();
+		TreeSet<Adjective> output = new TreeSet<Adjective>();
 
 		for(String[] current : raw){ //iterate over each line from the original file.
 
@@ -272,10 +275,10 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 		return output;
 	}
 
-	static ArrayList<Noun> parseNouns(Scanner data, int declension){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
+	static TreeSet<Noun> parseNouns(Scanner data, int declension){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
 		assert(declension != Values.INDEX_ENDINGS_DECLENSION_THIRD && declension != Values.INDEX_ENDINGS_DECLENSION_THIRD_I_N && declension != Values.INDEX_ENDINGS_DECLENSION_THIRD_I_N); //there's a separate function for these guys.
 		ArrayList<String[]> raw = parseDataToArray(data);
-		ArrayList<Noun> output = new ArrayList<Noun>();
+		TreeSet<Noun> output = new TreeSet<Noun>();
 
 		for(String[] current : raw){ //iterate over each line from the original file.
 
@@ -323,11 +326,11 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 		return output;
 	}
 
-	static ArrayList<Noun> parse3rdNouns(Scanner data){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
+	static TreeSet<Noun> parse3rdNouns(Scanner data){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
 
 		int declension = 3;
 		ArrayList<String[]> raw = parseDataToArray(data);
-		ArrayList<Noun> output = new ArrayList<Noun>();
+		TreeSet<Noun> output = new TreeSet<Noun>();
 
 		for(String[] current : raw){ //iterate over each line from the original file.
 
@@ -380,9 +383,9 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 		return output;
 	}
 
-	static ArrayList<Conjunction> parseConjunctions(Scanner data){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
+	static TreeSet<Conjunction> parseConjunctions(Scanner data){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
 		ArrayList<String[]> raw = parseDataToArray(data);
-		ArrayList<Conjunction> output = new ArrayList<Conjunction>();
+		TreeSet<Conjunction> output = new TreeSet<Conjunction>();
 
 		for(String[] current : raw){ //iterate over each line from the original file.
 
@@ -418,9 +421,9 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 		return output;
 	}
 
-	static ArrayList<Adverb> parseAdverbs(Scanner data){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
+	static TreeSet<Adverb> parseAdverbs(Scanner data){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
 		ArrayList<String[]> raw = parseDataToArray(data);
-		ArrayList<Adverb> output = new ArrayList<Adverb>();
+		TreeSet<Adverb> output = new TreeSet<Adverb>();
 
 		for(String[] current : raw){ //iterate over each line from the original file.
 
@@ -456,9 +459,9 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 		return output;
 	}
 
-	static ArrayList<Verb> parseVerbs(Scanner data, int conjugation){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
+	static TreeSet<Verb> parseVerbs(Scanner data, int conjugation){ //given a declension file, parse the nouns. Cannot do ones that have i-stem or no i-stem clarifications
 		ArrayList<String[]> raw = parseDataToArray(data);
-		ArrayList<Verb> output = new ArrayList<Verb>();
+		TreeSet<Verb> output = new TreeSet<Verb>();
 
 		for(String[] current : raw){ //iterate over each line from the original file.
 
@@ -517,7 +520,6 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 
 		return toParse;
 
-
 	}
 
 	static String fixInputLine(String input){ //get rid of tabs, etc: format in a more computer-readable way.
@@ -535,64 +537,35 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 		return fixed;
 	}
 
-
-	public static ArrayList<Noun> getAllNouns() {
-		return allNouns;
+	public static TreeSet<Preposition> getPrepositionsToChapter(int chapter) {
+		chapter++;
+		return (TreeSet<Preposition>) allPrepositions.subSet(Values.makeHighestChapterPreposition(0), Values.makeHighestChapterPreposition(chapter));
+	}
+	
+	public static TreeSet<Adverb> getAdverbsToChapter(int chapter) {
+		chapter++;
+		return (TreeSet<Adverb>) allAdverbs.subSet(Values.makeHighestChapterAdverb(0), Values.makeHighestChapterAdverb(chapter));
+	}
+	
+	public static TreeSet<Noun> getNounsToChapter(int chapter) {
+		chapter++;
+		return (TreeSet<Noun>) allNouns.subSet(Values.makeHighestChapterNoun(0), Values.makeHighestChapterNoun(chapter));
+	}
+	
+	public static TreeSet<Verb> getVerbsToChapter(int chapter) {
+		chapter++;
+		return (TreeSet<Verb>) allVerbs.subSet(Values.makeHighestChapterVerb(0), Values.makeHighestChapterVerb(chapter));
+	}
+	
+	public static TreeSet<Conjunction> getConjunctionsToChapter(int chapter) {
+		chapter++;
+		return (TreeSet<Conjunction>) allConjunctions.subSet(Values.makeHighestChapterConjunction(0), Values.makeHighestChapterConjunction(chapter));
+	}
+	
+	public static TreeSet<Adjective> getAdjectivesToChapter(int chapter) {
+		chapter++;
+		return (TreeSet<Adjective>) allAdjectives.subSet(Values.makeHighestChapterAdjective(0), Values.makeHighestChapterAdjective(chapter));
 	}
 
-
-	public static void setAllNouns(ArrayList<Noun> allNouns) {
-		FileParser.allNouns = allNouns;
-	}
-
-
-	public static ArrayList<Verb> getAllVerbs() {
-		return allVerbs;
-	}
-
-
-	public static void setAllVerbs(ArrayList<Verb> allVerbs) {
-		FileParser.allVerbs = allVerbs;
-	}
-
-
-	public static ArrayList<Adjective> getAllAdjectives() {
-		return allAdjectives;
-	}
-
-
-	public static void setAllAdjectives(ArrayList<Adjective> allAdjectives) {
-		FileParser.allAdjectives = allAdjectives;
-	}
-
-
-	public static ArrayList<Adverb> getAllAdverbs() {
-		return allAdverbs;
-	}
-
-
-	public static void setAllAdverbs(ArrayList<Adverb> allAdverbs) {
-		FileParser.allAdverbs = allAdverbs;
-	}
-
-
-	public static ArrayList<Conjunction> getAllConjunctions() {
-		return allConjunctions;
-	}
-
-
-	public static void setAllConjunctions(ArrayList<Conjunction> allConjunctions) {
-		FileParser.allConjunctions = allConjunctions;
-	}
-
-
-	public static ArrayList<Preposition> getAllPrepositions() {
-		return allPrepositions;
-	}
-
-
-	public static void setAllPrepositions(ArrayList<Preposition> allPrepositions) {
-		FileParser.allPrepositions = allPrepositions;
-	}
 
 }

@@ -53,17 +53,17 @@ public class Noun extends Word{
 		return nominative;
 	}
 
-	public static Noun getRandomNoun(){
+	public static Noun getRandomNoun(int maxChapter){
 		Random r = new Random();
-		return FileParser.getAllNouns().get(r.nextInt(FileParser.getAllNouns().size()));
+		return (Noun) FileParser.getNounsToChapter(maxChapter).toArray()[r.nextInt(FileParser.getNounsToChapter(maxChapter).size())];
 	}
 
-	public static Clause getRandomNounClause(int Case, int number){
+	public static Clause getRandomNounClause(int Case, int number, int maxChapter){
 		Random r = new Random();
 		if(r.nextDouble() < Values.PROBABILITY_ATTACH_GENITIVE){ //chosen to have an attached genitive.
-			return (new Clause(new ConjugatedWord[]{getRandomNoun().decline(Case, number), getRandomNoun().decline(Values.CASE_GENTIVE, Util.getRandomPlurality())}));
+			return new Clause(new Clause[]{getRandomNounClause(Case, number, maxChapter), getRandomNounClause(Values.CASE_GENTIVE, Util.getRandomPlurality(), maxChapter)});
 		} else {
-			return (new Clause(new ConjugatedWord[]{getRandomNoun().decline(Case, number)}));
+			return (new Clause(new ConjugatedWord[]{getRandomNoun(maxChapter).decline(Case, number)}));
 		}
 	}
 }

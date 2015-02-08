@@ -5,6 +5,10 @@ import java.util.Random;
 public class Clause {
 	ConjugatedWord[] words;
 
+	public Clause(Clause[] subClauses){
+		this.words = appendClauses(subClauses).getWords();
+	}
+	
 	public Clause(ConjugatedWord[] words){
 		this.words = words;
 	}
@@ -20,11 +24,11 @@ public class Clause {
 		return output.toString();
 	}
 	
-	public static Clause makeToBeSentence(){
+	public static Clause makeToBeSentence(int maxChapter){
 
 		int subjNumber = Util.getRandomPlurality();
-		Clause conjugatedSubject = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, subjNumber);
-		Clause conjugatedPredicate = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, Util.getRandomPlurality());
+		Clause conjugatedSubject = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, subjNumber, maxChapter);
+		Clause conjugatedPredicate = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, Util.getRandomPlurality(), maxChapter);
 		ConjugatedVerb toBe = new ConjugatedVerb(subjNumber==Values.NUMBER_SINGULAR ? "est" : "sunt", Values.INDEX_TENSE_PRESENT, subjNumber, 3);
 		
 		return Clause.appendClauses(new Clause[]{conjugatedSubject, toBe.asClause(), conjugatedPredicate});
