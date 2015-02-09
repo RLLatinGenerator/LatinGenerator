@@ -19,7 +19,7 @@ public class LatinGenerator {
 			System.out.println(Clause.makeToBeSentence(2).formatAsSentence());
 		}*/
 		
-		System.out.println(Clause.makeSubjVerbSentence(2, 0));
+		System.out.println(Clause.makeSubjVerbSentence(2, 0).formatAsSentence());
 		
 		System.out.println(Util.getRandomNounAttachment());
 		
