@@ -23,8 +23,14 @@ public class Values {
 	public static final int GENDER_MASCULINE = 0;
 	public static final int GENDER_FEMININE = 1;
 	public static final int GENDER_NEUTER = 2;
+
+	public static final double NOUN_CLAUSE_PROBABILITY_ATTACH_GENITIVE = 1; //these work like slices in a pie; if they add up to 8, and this is 2, there is a 1/4 chance of adding a genitive
+	public static final double NOUN_CLAUSE_PROBABILITY_ATTACH_NOTHING = 7;
 	
-	public static final double PROBABILITY_ATTACH_GENITIVE = 0.0;
+	public static final double[] NOUN_CLAUSE_PROBABILITY_ATTACH_TO_NOUN_CLAUSE = new double[]{NOUN_CLAUSE_PROBABILITY_ATTACH_NOTHING, NOUN_CLAUSE_PROBABILITY_ATTACH_GENITIVE};
+	
+	public static final int INDEX_NOUN_CLAUSE_ATTACH_NOTHING = 0;
+	public static final int INDEX_NOUN_CLAUSE_ATTACH_GENITIVE = 1;
 	
 	public static final int NUMBER_PLURAL = 1;
 	public static final int NUMBER_SINGULAR = 0;

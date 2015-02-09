@@ -21,6 +21,8 @@ public class LatinGenerator {
 		
 		System.out.println(Clause.makeSubjVerbSentence(2, 0));
 		
+		System.out.println(Util.getRandomNounAttachment());
+		
 		//System.out.println(Util.getWordsUpToChapter(FileParser.getAllNouns(), 3));
 		
 	}
