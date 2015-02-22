@@ -20,9 +20,9 @@ public class Noun extends Word{
 
 	public ConjugatedNoun decline(int Case, int number){
 		if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR){
-			return new ConjugatedNoun(nominative, Values.NUMBER_SINGULAR, Values.CASE_NOMINATIVE, gender);
+			return new ConjugatedNoun(this, nominative, Values.NUMBER_SINGULAR, Values.CASE_NOMINATIVE, gender);
 		}
-		return new ConjugatedNoun(addEnding(Values.DECLENSION_NOUNS[declension][number][Case]), number, Case, gender);
+		return new ConjugatedNoun(this, addEnding(Values.DECLENSION_NOUNS[declension][number][Case]), number, Case, gender);
 	}
 
 	public int getGender(){

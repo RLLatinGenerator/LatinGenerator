@@ -10,8 +10,10 @@ public class Adjective extends Word{
 		this.stem = stem;
 	}
 	
-	
-	
+	@Override
+	public String toString() {
+		return "Adjective ";
+	}
 
 
 

@@ -4,8 +4,8 @@ public class ConjugatedNoun extends ConjugatedWord{
 	int Case;
 	int gender;
 	
-	public ConjugatedNoun(String noun, int number, int Case, int gender){
-		super(noun);
+	public ConjugatedNoun(Noun unConjugated, String noun, int number, int Case, int gender){
+		super((Word) unConjugated, noun);
 		this.number = number;
 		this.Case = Case;
 		this.gender = gender;

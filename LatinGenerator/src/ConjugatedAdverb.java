@@ -1,8 +1,8 @@
 
 public class ConjugatedAdverb extends ConjugatedWord{
 
-	public ConjugatedAdverb(String adverb) {
-		super(adverb);
+	public ConjugatedAdverb(Adverb unConjugated, String adverb) {
+		super(unConjugated, adverb);
 		// TODO Auto-generated constructor stub
 	}
 

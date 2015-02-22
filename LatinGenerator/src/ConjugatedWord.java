@@ -1,8 +1,9 @@
 
-public class ConjugatedWord {
+public class ConjugatedWord extends Word{
 	String conjugatedWord;
 	
-	public ConjugatedWord(String conjugatedWord){
+	public ConjugatedWord(Word unConjugated, String conjugatedWord){
+		super(unConjugated);
 		this.conjugatedWord = conjugatedWord;
 	}
 	

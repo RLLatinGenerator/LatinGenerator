@@ -29,24 +29,25 @@ public class Verb extends Word{
 	
 	public ConjugatedVerb presentSysConjugate(int conjugation, int tense, int number, int person){
 		String root = secondPP.substring(0, secondPP.length() - 3);
-		return new ConjugatedVerb(root + Values.CONJUGATION_VERBS[tense][conjugation][number][person], tense, number, person);
+		return new ConjugatedVerb(this, root + Values.CONJUGATION_VERBS[tense][conjugation][number][person], tense, number, person);
 	}
 
 	public ConjugatedVerb perfectSysConjugate(int tense, int number, int person){
 		String root = thirdPP.substring(0, thirdPP.length() - 1);
-		return new ConjugatedVerb(root + Values.CONJUGATION_VERBS[tense][0][number][person], tense, number, person);
+		return new ConjugatedVerb(this, root + Values.CONJUGATION_VERBS[tense][0][number][person], tense, number, person);
 	}
 	
 	public ConjugatedVerb conjugate(int tense, int number, int person){
 		ConjugatedVerb conjugated;
-		if (tense < 3){
+		if (tense <= 2){
 			conjugated = presentSysConjugate(conjugation, tense, number, person);
 		}
-		else if (tense > 2){
+		else if (tense >= 3){
 			conjugated = perfectSysConjugate(tense, number, person);
 		}
 		else{
-			conjugated = new ConjugatedVerb("Error", -1, -1, -1);
+			conjugated = new ConjugatedVerb(null, "Error", -1, -1, -1);
+			System.err.println("ERROR");
 		}
 		return conjugated;
 	}
@@ -66,7 +67,7 @@ public class Verb extends Word{
 			conjugated = verb.conjugate(tense, 1, 2);
 		}
 		else{
-			conjugated = new ConjugatedVerb("Error", -1, -1, -1);
+			conjugated = new ConjugatedVerb(null, "Error", -1, -1, -1);
 		}
 		return conjugated;
 	}
