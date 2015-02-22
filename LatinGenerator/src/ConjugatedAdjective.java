@@ -1,11 +1,11 @@
 
 public class ConjugatedAdjective extends ConjugatedWord{
 
-	int number;
 	int Case;
+	int number;
 	int gender;
 	
-	public ConjugatedAdjective(String conjugatedWord, int number, int Case, int gender) {
+	public ConjugatedAdjective(String conjugatedWord, int Case, int number, int gender) {
 		super(conjugatedWord);
 		this.number = number;
 		this.Case = Case;
