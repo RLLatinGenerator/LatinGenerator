@@ -5,6 +5,12 @@ public class Values {
 	
 	public Values(){
 		highestDefinitions.add("zz");
+		ArrayList<String> sumDefintions = new ArrayList<String>();
+		sumDefintions.add("be");
+		sumDefintions.add("was");
+		sumDefintions.add("were");
+		sumDefintions.add("will");
+		sum = new Verb("sum", "esse", "fui", "futurus", -1, 1, sumDefintions);
 	}
 	
 	//Noun land
@@ -17,6 +23,10 @@ public class Values {
 	//public static final int CASE_LOCATIVE = 6;
 	
 	public static final String[] CASE_NAMES_BY_INDEX = new String[]{"Nominative", "Genitive", "Dative", "Accusative", "Ablative"};
+	
+	public static Verb sum;
+	
+	public static String[] irrelevantEnglishWords = new String[]{"the", "a", "an"};
 	
 	public static ArrayList<String> highestDefinitions = new ArrayList<String>();
 	
