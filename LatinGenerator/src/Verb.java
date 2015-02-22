@@ -53,7 +53,7 @@ public class Verb extends Word{
 	
 	public static Verb getRandomVerb(int maxChapter){
 		Random r = new Random();
-		return (Verb) FileParser.getVerbsToChapter(maxChapter).toArray()[r.nextInt(FileParser.getNounsToChapter(maxChapter).size())];
+		return (Verb) FileParser.getVerbsToChapter(maxChapter).toArray()[r.nextInt(FileParser.getVerbsToChapter(maxChapter).size())];
 	}
 	
 	
