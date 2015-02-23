@@ -251,7 +251,7 @@ public class Values {
 			}
 		}
 		for(Verb i : FileParser.allVerbs){
-			if(i.firstPP().equals(word){
+			if(i.firstPP().equals(word)){
 				returnedWord = i;
 			}
 		}
