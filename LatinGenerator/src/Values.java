@@ -239,7 +239,43 @@ public class Values {
 		}
 		System.out.println("=======");
 	}
-	
+	public static Word getWord(String word){
+		//Reads the data
+		FileParser.parseFromDirectory(new File("src/Data"));
+		//Preinitializes, eclipse made me do it :P
+		Word returnedWord = null;
+		//All the checks, sets var to the word
+		for(Noun i : FileParser.allNouns){
+			if(i.toString().equals(word)){
+				returnedWord = i;
+			}
+		}
+		for(Verb i : FileParser.allVerbs){
+			if(i.firstPP().equals(word){
+				returnedWord = i;
+			}
+		}
+		//TODO Robert fix adjectives pl0x
+		/*for(Adjective i : FileParser.allAdjectives){
+			if(i.stem.equals(word)){
+				returnedWord = i;
+			}
+		}*/
+		for(Adverb i : FileParser.allAdverbs){
+			if(i.toString().equals(word)){
+				returnedWord = i;
+			}
+		}
+		for(Conjunction i : FileParser.allConjunctions){
+			if(i.toString().equals(word)){
+				returnedWord = i;
+			}
+		}
+		//returns the word
+		return returnedWord;
+		
+	}
+
 	public static int getCaseFromString(String shorthand){ //passed "acc.", will return Values.CASE_ACCUSATIVE
 		for(int i = 0; i < 5; i++){
 		if(shorthand.toLowerCase().contains(Values.CASE_SHORTHAND[i]))
