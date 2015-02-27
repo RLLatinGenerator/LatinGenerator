@@ -11,7 +11,7 @@ import Words.Verb;
 public class AblativeAbsolute extends GrammaticalConstruction{
 
 	public AblativeAbsolute(int maxChapter) {
-		super(50, new int[]{}, new Clause());
+		super(50, new int[]{});
 		super.setConstruction(generateRandomGrammaticalConstruction(null, maxChapter));
 	}
 

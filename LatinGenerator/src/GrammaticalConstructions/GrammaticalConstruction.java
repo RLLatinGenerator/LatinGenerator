@@ -11,10 +11,10 @@ public abstract class GrammaticalConstruction {
 	private int[] typesModified;
 	private Clause construction;
 	
-	public GrammaticalConstruction(int chapter, int[] typesModified, Clause construction){
+	public GrammaticalConstruction(int chapter, int[] typesModified){
 		this.chapter = chapter;
 		this.typesModified = Util.copyArray(typesModified);
-		this.construction = new Clause(construction);
+		this.construction = new Clause();
 	}
 	
 	public Clause appendToClause(Clause input){
