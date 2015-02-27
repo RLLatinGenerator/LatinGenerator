@@ -11,7 +11,7 @@
 52	ineo, inire, inii (inivi), initum				go in, to enter
 52	transeo, transire, transii (transivi), transitum		cross
 52	fero, ferre, tuli, latum					bear, carry; bring, take; relate
-52	adfero, adferre, attuli, allatum				bring up, bring to; report
+52	adfero, adferre, adferravi, allatum				bring up, bring to; report
 52	confero, conferre, contuli, collatum			bring together, collect; compare
 52	infero, inferre, intuli, illatum				carry onward; bring upon, inflict
 52	refero, referre,rettuli, relatum				bring back; report
