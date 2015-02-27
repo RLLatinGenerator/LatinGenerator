@@ -32,8 +32,7 @@ public class TwoTerminationAdjective extends Adjective{
 	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		return mascFem + ", " + neuter;
 	}
 
 }

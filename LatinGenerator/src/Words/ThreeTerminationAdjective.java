@@ -34,8 +34,7 @@ public class ThreeTerminationAdjective extends Adjective {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		return masculine + ", " + feminine + ", " + neuter;
 	}
 
 }

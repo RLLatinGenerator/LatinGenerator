@@ -4,15 +4,16 @@ import java.util.ArrayList;
 
 public class OneTerminationAdjective extends Adjective{
 	private String nominative;
+	private String genitive;
 	public OneTerminationAdjective(String nominative, String genitive, int chapter, ArrayList<String> definitions) {
 		super(genitive.substring(0, genitive.length() - 1), chapter, definitions);
 		this.nominative = nominative;
+		this.genitive = genitive;
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		return nominative + ", " + genitive;
 	}
 
 	@Override
