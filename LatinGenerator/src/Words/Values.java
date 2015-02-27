@@ -177,6 +177,9 @@ public class Values {
 	public static final int INDEX_TENSE_FUTURE_PERFECT = 4;
 	public static final int INDEX_TENSE_PLUPERFECT = 5;
 	
+	public static final int INDEX_PARTICIPLE_PRESENT = 0;
+	public static final int INDEX_PARTICIPLE_FUTURE = 1;
+	public static final int INDEX_PARTICIPLE_PERFECT = 2;
 	
 	public static final int NOUN_DATA_ARRAY_LENGTH_CORRECT = 3; //[chapter] [nom, gen, gender] [definition]. Based on tabs.
 	public static final int VERB_DATA_ARRAY_LENGTH_CORRECT = 3;
