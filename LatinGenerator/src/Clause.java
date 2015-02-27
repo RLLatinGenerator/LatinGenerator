@@ -41,13 +41,11 @@ public class Clause {
 			return true;
 		} else {
 			return false;
-		}
-		
+		}	
 	}
 	
-	
 	public static Clause makeToBeSentence(int maxChapter){
-
+		
 		int number = Util.getRandomPlurality();
 		Clause conjugatedSubject = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, number, maxChapter);
 		Clause conjugatedPredicate = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, number, maxChapter);

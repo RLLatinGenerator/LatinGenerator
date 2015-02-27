@@ -51,6 +51,12 @@ public class Values {
 	public static final char GENDER_MASCULINE_CHAR = 'm';
 	public static final char GENDER_FEMININE_CHAR = 'f';
 	
+	public String[] TRANSLATIONS_CASE_NOMINATIVE = new String[]{""};
+	public String[] TRANSLATIONS_CASE_GENITIVE = new String[]{"of", "'s"};
+	public String[] TRANSLATIONS_CASE_DATIVE = new String[]{"to", "for"};
+	public String[] TRANSLATIONS_CASE_ACCUSATIVE = new String[]{"to", "toward"};
+	public String[] TRANSLATIONS_CASE_ABLATIVE = new String[]{"by, because"};
+	
 	public static String[][] DECLENSION_FIRST =  new String[][]{{"a", "ae", "ae", "am", "a"}, {"ae", "arum", "is", "as", "is"}};
 	public static String[][] DECLENSION_SECOND = new String[][]{{"us", "i", "o", "um", "o"}, {"i", "orum", "is", "os", "is"}};
 	public static String[][] DECLENSION_SECOND_N = new String [][]{{"um", "i", "o", "um", "o"}, {"a", "orum", "is", "a", "is"}};
