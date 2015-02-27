@@ -65,7 +65,7 @@ public class Values {
 	public static String[][] DECLENSION_THIRD_I_N = new String[][]{{"", "is", "i", "", "i"}, {"ia", "ium", "ibus", "ia", "ibus"}};
 	public static String[][] DECLENSION_FOURTH = new String[][]{{"us", "us", "ui", "um", "u"}, {"us", "uum", "ibus", "us", "ibus"}};
 	public static String[][] DECLENSION_FOURTH_N = new String[][]{{"u", "us", "u", "u", "u"}, {"ua", "uum", "ibus", "ua", "ibus"}};
-	public static String[][] DECLENSION_FIFTH = new String[][]{{"es","ei","ei","em","e"}, {"es","erum","ebus","es","ebus"}};	//TODO: fifth
+	public static String[][] DECLENSION_FIFTH = new String[][]{{"es","ei","ei","em","e"}, {"es","erum","ebus","es","ebus"}};
 	
 	public static String[][][] DECLENSION_NOUNS = new String[][][]{DECLENSION_FIRST, DECLENSION_SECOND, DECLENSION_SECOND_N, DECLENSION_THIRD, DECLENSION_THIRD_I, DECLENSION_THIRD_I_N, DECLENSION_FOURTH, DECLENSION_FOURTH_N, DECLENSION_FIFTH};
 	
@@ -79,6 +79,15 @@ public class Values {
 	public static final int INDEX_ENDINGS_DECLENSION_FOURTH = 7;
 	public static final int INDEX_ENDINGS_DECLENSION_FOURTH_N = 8;
 	public static final int INDEX_ENDINGS_DECLENSION_FIFTH = 9;
+	
+	public static String[][] DECLENSION_ADJECTIVES_SECOND_M = new String[][]{{"us", "i", "o", "um", "o"}, {"i", "orum", "is", "os", "is"}};
+	public static String[][] DECLENSION_ADJECITVES_SECOND_F =  new String[][]{{"a", "ae", "ae", "am", "a"}, {"ae", "arum", "is", "as", "is"}};
+	public static String[][] DECLENSION_ADJECTIVES_SECOND_N = new String [][]{{"um", "i", "o", "um", "o"}, {"a", "orum", "is", "a", "is"}};
+	public static String[][] DECLENSION_ADJECTIVES_THIRD_M = new String[][]{{"", "is", "i", "em", "e"}, {"es", "ium", "ibus", "es", "ibus"}};
+	public static String[][] DECLENSION_ADJECTIVES_THIRD_F = new String[][]{{"", "is", "i", "em", "e"}, {"es", "ium", "ibus", "es", "ibus"}};
+	public static String[][] DECLENSION_ADJECTIVES_THIRD_N = new String[][]{{"", "is", "i", "", "i"}, {"ia", "ium", "ibus", "ia", "ibus"}};
+	
+	public static String[][][][] DECLENSION_ADJECTIVES = new String[][][][]{{DECLENSION_ADJECTIVES_SECOND_M, DECLENSION_ADJECITVES_SECOND_F, DECLENSION_ADJECTIVES_SECOND_N}, {DECLENSION_ADJECTIVES_THIRD_M, DECLENSION_ADJECTIVES_THIRD_F, DECLENSION_ADJECTIVES_THIRD_N}};
 	
 	public static final int[] declensionGenitiveLength = new int[]{2, 1, 1, 2, 2, 2, 2, 2, 2, 2};
 	
@@ -192,7 +201,7 @@ public class Values {
 	}
 	
 	public static Adjective makeHighestChapterAdjective(int chapter){
-		return new Adjective("aus", "aa", "aum", chapter, Values.DELCENSION_ADJECTIVE_FIRST_AND_SECOND, highestDefinitions);
+		return new Adjective("a", Values.DELCENSION_ADJECTIVE_FIRST_AND_SECOND, chapter, highestDefinitions);
 	}
 	
 	public static Adverb makeHighestChapterAdverb(int chapter){
@@ -236,7 +245,43 @@ public class Values {
 		}
 		System.out.println("=======");
 	}
-	
+	public static Word getWord(String word){
+		//Reads the data
+		FileParser.parseFromDirectory(new File("src/Data"));
+		//Preinitializes, eclipse made me do it :P
+		Word returnedWord = null;
+		//All the checks, sets var to the word
+		for(Noun i : FileParser.allNouns){
+			if(i.toString().equals(word)){
+				returnedWord = i;
+			}
+		}
+		for(Verb i : FileParser.allVerbs){
+			if(i.firstPP().equals(word)){
+				returnedWord = i;
+			}
+		}
+		//TODO Robert fix adjectives pl0x
+		/*for(Adjective i : FileParser.allAdjectives){
+			if(i.stem.equals(word)){
+				returnedWord = i;
+			}
+		}*/
+		for(Adverb i : FileParser.allAdverbs){
+			if(i.toString().equals(word)){
+				returnedWord = i;
+			}
+		}
+		for(Conjunction i : FileParser.allConjunctions){
+			if(i.toString().equals(word)){
+				returnedWord = i;
+			}
+		}
+		//returns the word
+		return returnedWord;
+		
+	}
+
 	public static int getCaseFromString(String shorthand){ //passed "acc.", will return Values.CASE_ACCUSATIVE
 		for(int i = 0; i < 5; i++){
 		if(shorthand.toLowerCase().contains(Values.CASE_SHORTHAND[i]))

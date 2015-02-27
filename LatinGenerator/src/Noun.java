@@ -28,7 +28,19 @@ public class Noun extends Word{
 	public int getGender(){
 		return gender;
 	}
-	
+	public int getDeclension(){
+		return declension;
+	}
+	public String addEnding(String ending){
+		return base + ending;
+	}
+	public String getGenitive(){
+		return genitive;
+	}
+	public String getNominative(){
+		return nominative;
+	}
+
 	public int getDeclension(String nominative, String genitive, int gender){ //get the declension of the word with the nominative, genitive(ie: 2, 4)
 		String lastTwoLettersGen = "" + (genitive.charAt(genitive.length())) + (genitive.charAt(genitive.length()-1));
 		String lastTwoLettersNom = "" + (nominative.charAt(nominative.length())) + (nominative.charAt(nominative.length()-1));
