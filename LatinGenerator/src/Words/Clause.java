@@ -8,6 +8,17 @@ public class Clause {
 		this.words = appendClauses(subClauses).getWords();
 	}
 	
+	public Clause(){
+		this.words = new ConjugatedWord[0];
+	}
+	
+	public Clause(Clause copy){
+		this.words = new ConjugatedWord[copy.getWords().length];
+		for(int i = 0; i < words.length; i++){
+			this.words[i] = new ConjugatedWord(copy.getWords()[i]);
+		}
+	}
+	
 	public Clause(ConjugatedWord[] words){
 		this.words = words;
 	}

@@ -1,5 +1,6 @@
 package Words;
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class Values {
@@ -24,6 +25,8 @@ public class Values {
 	//public static final int CASE_LOCATIVE = 6;
 	
 	public static final String[] CASE_NAMES_BY_INDEX = new String[]{"Nominative", "Genitive", "Dative", "Accusative", "Ablative"};
+	
+	public static final Random random = new Random();
 	
 	public static Verb sum;
 	

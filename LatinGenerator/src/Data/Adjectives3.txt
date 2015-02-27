@@ -28,11 +28,10 @@
 48	qualis, quale						what kind?
 54	levis, leve						light (in weight or importance)
 54	militaris militare					military
-54	prudens:prudentis)					foresighted; wise, prudent
+54	prudens:prudentis					foresighted; wise, prudent
 54	recens:recentis)					fresh, new, recent
 54	vetus:veteris)						old
 56	complures, complura					several, quite a few
 57	turpis, turpe						base, disgraceful; ugly
-57	vehemens:vehementis)				violent, forceful
+57	vehemens:vehementis				violent, forceful
 58	aliqui, aliqua, aliquod					some
-58	qui, qua, quod (after si, nisi, num, ne)		any
