@@ -193,7 +193,7 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 			int chapter = 0;
 			String masculine;
 			String feminine;
-			String neuter;
+
 			ArrayList<String> definitions = new ArrayList<String>();
 
 			//Values.betterStringArrayPrint(current);
@@ -202,14 +202,14 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 				chapter = Integer.parseInt(current[0]);
 				masculine = current[1].split(", ")[0];
 				feminine = current[1].split(", ")[1];
-				neuter = current[1].split(", ")[2];
+				//neuter = current[1].split(", ")[2];
 				List<String> tempDefinitions = Arrays.asList(current[2].split(",|;")); //definitions
 				definitions.addAll(tempDefinitions);
 			} catch(Exception e){
 				System.err.println("Could not read a line!");
 				continue; //We can't make a noun out of the botrked line.
 			}
-			Adjective currentAdjective = new Adjective(masculine, feminine, neuter, chapter, declension, definitions);
+			Adjective currentAdjective = new FirstSecondAdjective(masculine, feminine, chapter, definitions);
 			System.out.println("Added: " + currentAdjective);
 			output.add(currentAdjective);
 		}
@@ -218,8 +218,6 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 	}
 
 	static TreeSet<Adjective> parseAdjective3(Scanner data){ //use ADJECTIVE_DECLENSION, not declensions for nouns. Can parse 3rd declension. 
-		
-		int declension = -1;
 		ArrayList<String[]> raw = parseDataToArray(data);
 		TreeSet<Adjective> output = new TreeSet<Adjective>();
 
@@ -235,39 +233,36 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 			//current[] contains a split based on tabs. Generally {chapter, nom/gen/gender, definition}.
 
 			int chapter = 0;
-			String masculine = null;
-			String feminine = null;
-			String neuter = null;
 			ArrayList<String> definitions = new ArrayList<String>();
+			Adjective currentAdjective = null;
 
 			//Values.betterStringArrayPrint(current);
 
 			try{ //try to read a noun, assuming that the chapter IS specified
-				if(current[1].split(", ").length == 1){
-					masculine = current[1].split(", ")[0];
-					feminine = null;
-					neuter = null;
-					declension = Values.DELCENSION_ADJECTIVE_THIRD_1;
-				} else if(current[1].split(", ").length == 2){
-					masculine = current[1].split(", ")[0];
-					feminine = current[1].split(", ")[1];
-					neuter = null;
-					declension = Values.DELCENSION_ADJECTIVE_THIRD_2;
-				} else if(current[1].split(", ").length == 3){
-					masculine = current[1].split(", ")[0];
-					feminine = current[1].split(", ")[1];
-					neuter = current[1].split(", ")[2];
-					declension = Values.DELCENSION_ADJECTIVE_THIRD_3;
-				}
+				
 				chapter = Integer.parseInt(current[0].trim());
 				List<String> tempDefinitions = Arrays.asList(current[2].split(",|;")); //definitions
 				definitions.addAll(tempDefinitions);
+				
+				if(current[1].split(", ").length == 1){
+					currentAdjective = new OneTerminationAdjective(current[1].split(", ")[0].split(":")[0], current[1].split(", ")[0].split(":")[1], chapter, definitions);
+				} else if(current[1].split(", ").length == 2){
+					String mascFem = current[1].split(", ")[0];
+					String neuter = current[1].split(", ")[1];
+					currentAdjective = new TwoTerminationAdjective(mascFem, neuter, chapter, definitions);
+				} else if(current[1].split(", ").length == 3){
+					String masculine = current[1].split(", ")[0];
+					String feminine = current[1].split(", ")[1];
+					String neuter = current[1].split(", ")[2];
+					currentAdjective = new ThreeTerminationAdjective(masculine, feminine, neuter, chapter, definitions);
+				}
+
 			} catch(Exception e){
 				e.printStackTrace();
 				System.err.println("Could not read a line!");
 				continue; //We can't make a noun out of the botrked line.
 			}
-			Adjective currentAdjective = new Adjective(masculine, feminine, neuter, chapter, declension, definitions);
+			//Adjective currentAdjective = new Adjective(masculine, feminine, neuter, chapter, declension, definitions);
 			System.out.println("Added: " + currentAdjective);
 			output.add(currentAdjective);
 		}

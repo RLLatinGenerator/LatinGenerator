@@ -31,9 +31,6 @@ public class Noun extends Word{
 	public int getDeclension(){
 		return declension;
 	}
-	public String addEnding(String ending){
-		return base + ending;
-	}
 	public String getGenitive(){
 		return genitive;
 	}

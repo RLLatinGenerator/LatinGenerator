@@ -1,38 +1,38 @@
 18	acer, acris, acre					sharp, keen, fierce
-18	audax (audacis = gen)					bold, daring
+18	audax:audacis					bold, daring
 18	brevis, breve						short
 18 	celer, celeris, celere					swift
 18	facilis, facile						easy + dative
 18	fortis, forte						strong, brave
 18	gravis, grave						heavy, severe, serious
 18	omnis, omne						all, every
-18	potens (potentis = gen)				powerful
+18	potens:potentis		powerful
 18	similis, simile						like, similar (to) + dative
 25	is, ea, id						this, that; he, she, it
 25 	hic, haec, hoc 						this, the latter (these in pl)
 25 	ille, illa, illud						that, the former (those in pl)
-33	diligens (diligentis)					careful, diligent
-33 	felix (felicis)						happy, lucky
+33	diligens:diligentis					careful, diligent
+33 	felix:felicis						happy, lucky
 33 	tristis, triste						sad, grim
 33	utilis, utile						useful, profitable + dative
 34	difficilis, difficile					difficult, hard + dative
 34	dissimilis, dissimile					unlike, dissimilar (to) + dative
 34	fidelis, fidele						faithful, loyal + dative
 34	nobilis, nobile						of high birth, noble, well-known
-34	par ( paris)						equal, equal to + dative
+34	par:paris					equal, equal to + dative
 34 	propior, propius					nearer + dative
-35  	senex (senis)						old 
+35  	senex:senis						old 
 47	communis, commune					common, general
 47	immortalis, immortale					immortal
 48	talis, tale						such, of such a kind
 48	qualis, quale						what kind?
 54	levis, leve						light (in weight or importance)
 54	militaris militare					military
-54	prudens (prudentis)					foresighted; wise, prudent
-54	recens (recentis)					fresh, new, recent
-54	vetus (veteris)						old
+54	prudens:prudentis)					foresighted; wise, prudent
+54	recens:recentis)					fresh, new, recent
+54	vetus:veteris)						old
 56	complures, complura					several, quite a few
 57	turpis, turpe						base, disgraceful; ugly
-57	vehemens (vehementis)				violent, forceful
+57	vehemens:vehementis)				violent, forceful
 58	aliqui, aliqua, aliquod					some
 58	qui, qua, quod (after si, nisi, num, ne)		any

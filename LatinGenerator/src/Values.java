@@ -187,6 +187,8 @@ public class Values {
 	public static final int DELCENSION_ADJECTIVE_THIRD_2 = 2;
 	public static final int DELCENSION_ADJECTIVE_THIRD_3 = 3;
 	
+	public static final int MAX_CHAPTER = 101;
+	
 	
 	public static final String[] CASE_SHORTHAND = new String[]{CASE_NOMINATIVE_SHORTHAND, CASE_GENITIVE_SHORTHAND, CASE_DATIVE_SHORTHAND, CASE_ACCUSATIVE_SHORTHAND, CASE_ABLATIVE_SHORTHAND};
 	
@@ -201,7 +203,7 @@ public class Values {
 	}
 	
 	public static Adjective makeHighestChapterAdjective(int chapter){
-		return new Adjective("a", Values.DELCENSION_ADJECTIVE_FIRST_AND_SECOND, chapter, highestDefinitions);
+		return new FirstSecondAdjective("a", "a", chapter, highestDefinitions);
 	}
 	
 	public static Adverb makeHighestChapterAdverb(int chapter){
@@ -246,33 +248,30 @@ public class Values {
 		System.out.println("=======");
 	}
 	public static Word getWord(String word){
-		//Reads the data
-		FileParser.parseFromDirectory(new File("src/Data"));
 		//Preinitializes, eclipse made me do it :P
 		Word returnedWord = null;
 		//All the checks, sets var to the word
-		for(Noun i : FileParser.allNouns){
+		for(Noun i : FileParser.getNounsToChapter(MAX_CHAPTER)){
 			if(i.toString().equals(word)){
 				returnedWord = i;
 			}
 		}
-		for(Verb i : FileParser.allVerbs){
+		for(Verb i : FileParser.getVerbsToChapter(MAX_CHAPTER)){
 			if(i.firstPP().equals(word)){
 				returnedWord = i;
 			}
 		}
-		//TODO Robert fix adjectives pl0x
-		/*for(Adjective i : FileParser.allAdjectives){
+		for(Adjective i : FileParser.getAdjectivesToChapter(MAX_CHAPTER)){
 			if(i.stem.equals(word)){
 				returnedWord = i;
 			}
-		}*/
-		for(Adverb i : FileParser.allAdverbs){
+		}
+		for(Adverb i : FileParser.getAdverbsToChapter(MAX_CHAPTER)){
 			if(i.toString().equals(word)){
 				returnedWord = i;
 			}
 		}
-		for(Conjunction i : FileParser.allConjunctions){
+		for(Conjunction i : FileParser.getConjunctionsToChapter(MAX_CHAPTER)){
 			if(i.toString().equals(word)){
 				returnedWord = i;
 			}
