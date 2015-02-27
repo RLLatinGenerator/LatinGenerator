@@ -17,10 +17,19 @@ public class IrregularVerb extends Verb{
 	@Override
 	public ConjugatedVerb conjugate(int tense, int number, int person){
 		if(irregularPresent && tense <= 2){
-			return null;
+			return new ConjugatedVerb(this, declension[tense][number][person], tense, number, person);
+		}
+		else if(irregularPerfect && tense >= 3){
+			return new ConjugatedVerb(this, declension[tense][number][person], tense, number, person);
+		}
+		if (tense <= 2){
+			return presentSysConjugate(conjugation, tense, number, person);
+		}
+		else if (tense >= 3){
+			return perfectSysConjugate(tense, number, person);
 		}
 		else{
-			return null;
+			return new ConjugatedVerb(null, "Error", -1, -1, -1);
 		}
 	}
 }
