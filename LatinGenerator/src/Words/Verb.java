@@ -74,7 +74,19 @@ public class Verb extends Word{
 		}
 		return conjugated;
 	}
+	
+	public Adjective getParticiple(int tense){
+		if(tense == Values.INDEX_PARTICIPLE_PRESENT){
+			return new FirstSecondAdjective(fourthPP, (fourthPP.substring(0, fourthPP.length() - 1) + "a"), (fourthPP.substring(0, fourthPP.length() -2) + "um"), chapter, definitions);
+		}
+		else if(tense == Values.INDEX_PARTICIPLE_FUTURE){
+			return new FirstSecondAdjective(fourthPP, (fourthPP.substring(0, fourthPP.length() - 1) + "ura"), (fourthPP.substring(0, fourthPP.length() -2) + "urum"), chapter, definitions);
+		}
+		else{
+			return new OneTerminationAdjective((secondPP.substring(0, secondPP.length() - 3) + "ns"), (secondPP.substring(0, secondPP.length() - 3) + "ns"), chapter, definitions);
+		}
 
+	}
 
 }
 
