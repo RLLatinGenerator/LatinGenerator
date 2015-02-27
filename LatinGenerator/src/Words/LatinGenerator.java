@@ -13,7 +13,7 @@ public class LatinGenerator {
 		
 		System.out.println("------------");
 		
-		System.out.println(new AblativeAbsolute(60).getConstruction().formatAsSentence());
+		System.out.println(new AblativeAbsolute(3).getConstruction().formatAsSentence());
 		
 		
 	}

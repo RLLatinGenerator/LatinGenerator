@@ -164,6 +164,14 @@ public class Values {
 	
 	public static String[][][][] CONJUGATION_VERBS = new String[][][][]{PRESENT_CONJUGATION, FUTURE_CONJUGATION, IMPERFECT_CONJUGATION, PERFECT_CONJUGATION, PLUPERFECT_CONJUGATION, FUTURE_PERFECT_CONJUGATION};
 	
+	public static final int WORD_TYPE_NOUN = 0;
+	public static final int WORD_TYPE_VERB = 1;
+	public static final int WORD_TYPE_ADVERB = 2;
+	public static final int WORD_TYPE_CONJUNCTION = 3;
+	public static final int WORD_TYPE_ADJECTIVE = 4;
+	public static final int WORD_TYPE_PRONOUN = 5;
+	public static final int WORD_TYPE_PREPOSITION = 6;
+	
 	public static final int INDEX_CONJUGATION_FIRST = 0;
 	public static final int INDEX_CONJUGATION_SECOND = 1;
 	public static final int INDEX_CONJUGATION_THIRD = 2;
