@@ -12,8 +12,22 @@ public class TwoTerminationAdjective extends Adjective{
 	
 	@Override
 	public ConjugatedAdjective decline(int Case, int number, int gender) {
-		// TODO Auto-generated method stub
-		return null;
+		if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_MASCULINE){
+			return new ConjugatedAdjective(this, mascFem, number, Case, gender);
+		}
+		else if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_FEMININE){
+			return new ConjugatedAdjective(this, mascFem, number, Case, gender);
+		}
+		else if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_NEUTER){
+			return new ConjugatedAdjective(this, neuter, number, Case, gender);
+		}
+		else if (Case == Values.CASE_ACCUSATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_NEUTER){
+			return new ConjugatedAdjective(this, neuter, number, Case, gender);
+		}
+		else{
+			return new ConjugatedAdjective(this, stem.concat(Values.DECLENSION_ADJECTIVES_THIRD[gender][Case][number]), number, Case, gender);
+		}
+		
 	}
 	@Override
 	public String toString() {

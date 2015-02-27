@@ -12,18 +12,21 @@ public class ThreeTerminationAdjective extends Adjective {
 		this.neuter = neuter;
 	}
 
-	public ConjugatedAdjective decline(int Case, int number, int gender){
+	public ConjugatedAdjective decline(int number, int Case, int gender){
 			if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_MASCULINE){
-				return new ConjugatedAdjective(this, masculine, Case, number, gender);
+				return new ConjugatedAdjective(this, masculine, number, Case, gender);
 			}
 			else if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_FEMININE){
-				return new ConjugatedAdjective(this, feminine, Case, number, gender);
+				return new ConjugatedAdjective(this, feminine, number, Case, gender);
 			}
 			else if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_NEUTER){
-				return new ConjugatedAdjective(this, neuter, Case, number, gender);
+				return new ConjugatedAdjective(this, neuter, number, Case, gender);
+			}
+			else if (Case == Values.CASE_ACCUSATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_NEUTER){
+				return new ConjugatedAdjective(this, neuter, number, Case, gender);
 			}
 			else{
-				return new ConjugatedAdjective(this, stem.concat(Values.DECLENSION_ADJECTIVES[Values.DELCENSION_ADJECTIVE_THIRD_3][gender][number][Case]), Case, number, gender);
+				return new ConjugatedAdjective(this, stem.concat(Values.DECLENSION_ADJECTIVES_SECOND[gender][number][Case]), number, Case, gender);
 			}
 
 	}

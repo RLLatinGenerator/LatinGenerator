@@ -15,7 +15,7 @@ public class Values {
 	
 	//Noun land
 	public static final int CASE_NOMINATIVE = 0;
-	public static final int CASE_GENTIVE = 1;
+	public static final int CASE_GENITIVE = 1;
 	public static final int CASE_DATIVE= 2;
 	public static final int CASE_ACCUSATIVE= 3;
 	public static final int CASE_ABLATIVE = 4;
@@ -87,7 +87,10 @@ public class Values {
 	public static String[][] DECLENSION_ADJECTIVES_THIRD_F = new String[][]{{"", "is", "i", "em", "e"}, {"es", "ium", "ibus", "es", "ibus"}};
 	public static String[][] DECLENSION_ADJECTIVES_THIRD_N = new String[][]{{"", "is", "i", "", "i"}, {"ia", "ium", "ibus", "ia", "ibus"}};
 	
-	public static String[][][][] DECLENSION_ADJECTIVES = new String[][][][]{{DECLENSION_ADJECTIVES_SECOND_M, DECLENSION_ADJECITVES_SECOND_F, DECLENSION_ADJECTIVES_SECOND_N}, {DECLENSION_ADJECTIVES_THIRD_M, DECLENSION_ADJECTIVES_THIRD_F, DECLENSION_ADJECTIVES_THIRD_N}};
+	public static String[][][] DECLENSION_ADJECTIVES_SECOND = new String[][][]{DECLENSION_ADJECTIVES_SECOND_M, DECLENSION_ADJECITVES_SECOND_F, DECLENSION_ADJECTIVES_SECOND_N};
+	public static String[][][] DECLENSION_ADJECTIVES_THIRD = new String[][][]{DECLENSION_ADJECTIVES_THIRD_M, DECLENSION_ADJECTIVES_THIRD_F, DECLENSION_ADJECTIVES_THIRD_N};
+	
+	public static String[][][][] DECLENSION_ADJECTIVES = new String[][][][]{DECLENSION_ADJECTIVES_SECOND, DECLENSION_ADJECTIVES_THIRD};
 	
 	public static final int[] declensionGenitiveLength = new int[]{2, 1, 1, 2, 2, 2, 2, 2, 2, 2};
 	
@@ -203,7 +206,7 @@ public class Values {
 	}
 	
 	public static Adjective makeHighestChapterAdjective(int chapter){
-		return new FirstSecondAdjective("a", "a", chapter, highestDefinitions);
+		return new FirstSecondAdjective("a", "a", "a", chapter, highestDefinitions);
 	}
 	
 	public static Adverb makeHighestChapterAdverb(int chapter){
