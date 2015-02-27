@@ -1,3 +1,4 @@
+package Words;
 import java.util.ArrayList;
 
 public class ThreeTerminationAdjective extends Adjective {

@@ -1,3 +1,4 @@
+package Words;
 
 public class ConjugatedAdverb extends ConjugatedWord{
 

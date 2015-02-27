@@ -1,3 +1,4 @@
+package Words;
 
 public class ConjugatedWord extends Word{
 	String conjugatedWord;

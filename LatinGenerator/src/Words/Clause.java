@@ -1,3 +1,4 @@
+package Words;
 import java.util.Arrays;
 
 public class Clause {

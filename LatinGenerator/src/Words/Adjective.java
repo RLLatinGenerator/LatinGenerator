@@ -1,3 +1,4 @@
+package Words;
 import java.util.ArrayList;
 
 public abstract class Adjective extends Word{

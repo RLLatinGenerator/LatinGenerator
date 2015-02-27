@@ -1,3 +1,4 @@
+package Words;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -193,6 +194,7 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 			int chapter = 0;
 			String masculine;
 			String feminine;
+			String neuter;
 
 			ArrayList<String> definitions = new ArrayList<String>();
 
@@ -202,14 +204,14 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 				chapter = Integer.parseInt(current[0]);
 				masculine = current[1].split(", ")[0];
 				feminine = current[1].split(", ")[1];
-				//neuter = current[1].split(", ")[2];
+				neuter = current[1].split(", ")[2];
 				List<String> tempDefinitions = Arrays.asList(current[2].split(",|;")); //definitions
 				definitions.addAll(tempDefinitions);
 			} catch(Exception e){
 				System.err.println("Could not read a line!");
 				continue; //We can't make a noun out of the botrked line.
 			}
-			Adjective currentAdjective = new FirstSecondAdjective(masculine, feminine, chapter, definitions);
+			Adjective currentAdjective = new FirstSecondAdjective(masculine, feminine, neuter, chapter, definitions);
 			System.out.println("Added: " + currentAdjective);
 			output.add(currentAdjective);
 		}

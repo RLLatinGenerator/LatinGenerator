@@ -1,3 +1,4 @@
+package Words;
 
 public class ConjugatedNoun extends ConjugatedWord{
 	int number;
