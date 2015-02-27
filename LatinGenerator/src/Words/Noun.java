@@ -19,11 +19,11 @@ public class Noun extends Word{
 		this.gender = gender;
 	}
 
-	public ConjugatedNoun decline(int Case, int number){
+	public ConjugatedNoun decline(int purpose, int Case, int number){
 		if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR){
-			return new ConjugatedNoun(this, nominative, Values.NUMBER_SINGULAR, Values.CASE_NOMINATIVE, gender);
+			return new ConjugatedNoun(this, nominative, purpose, Values.NUMBER_SINGULAR, Values.CASE_NOMINATIVE, gender);
 		}
-		return new ConjugatedNoun(this, addEnding(Values.DECLENSION_NOUNS[declension][number][Case]), number, Case, gender);
+		return new ConjugatedNoun(this, addEnding(Values.DECLENSION_NOUNS[declension][number][Case]), purpose, number, Case, gender);
 	}
 
 	public int getGender(){
@@ -67,8 +67,8 @@ public class Noun extends Word{
 		return nominative;
 	}
 
-	public static Clause getNounClause(Noun noun, int Case, int number){
-		return new Clause(new ConjugatedWord[]{noun.decline(Case, number)});
+	public static Clause getNounClause(Noun noun, int purpose, int Case, int number){
+		return new Clause(new ConjugatedWord[]{noun.decline(purpose, Case, number)});
 	}
 	
 	public static Noun getRandomNoun(int maxChapter){
@@ -76,12 +76,12 @@ public class Noun extends Word{
 		return (Noun) FileParser.getNounsToChapter(maxChapter).toArray()[r.nextInt(FileParser.getNounsToChapter(maxChapter).size())];
 	}
 
-	public static Clause getRandomNounClause(int Case, int number, int maxChapter){
+	public static Clause getRandomNounClause(int purpose, int Case, int number, int maxChapter){
 		int attachment = Util.getRandomNounAttachment();
 		if(attachment == Values.INDEX_NOUN_CLAUSE_ATTACH_GENITIVE){ //chosen to have an attached genitive.
-			return new Clause(new Clause[]{getRandomNounClause(Case, number, maxChapter), getRandomNounClause(Values.CASE_GENTIVE, Util.getRandomPlurality(), maxChapter)});
+			return new Clause(new Clause[]{getRandomNounClause(purpose, Case, number, maxChapter), getRandomNounClause(Purpose.NOUN_POSSESSION, Values.CASE_GENITIVE, Util.getRandomPlurality(), maxChapter)});
 		} else if(attachment == Values.INDEX_NOUN_CLAUSE_ATTACH_NOTHING) {
-			return (new Clause(new ConjugatedWord[]{getRandomNoun(maxChapter).decline(Case, number)}));
+			return (new Clause(new ConjugatedWord[]{getRandomNoun(maxChapter).decline(purpose, Case, number)}));
 		}
 		System.out.println(attachment);
 		return null;

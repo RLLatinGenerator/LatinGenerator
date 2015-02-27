@@ -21,6 +21,14 @@ public class Util {
 		return output;
 	}
 	
+	public static int[] copyArray(int[] input){
+		int[] output = new int[input.length];
+		for(int i = 0; i < input.length; i++){
+			output[i] = input[i];
+		}
+		return output;
+	}
+	
 	public static int arraySum(double[] input){
 		int total = 0;
 		for(double i : input){

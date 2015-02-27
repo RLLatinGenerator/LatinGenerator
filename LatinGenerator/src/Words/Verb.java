@@ -30,26 +30,26 @@ public class Verb extends Word{
 	public String firstPP(){
 		return firstPP;
 	}
-	public ConjugatedVerb presentSysConjugate(int conjugation, int tense, int number, int person){
+	public ConjugatedVerb presentSysConjugate(int conjugation, int purpose, int tense, int number, int person){
 		String root = secondPP.substring(0, secondPP.length() - 3);
-		return new ConjugatedVerb(this, root + Values.CONJUGATION_VERBS[tense][conjugation][number][person], tense, number, person);
+		return new ConjugatedVerb(this, root + Values.CONJUGATION_VERBS[tense][conjugation][number][person], purpose, tense, number, person);
 	}
 
-	public ConjugatedVerb perfectSysConjugate(int tense, int number, int person){
+	public ConjugatedVerb perfectSysConjugate(int purpose, int tense, int number, int person){
 		String root = thirdPP.substring(0, thirdPP.length() - 1);
-		return new ConjugatedVerb(this, root + Values.CONJUGATION_VERBS[tense][0][number][person], tense, number, person);
+		return new ConjugatedVerb(this, root + Values.CONJUGATION_VERBS[tense][0][number][person], purpose, tense, number, person);
 	}
 	
-	public ConjugatedVerb conjugate(int tense, int number, int person){
+	public ConjugatedVerb conjugate(int purpose, int tense, int number, int person){
 		ConjugatedVerb conjugated;
 		if (tense <= 2){
-			conjugated = presentSysConjugate(conjugation, tense, number, person);
+			conjugated = presentSysConjugate(purpose, conjugation, tense, number, person);
 		}
 		else if (tense >= 3){
-			conjugated = perfectSysConjugate(tense, number, person);
+			conjugated = perfectSysConjugate(purpose, tense, number, person);
 		}
 		else{
-			conjugated = new ConjugatedVerb(null, "Error", -1, -1, -1);
+			conjugated = new ConjugatedVerb(null, "Error", -1, -1, -1, -1);
 			System.err.println("ERROR");
 		}
 		return conjugated;
@@ -64,13 +64,13 @@ public class Verb extends Word{
 	public static ConjugatedVerb getAgreeingVerb(ConjugatedNoun noun, Verb verb , int tense){
 		ConjugatedVerb conjugated;
 		if (noun.number == Values.NUMBER_SINGULAR){
-			conjugated = verb.conjugate(tense,0, 2);
+			conjugated = verb.conjugate(Purpose.VERB_MAIN, tense,0, 2);
 		}
 		else if (noun.number == Values.NUMBER_PLURAL){
-			conjugated = verb.conjugate(tense, 1, 2);
+			conjugated = verb.conjugate(Purpose.VERB_MAIN, tense, 1, 2);
 		}
 		else{
-			conjugated = new ConjugatedVerb(null, "Error", -1, -1, -1);
+			conjugated = new ConjugatedVerb(null, "Error", -1, -1, -1, -1);
 		}
 		return conjugated;
 	}

@@ -9,6 +9,6 @@ public abstract class Adjective extends Word{
 		this.stem = stem;
 	}
 	
-	public abstract ConjugatedAdjective decline(int Case, int number, int gender);
+	public abstract ConjugatedAdjective decline(int Case, int number, int gender, int purpose);
 	public abstract String toString();
 }

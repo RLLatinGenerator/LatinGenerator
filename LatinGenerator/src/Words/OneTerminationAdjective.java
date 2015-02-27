@@ -16,21 +16,21 @@ public class OneTerminationAdjective extends Adjective{
 	}
 
 	@Override
-	public ConjugatedAdjective decline(int Case, int number, int gender) {
+	public ConjugatedAdjective decline(int purpose, int Case, int number, int gender) {
 		if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_MASCULINE){
-			return new ConjugatedAdjective(this, nominative, number, Case, gender);
+			return new ConjugatedAdjective(this, nominative, purpose, number, Case, gender);
 		}
 		else if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_FEMININE){
-			return new ConjugatedAdjective(this, nominative, number, Case, gender);
+			return new ConjugatedAdjective(this, nominative, purpose, number, Case, gender);
 		}
 		else if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_NEUTER){
-			return new ConjugatedAdjective(this, nominative, number, Case, gender);
+			return new ConjugatedAdjective(this, nominative, purpose, number, Case, gender);
 		}
 		else if (Case == Values.CASE_ACCUSATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_NEUTER){
-			return new ConjugatedAdjective(this, nominative, number, Case, gender);
+			return new ConjugatedAdjective(this, nominative, purpose, number, Case, gender);
 		}
 		else{
-			return new ConjugatedAdjective(this, stem.concat(Values.DECLENSION_ADJECTIVES_THIRD[gender][number][Case]), number, Case, gender);
+			return new ConjugatedAdjective(this, stem.concat(Values.DECLENSION_ADJECTIVES_THIRD[gender][number][Case]), purpose, number, Case, gender);
 		}
 	}
 

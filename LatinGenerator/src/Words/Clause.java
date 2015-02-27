@@ -48,9 +48,9 @@ public class Clause {
 	public static Clause makeToBeSentence(int maxChapter){
 		
 		int number = Util.getRandomPlurality();
-		Clause conjugatedSubject = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, number, maxChapter);
-		Clause conjugatedPredicate = Noun.getRandomNounClause(Values.CASE_NOMINATIVE, number, maxChapter);
-		ConjugatedVerb toBe = new ConjugatedVerb(Values.sum, number==Values.NUMBER_SINGULAR ? "est" : "sunt", Values.INDEX_TENSE_PRESENT, number, 3);
+		Clause conjugatedSubject = Noun.getRandomNounClause(Purpose.NOUN_SUBJECT, Values.CASE_NOMINATIVE, number, maxChapter);
+		Clause conjugatedPredicate = Noun.getRandomNounClause(Purpose.NOUN_OBJECT, Values.CASE_NOMINATIVE, number, maxChapter);
+		ConjugatedVerb toBe = new ConjugatedVerb(Values.sum, number==Values.NUMBER_SINGULAR ? "est" : "sunt", Purpose.VERB_MAIN, Values.INDEX_TENSE_PRESENT, number, 3);
 		
 		return Clause.appendClauses(new Clause[]{conjugatedSubject, toBe.asClause(), conjugatedPredicate});
 	}
@@ -58,9 +58,9 @@ public class Clause {
 	public static Clause makeSubjVerbSentence(int maxChapter, int tense){
 		int number = Util.getRandomPlurality();
 		Noun subject = Noun.getRandomNoun(maxChapter);
-		ConjugatedNoun conjugatedSubject = new ConjugatedNoun(subject, subject.toString(), number, Values.CASE_NOMINATIVE, subject.getGender());
-		Clause subjectClause = Noun.getNounClause(subject, Values.CASE_NOMINATIVE, number);
-		Clause predicateClause = Noun.getRandomNounClause(Values.CASE_ACCUSATIVE, Util.getRandomPlurality(), maxChapter);
+		ConjugatedNoun conjugatedSubject = new ConjugatedNoun(subject, subject.toString(), Purpose.NOUN_SUBJECT, number, Values.CASE_NOMINATIVE, subject.getGender());
+		Clause subjectClause = Noun.getNounClause(subject, Purpose.NOUN_SUBJECT, Values.CASE_NOMINATIVE, number);
+		Clause predicateClause = Noun.getRandomNounClause(Purpose.NOUN_PREDICATE, Values.CASE_ACCUSATIVE, Util.getRandomPlurality(), maxChapter);
 		Verb verb = Verb.getRandomVerb(maxChapter);
 		ConjugatedVerb conjugatedVerb = Verb.getAgreeingVerb(conjugatedSubject, verb, tense);
 		return Clause.appendClauses(new Clause[]{subjectClause, conjugatedVerb.asClause(), predicateClause});
