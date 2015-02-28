@@ -1,31 +1,41 @@
 package CaseUseages;
 
+import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 
+import GrammaticalConstructions.GrammaticalConstruction;
 import Words.Clause;
 import Words.ConjugatedNoun;
 import Words.ConjugatedWord;
 import Words.Noun;
 import Words.Preposition;
-import Words.Util;
+import Words.Purpose;
 import Words.Values;
 import Words.Word;
 
-public abstract class CaseUsage { //MAKE SURE TO ADD ANY NEW CASE USAGES TO VALUES.CASEUSAGES!
+public abstract class CaseUsage extends GrammaticalConstruction{ //MAKE SURE TO ADD ANY NEW CASE USAGES TO VALUES.CASEUSAGES!
 	private int Case;
-	private int chapter;
-	private int[] canModify;
-	private ArrayList<String> translations;
+	//private ArrayList<String> translations;
 	private ArrayList<Preposition> introducedBy;
 	private int prepositionPurpose;
 	private int nounPurpose;
 	
-	public CaseUsage(int Case, int chapter, int[] canModify, int prepositionPurpose, int nounPurpose, ArrayList<String> translations, ArrayList<Preposition> introducedBy){
+	public CaseUsage(int Case, int chapter, int[] canModify, int prepositionPurpose, int nounPurpose, HashMap<Integer, HashSet<String>> purposeTranslations){
+		super(chapter, canModify, purposeTranslations);
 		this.Case = Case;
-		this.chapter = chapter;
-		this.canModify = Util.copyArray(canModify);
-		this.translations = new ArrayList<String>(translations);
+		this.introducedBy = new ArrayList<Preposition>(introducedBy);
+		this.prepositionPurpose = prepositionPurpose;
+		this.nounPurpose = nounPurpose;
+		
+	}
+	
+	public CaseUsage(int Case, int chapter, int[] canModify, int prepositionPurpose, int nounPurpose, HashSet<String> translations){ //translations are assumed to be translations for the preposition.
+		super(chapter, canModify);
+		this.Case = Case;
+		setTranslations(translations);
 		this.introducedBy = new ArrayList<Preposition>(introducedBy);
 		this.prepositionPurpose = prepositionPurpose;
 		this.nounPurpose = nounPurpose;
@@ -35,9 +45,15 @@ public abstract class CaseUsage { //MAKE SURE TO ADD ANY NEW CASE USAGES TO VALU
 		
 	}
 	
+	public Clause generateRandom(int maxChapter){
+		return generateRandomGrammaticalConstruction(null, maxChapter);
+	}
+	
+	/*
 	public CaseUsage(int Case, int chapter, int[] canModify, int prepositionPurpose, int nounPurpose, String[] translations, Preposition[] introducedBy){
 		this(Case, chapter, canModify, prepositionPurpose, nounPurpose, new ArrayList<String>(Arrays.asList(translations)), new ArrayList<Preposition>(Arrays.asList(introducedBy)));
 	}
+	*/
 	
 	public boolean needsIntroductionPreposition(){
 		return !(introducedBy.size()==0);
@@ -45,11 +61,11 @@ public abstract class CaseUsage { //MAKE SURE TO ADD ANY NEW CASE USAGES TO VALU
 	
 	public abstract Clause addToWord(ConjugatedWord caseUsageWord, ConjugatedWord toAttachTo); //for example, if I pass a verb, it will append a ablative of means.
 	public abstract ConjugatedNoun makeCaseUsage(Noun input, int plurality);
-	public abstract Clause generateRandom(int maxChapter);
+	//public abstract Clause generateRandom(int maxChapter);
 	
 	public boolean checkIfCanModify(Word word){
 		int type = Values.getWordType(word);
-		return (Arrays.asList(canModify).contains(type));
+		return (Arrays.asList(getTypesModified()).contains(type));
 	}
 
 	public int getCase() {
@@ -60,28 +76,17 @@ public abstract class CaseUsage { //MAKE SURE TO ADD ANY NEW CASE USAGES TO VALU
 		Case = case1;
 	}
 
-	public int getChapter() {
-		return chapter;
-	}
-
-	public void setChapter(int chapter) {
-		this.chapter = chapter;
-	}
-
-	public int[] getCanModify() {
-		return Util.copyArray(canModify);
-	}
-
-	public void setCanModify(int[] canModify) {
-		this.canModify = Util.copyArray(canModify);
-	}
-
+	/*
 	public ArrayList<String> getTranslations() {
 		return new ArrayList<String>(translations);
 	}
+	*/
 
-	public void setTranslations(ArrayList<String> translations) {
-		this.translations = new ArrayList<String>(translations);
+	public void setTranslations(HashSet<String> translations) {
+		HashMap<Integer, HashSet<String>> purposeTranslations = new HashMap<>();
+		purposeTranslations.put(getPrepositionPurpose(), translations);
+		purposeTranslations.put(getNounPurpose(), new HashSet<String>());
+		setPurposeTranslations(purposeTranslations);
 	}
 
 	public ArrayList<Preposition> getIntroducedBy() {
@@ -92,6 +97,7 @@ public abstract class CaseUsage { //MAKE SURE TO ADD ANY NEW CASE USAGES TO VALU
 		this.introducedBy = new ArrayList<Preposition>(introducedBy);
 	}
 
+	
 	public int getPrepositionPurpose() {
 		return prepositionPurpose;
 	}
@@ -107,4 +113,5 @@ public abstract class CaseUsage { //MAKE SURE TO ADD ANY NEW CASE USAGES TO VALU
 	public void setNounPurpose(int nounPurpose) {
 		this.nounPurpose = nounPurpose;
 	}
+	
 }

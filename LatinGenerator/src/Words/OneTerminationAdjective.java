@@ -17,7 +17,7 @@ public class OneTerminationAdjective extends Adjective{
 	}
 
 	@Override
-	public ConjugatedAdjective decline(int purpose, int Case, int number, int gender) {
+	public ConjugatedAdjective decline(int Case, int number, int gender, int purpose) {
 		if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_MASCULINE){
 			return new ConjugatedAdjective(this, nominative, purpose, number, Case, gender);
 		}

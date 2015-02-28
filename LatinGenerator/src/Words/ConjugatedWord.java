@@ -13,6 +13,7 @@ public class ConjugatedWord extends Word{
 	public ConjugatedWord(Word unConjugated, String conjugatedWord, int purpose){
 		super(unConjugated);
 		this.conjugatedWord = conjugatedWord;
+		this.purpose = purpose;
 	}
 	
 	public String toString(){

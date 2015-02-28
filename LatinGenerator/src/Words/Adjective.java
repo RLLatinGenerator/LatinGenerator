@@ -11,7 +11,7 @@ public abstract class Adjective extends Word{
 	
 	public static Adjective getRandomAdjective(int maxChapter){
 		int size = FileParser.getAdjectivesToChapter(maxChapter).size();
-		return FileParser.getAdjectivesToChapter(maxChapter).toArray(new Adjective[size])[Values.random.nextInt(size)];
+		return Util.getRandom(new ArrayList<Adjective>(FileParser.getAdjectivesToChapter(maxChapter)));
 	}
 	
 	public abstract ConjugatedAdjective decline(int Case, int number, int gender, int purpose);

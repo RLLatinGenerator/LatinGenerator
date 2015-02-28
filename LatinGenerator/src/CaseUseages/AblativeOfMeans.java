@@ -2,6 +2,8 @@ package CaseUseages;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 
 import Words.Clause;
 import Words.ConjugatedNoun;
@@ -18,8 +20,8 @@ public class AblativeOfMeans extends CaseUsage{
 		//super(myCaseTaken, myChapter, new int[]{Values.WORD_TYPE_VERB}, new String[]{"by", "by means of"}, new Preposition[]{(Preposition) Values.getWord("ab"), (Preposition) Values.getWord("a")});
 		super.setCase(Values.CASE_ABLATIVE);
 		super.setChapter(20);
-		super.setCanModify(new int[]{Values.WORD_TYPE_VERB});
-		super.setTranslations(new ArrayList<String>(Arrays.asList(new String[]{"by", "by means of"})));
+		super.setTypesModified(new int[]{Values.WORD_TYPE_VERB});
+		super.setTranslations(new HashSet<String>(Arrays.asList(new String[]{"by", "by means of"})));
 		super.setIntroducedBy(new ArrayList<Preposition> (Arrays.asList(new Preposition[]{(Preposition) Values.getWord("ab"), (Preposition) Values.getWord("a")})));
 		super.setPrepositionPurpose(Purpose.PREPOSITION_ABLATIVE_OF_MEANS);
 		super.setNounPurpose(Purpose.NOUN_ABLATIVE_OF_MEANS);
@@ -32,7 +34,10 @@ public class AblativeOfMeans extends CaseUsage{
 		} else return null;
 	}
 	
-	public Clause generateRandom(int maxChapter){
+	public Clause generateRandomGrammaticalConstruction(ConjugatedWord modified, int maxChapter){
+		if(modified != null && !checkIfCanModify(modified)){
+			throw new IllegalArgumentException();
+		}
 		if(!needsIntroductionPreposition()){
 			return new Clause(makeCaseUsage(Noun.getRandomNoun(this.getChapter()), Util.getRandomPlurality()));
 		} else {

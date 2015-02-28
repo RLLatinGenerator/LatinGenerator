@@ -3,24 +3,73 @@ package Words;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import CaseUseages.CaseUsage;
 import GrammaticalConstructions.GrammaticalConstruction;
 
 public class Translation {
-	
+
+
+
 	public boolean isValidEnglishTranslation(Clause latin, String english){
-		english = cleanEnglishTranslation(english);
+
+	}
+
+	/*
+	IMPORTANT: 
+	[null : This word and purpose can be ommitted completely], 
+	[Blank string included OR empty set : Only normal word required], 
+	[Given string has nothing but a purpose : The purpose alone is a sufficient translation. No normal definition is needed.] (Ex. ut + purpose clause. we don't want a random 'as' required.)
+	[Given string ends with a '+' : A normal definition must be added in addition to the purpose translation]
+
+	 */
+
+	static void printAllValidTranslations(ArrayList<HashSet<String>> input){
+		for(HashSet<String> current : input){
+			for(String currentS : current){
+				System.out.print(currentS + "/");
+			}
+			System.out.println();
+		}
+	}
+
+	public static ArrayList<HashSet<String>> getAllPossibleTranslations(Clause latin){
+		ArrayList<HashSet<String>> output = new ArrayList<>();
+
 		for(ConjugatedWord currentWord : latin.getWords()){
 			int currentPurpose = currentWord.getPurpose();
-			//int currentValid 
-			ArrayList<String> currentWordTranslations = currentWord.getBuzzWords()
+			//System.out.println(currentWord);
+			HashSet<String> purposeTranslations = getTranslationsFromPurpose(currentPurpose);
+			HashSet<String> validTranslationsForCurrentWord = new HashSet<>();
+
+			if(purposeTranslations.size() == 0){ //empty set.
+				for(String currentEnglishTranslation : currentWord.definitions){
+					validTranslationsForCurrentWord.add(currentEnglishTranslation);
+				}
+			} else {
+				for(String currentPurposeTrans : purposeTranslations){
+					if(currentPurposeTrans == null){ //	[null : This word and purpose can be ommitted completely], 
+						validTranslationsForCurrentWord.add("");
+					} else if(currentPurposeTrans.length() == 0){ //[Blank string included : Only normal word required], 
+						for(String currentEnglishTranslation : currentWord.definitions){
+							validTranslationsForCurrentWord.add(currentEnglishTranslation);
+						}
+					} else if(currentPurposeTrans.charAt(currentPurposeTrans.length()-1) == '+'){ //[Given string ends with a '+' : A normal definition must be added in addition to the purpose translation]
+						for(String currentEnglishTranslation : currentWord.definitions){
+							validTranslationsForCurrentWord.add(currentPurposeTrans.substring(0, currentPurposeTrans.length()-1) + " " + currentEnglishTranslation);
+						}
+					} else { //	[Given string has nothing but a purpose : The purpose alone is a sufficient translation. No normal definition is needed.] (Ex. ut + purpose clause. we don't want a random 'as' required.)
+						validTranslationsForCurrentWord.add(currentPurposeTrans);
+					}
+				}
+			}
+			output.add(validTranslationsForCurrentWord);
 		}
-		
+		return output;
 	}
-	
-	public HashSet<String> getTranslationsFromPurpose(int purpose){
-		for(Class<? extends GrammaticalConstruction> current : Values.grammaticalConstructions){ //search through grammatical constructions.
+
+	public static HashSet<String> getTranslationsFromPurpose(int purpose){
+		for(Class<? extends GrammaticalConstruction> current : Values.grammaticalConstructions){ //search through grammatical constructions, looking for a purpose that matches the passed one.
 			try {
+				System.out.println(current.newInstance().getPurposeTranslations());
 				if(current.newInstance().getPurposeTranslations().containsKey(purpose)){
 					return current.newInstance().getPurposeTranslations().get(purpose);
 				}
@@ -30,54 +79,22 @@ public class Translation {
 				e.printStackTrace();
 			}
 		}
-		
-		for(Class<? extends CaseUsage> current : Values.caseUsages){ //search through grammatical constructions.
-			try {
-				if(current.newInstance().containsKey(purpose)){
-					return current.newInstance().getPurposeTranslations().get(purpose);
-				}
-			} catch (InstantiationException e) {
-				e.printStackTrace();
-			} catch (IllegalAccessException e) {
-				e.printStackTrace();
-			}
-		}
+
+		throw new IllegalArgumentException("Invalid purpose integer: " + purpose);
 	}
-	
+
 	public static String cleanEnglishTranslation(String translation){
 		translation = translation.toLowerCase();
 		for(String current : Values.irrelevantEnglishWords){
 			translation = translation.replaceAll(current + " ", "");
 		}
-		
+
 		return translation;
-		
+
 	}
-	
-	boolean validEnglishTranslation(String translation){
-		translation = Translation.cleanEnglishTranslation(translation);
-		String[] englishWords = translation.split(" ");
-		int latinWordsIndex = 0;
-		if(englishWords.length < words.length){
-			return false;
-		}
-		
-		for(int i = 0; i < this.words.length; i++){
-			if(this.words[latinWordsIndex].isValidTranslation(englishWords[i])){
-				System.out.println(this.words[latinWordsIndex] + " == " + englishWords[i]);
-				latinWordsIndex++;
-			}
-		}
-		
-		if(latinWordsIndex >= this.words.length){
-			return true;
-		} else {
-			return false;
-		}	
-	}
-	
+
 	boolean isValidTranslation(Word word, String translation){
 		return word.getBuzzWords().contains(translation.trim().substring(0, 4));
 	}
-	
+
 }

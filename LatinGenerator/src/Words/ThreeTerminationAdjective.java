@@ -13,7 +13,7 @@ public class ThreeTerminationAdjective extends Adjective {
 		this.neuter = neuter;
 	}
 
-	public ConjugatedAdjective decline(int number, int Case, int gender, int purpose){
+	public ConjugatedAdjective decline(int Case, int number, int gender, int purpose){
 			if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR && gender == Values.GENDER_MASCULINE){
 				return new ConjugatedAdjective(this, masculine, purpose, number, Case, gender);
 			}

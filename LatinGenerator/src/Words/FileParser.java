@@ -125,6 +125,12 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 		System.out.printf("Done in: %d milliseconds! \nParsed %d words. \nFINISHED PARSING. \n", (System.currentTimeMillis()-timer), totalWords);
 		
 	}
+	
+	static void trimAll(ArrayList<String> input){
+		for(int i = 0; i < input.size(); i++){
+			input.add(i, input.remove(i).trim());
+		}
+	}
 
 
 
@@ -167,6 +173,7 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 				System.err.println("Could not read a line!");
 				continue; //We can't make a noun out of the botrked line.
 			}
+			trimAll(definitions);
 			Preposition currentPreposition = new Preposition(Preposition, caseTaken, chapter, definitions);
 			System.out.println("Added: " + currentPreposition);
 			output.add(currentPreposition);
@@ -211,6 +218,7 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 				System.err.println("Could not read a line!");
 				continue; //We can't make a noun out of the botrked line.
 			}
+			trimAll(definitions);
 			Adjective currentAdjective = new FirstSecondAdjective(masculine, feminine, neuter, chapter, definitions);
 			System.out.println("Added: " + currentAdjective);
 			output.add(currentAdjective);
@@ -245,6 +253,7 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 				chapter = Integer.parseInt(current[0].trim());
 				List<String> tempDefinitions = Arrays.asList(current[2].split(",|;")); //definitions
 				definitions.addAll(tempDefinitions);
+				trimAll(definitions);
 				
 				if(current[1].split(", ").length == 1){
 					currentAdjective = new OneTerminationAdjective(current[1].split(", ")[0].split(":")[0], current[1].split(", ")[0].split(":")[1], chapter, definitions);
@@ -315,6 +324,7 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 				continue; //We can't make a noun out of the botrked line.
 			}
 			int genderIndex = Values.getGenderIndex(gender);
+			trimAll(definitions);
 			Noun currentNoun = new Noun(nominative, genitive, chapter, genderIndex, declension, definitions);
 			System.out.println("Added: " + currentNoun);
 			output.add(currentNoun);
@@ -372,6 +382,7 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 				continue; //We can't make a noun out of the botrked line.
 			}
 			int genderIndex = Values.getGenderIndex(gender);
+			trimAll(definitions);
 			Noun currentNoun = new Noun(nominative, genitive, chapter, genderIndex, declension, definitions);
 			System.out.println("Added: " + currentNoun);
 			output.add(currentNoun);
@@ -410,6 +421,7 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 				System.err.println("Could not read a line!");
 				continue; //We can't make a noun out of the botrked line.
 			}
+			trimAll(definitions);
 			Conjunction currentConjunction = new Conjunction(Conjunction, chapter, definitions);
 			System.out.println("Added: " + currentConjunction);
 			output.add(currentConjunction);
@@ -448,6 +460,7 @@ public class FileParser { //this is a personal WIP; I'm anticipating finishing i
 				System.err.println("Could not read a line!");
 				continue; //We can't make a noun out of the botrked line.
 			}
+			trimAll(definitions);
 			Adverb currentAdverb = new Adverb(Adverb, chapter, definitions);
 			System.out.println("Added: " + currentAdverb);
 			output.add(currentAdverb);

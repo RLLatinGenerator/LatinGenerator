@@ -19,7 +19,7 @@ public class Values {
 		sumDefintions.add("will");
 		sum = new Verb("sum", "esse", "fui", "futurus", -1, 1, sumDefintions);
 		
-		caseUsages.add(AblativeOfMeans.class);
+		grammaticalConstructions.add(AblativeOfMeans.class);
 		grammaticalConstructions.add(AblativeAbsolute.class);
 	}
 
@@ -42,8 +42,7 @@ public class Values {
 
 	public static ArrayList<String> highestDefinitions = new ArrayList<String>();
 	
-	public static ArrayList<Class<? extends CaseUsage>> caseUsages = new ArrayList<Class<? extends CaseUsage>>();//AblativeOfMeans.class};
-	public static ArrayList<Class<? extends GrammaticalConstruction>> grammaticalConstructions = new ArrayList<Class<? extends GrammaticalConstruction>>();//AblativeOfMeans.class};
+	public static ArrayList<Class<? extends GrammaticalConstruction>> grammaticalConstructions = new ArrayList<Class<? extends GrammaticalConstruction>>(); //Hold all grammatical constructions for indexing purposes.
 
 	public static final int GENDER_MASCULINE = 0;
 	public static final int GENDER_FEMININE = 1;
@@ -427,17 +426,19 @@ public class Values {
 	}
 
 	public static int getWordType(Word w){
-		if(w.getClass() == Noun.class || Noun.class.isAssignableFrom(w.getClass())){
+		if(w==null){
+			throw new IllegalArgumentException();
+		} else if(w.getClass().equals(Noun.class) || Noun.class.isAssignableFrom(w.getClass())){
 			return Values.WORD_TYPE_NOUN;
-		} else if(w.getClass() == Adjective.class || Adjective.class.isAssignableFrom(w.getClass())){
+		} else if(w.getClass().equals(Adjective.class) || Adjective.class.isAssignableFrom(w.getClass())){
 			return Values.WORD_TYPE_ADJECTIVE;
-		} else if(w.getClass() == Conjunction.class || Conjunction.class.isAssignableFrom(w.getClass())){
+		} else if(w.getClass().equals(Conjunction.class) || Conjunction.class.isAssignableFrom(w.getClass())){
 			return Values.WORD_TYPE_CONJUNCTION;
-		} else if(w.getClass() == Preposition.class || Preposition.class.isAssignableFrom(w.getClass())){
+		} else if(w.getClass().equals(Preposition.class) || Preposition.class.isAssignableFrom(w.getClass())){
 			return Values.WORD_TYPE_PREPOSITION;
-		} else if(w.getClass() == Adverb.class || Adverb.class.isAssignableFrom(w.getClass())){
+		} else if(w.getClass().equals(Adverb.class) || Adverb.class.isAssignableFrom(w.getClass())){
 			return Values.WORD_TYPE_ADVERB;
-		} else if(w.getClass() == Pronoun.class || Pronoun.class.isAssignableFrom(w.getClass())){
+		} else if(w.getClass().equals(Pronoun.class) || Pronoun.class.isAssignableFrom(w.getClass())){
 			return Values.WORD_TYPE_PRONOUN;
 		} else
 			return -1;

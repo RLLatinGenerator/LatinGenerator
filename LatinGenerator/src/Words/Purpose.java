@@ -17,5 +17,5 @@ public class Purpose {
 	
 	public static final int PREPOSITION_ABLATIVE_OF_MEANS = 401;
 	
-	public static final int ADDITIONAL_ABLATIVE_ABSOLUTE = 501;
+	//public static final int ADDITIONAL_ABLATIVE_ABSOLUTE = 501; //additionals are for constructions that don't have extra words, but have extra meanings: eg. Ablative Abolutes
 }
