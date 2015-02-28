@@ -9,8 +9,24 @@ public class Translation {
 
 
 
-	public boolean isValidEnglishTranslation(Clause latin, String english){
-
+	public static boolean isValidEnglishTranslation(Clause latin, String english){
+		ArrayList<HashSet<String>> possibleTranslations = getAllPossibleTranslations(latin);
+		english = cleanEnglishTranslation(english);
+		for(HashSet<String> currentGroup : possibleTranslations){
+			innerloop : for(String currentTranslation : currentGroup){
+				if(english.length() > currentTranslation.length() && english.substring(0, currentTranslation.length()).equals(currentTranslation)){
+					english = english.substring(currentTranslation.length());
+					break innerloop;
+				}
+			}
+		}
+		
+		System.out.println(english);
+		if(english.length() == 0){
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/*
