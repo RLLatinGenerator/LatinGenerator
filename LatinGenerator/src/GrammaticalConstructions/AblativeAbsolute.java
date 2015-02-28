@@ -1,5 +1,8 @@
 package GrammaticalConstructions;
 
+import java.util.HashMap;
+import java.util.HashSet;
+
 import Words.Adjective;
 import Words.Clause;
 import Words.ConjugatedWord;
@@ -10,9 +13,25 @@ import Words.Verb;
 
 public class AblativeAbsolute extends GrammaticalConstruction{
 
-	public AblativeAbsolute(int maxChapter) {
+	public AblativeAbsolute(int maxChapter) { //MAKE SURE TO ADD ANY NEW GRAMMATICAL CONSTRUCTIONS TO VALUES.GRAMMATICALCONSTRUCTIONS!
 		super(50, new int[]{});
 		super.setConstruction(generateRandomGrammaticalConstruction(null, maxChapter));
+		HashMap<Integer, HashSet<String>> purposeTranslations = new HashMap<>();
+		
+		purposeTranslations.put(Purpose.ADJECTIVE_ABLATIVE_ABSOLUTE_PREDICATE, new HashSet<String>());
+		purposeTranslations.put(Purpose.NOUN_ABLATIVE_ABSOLUTE_PREDICATE, new HashSet<String>());
+		purposeTranslations.put(Purpose.NOUN_ABLATIVE_ABSOLUTE_SUBJECT, new HashSet<String>());
+		purposeTranslations.put(Purpose.VERB_ABLATIVE_ABSOLUTE_PARTICIPLE, new HashSet<String>());
+		
+		HashSet<String> ADDITIONAL_ABLATIVE_ABSOLUTE = new HashSet<String>();
+		ADDITIONAL_ABLATIVE_ABSOLUTE.add("after");
+		ADDITIONAL_ABLATIVE_ABSOLUTE.add("since");
+		ADDITIONAL_ABLATIVE_ABSOLUTE.add("when");
+		ADDITIONAL_ABLATIVE_ABSOLUTE.add("although");
+		purposeTranslations.put(Purpose.ADDITIONAL_ABLATIVE_ABSOLUTE, ADDITIONAL_ABLATIVE_ABSOLUTE);
+		
+		super.setPurposeTranslations(purposeTranslations);
+		
 	}
 
 	@Override

@@ -2,6 +2,11 @@ package Words;
 import java.util.ArrayList;
 import java.util.Random;
 
+import CaseUseages.AblativeOfMeans;
+import CaseUseages.CaseUsage;
+import GrammaticalConstructions.AblativeAbsolute;
+import GrammaticalConstructions.GrammaticalConstruction;
+
 
 public class Values {
 
@@ -13,6 +18,9 @@ public class Values {
 		sumDefintions.add("were");
 		sumDefintions.add("will");
 		sum = new Verb("sum", "esse", "fui", "futurus", -1, 1, sumDefintions);
+		
+		caseUsages.add(AblativeOfMeans.class);
+		grammaticalConstructions.add(AblativeAbsolute.class);
 	}
 
 	//Noun land
@@ -33,6 +41,9 @@ public class Values {
 	public static String[] irrelevantEnglishWords = new String[]{"the", "a", "an"};
 
 	public static ArrayList<String> highestDefinitions = new ArrayList<String>();
+	
+	public static ArrayList<Class<? extends CaseUsage>> caseUsages = new ArrayList<Class<? extends CaseUsage>>();//AblativeOfMeans.class};
+	public static ArrayList<Class<? extends GrammaticalConstruction>> grammaticalConstructions = new ArrayList<Class<? extends GrammaticalConstruction>>();//AblativeOfMeans.class};
 
 	public static final int GENDER_MASCULINE = 0;
 	public static final int GENDER_FEMININE = 1;
@@ -208,6 +219,9 @@ public class Values {
 	public static final int DELCENSION_ADJECTIVE_THIRD_3 = 3;
 
 	public static final int MAX_CHAPTER = 101;
+	
+	
+
 
 
 	public static String[][][] SUM_DECLENSION = {{{"sum", "es", "est"}, {"sumus", "estis", "sunt"}},

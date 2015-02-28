@@ -16,4 +16,6 @@ public class Purpose {
 	public static final int ADJECTIVE_ABLATIVE_ABSOLUTE_PREDICATE = 301;
 	
 	public static final int PREPOSITION_ABLATIVE_OF_MEANS = 401;
+	
+	public static final int ADDITIONAL_ABLATIVE_ABSOLUTE = 501;
 }

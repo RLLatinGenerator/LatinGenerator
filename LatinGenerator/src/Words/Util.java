@@ -46,15 +46,7 @@ public class Util {
 		return total;
 	}
 	
-	public static String cleanEnglishTranslation(String translation){
-		translation = translation.toLowerCase();
-		for(String current : Values.irrelevantEnglishWords){
-			translation = translation.replaceAll(current + " ", "");
-		}
-		
-		return translation;
-		
-	}
+
 	
 	public static int getRandomNounAttachment(){
 		Random r = new Random();

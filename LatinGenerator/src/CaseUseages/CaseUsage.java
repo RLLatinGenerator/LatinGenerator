@@ -12,7 +12,7 @@ import Words.Util;
 import Words.Values;
 import Words.Word;
 
-public abstract class CaseUsage {
+public abstract class CaseUsage { //MAKE SURE TO ADD ANY NEW CASE USAGES TO VALUES.CASEUSAGES!
 	private int Case;
 	private int chapter;
 	private int[] canModify;

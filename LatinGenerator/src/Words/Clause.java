@@ -2,7 +2,7 @@ package Words;
 import java.util.Arrays;
 
 public class Clause {
-	ConjugatedWord[] words;
+	private ConjugatedWord[] words;
 
 	public Clause(Clause[] subClauses){
 		this.words = concatenateClauses(subClauses).getWords();
@@ -36,28 +36,6 @@ public class Clause {
 		output.setCharAt(output.length()-1, '.');
 		
 		return output.toString();
-	}
-	
-	boolean validEnglishTranslation(String translation){
-		translation = Util.cleanEnglishTranslation(translation);
-		String[] englishWords = translation.split(" ");
-		int latinWordsIndex = 0;
-		if(englishWords.length < words.length){
-			return false;
-		}
-		
-		for(int i = 0; i < this.words.length; i++){
-			if(this.words[latinWordsIndex].isValidTranslation(englishWords[i])){
-				System.out.println(this.words[latinWordsIndex] + " == " + englishWords[i]);
-				latinWordsIndex++;
-			}
-		}
-		
-		if(latinWordsIndex >= this.words.length){
-			return true;
-		} else {
-			return false;
-		}	
 	}
 	
 	public static Clause makeToBeSentence(int maxChapter){

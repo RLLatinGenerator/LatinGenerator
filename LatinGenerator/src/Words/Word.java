@@ -47,7 +47,4 @@ public class Word implements Comparable<Word>{
 		}
 	}
 	
-	boolean isValidTranslation(String translation){
-		return getBuzzWords().contains(translation.trim().substring(0, 4));
-	}
 }

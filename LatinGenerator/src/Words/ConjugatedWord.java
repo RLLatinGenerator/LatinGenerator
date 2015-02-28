@@ -1,8 +1,8 @@
 package Words;
 
 public class ConjugatedWord extends Word{
-	String conjugatedWord;
-	int purpose;
+	private String conjugatedWord;
+	private int purpose;
 	
 	public ConjugatedWord(ConjugatedWord copy){
 		super(new Word(copy.chapter, copy.definitions));
@@ -25,5 +25,17 @@ public class ConjugatedWord extends Word{
 	
 	public String getConjugatedWord(){
 		return conjugatedWord;
+	}
+
+	public int getPurpose() {
+		return purpose;
+	}
+
+	public void setPurpose(int purpose) {
+		this.purpose = purpose;
+	}
+
+	public void setConjugatedWord(String conjugatedWord) {
+		this.conjugatedWord = conjugatedWord;
 	}
 }

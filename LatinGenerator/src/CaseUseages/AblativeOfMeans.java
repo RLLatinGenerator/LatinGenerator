@@ -14,7 +14,7 @@ import Words.Values;
 
 public class AblativeOfMeans extends CaseUsage{
 	
-	public AblativeOfMeans() { //I've made this as easy as I possible can to copy-paste.
+	public AblativeOfMeans() { //I've made this as easy as I possible can to copy-paste. MAKE SURE TO ADD ANY NEW CASE USAGES TO VALUES.CASEUSAGES!
 		//super(myCaseTaken, myChapter, new int[]{Values.WORD_TYPE_VERB}, new String[]{"by", "by means of"}, new Preposition[]{(Preposition) Values.getWord("ab"), (Preposition) Values.getWord("a")});
 		super.setCase(Values.CASE_ABLATIVE);
 		super.setChapter(20);
