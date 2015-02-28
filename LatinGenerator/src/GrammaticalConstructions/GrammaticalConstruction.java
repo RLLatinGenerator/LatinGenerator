@@ -18,7 +18,7 @@ public abstract class GrammaticalConstruction {
 	}
 	
 	public Clause appendToClause(Clause input){
-		return Clause.appendClauses(new Clause[]{input, construction});
+		return Clause.concatenateClauses(new Clause[]{input, construction});
 	}
 	
 	public abstract Clause generateRandomGrammaticalConstruction(ConjugatedWord modified, int maxChapter);

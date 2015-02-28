@@ -1,4 +1,5 @@
 package Words;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.TreeSet;
 
@@ -27,6 +28,14 @@ public class Util {
 			output[i] = input[i];
 		}
 		return output;
+	}
+	
+	public static <T> T getRandom(ArrayList<T> input){
+		if(input.size() == 0)
+			return null;
+		
+		int index = Values.random.nextInt(input.size());
+		return input.get(index);
 	}
 	
 	public static int arraySum(double[] input){

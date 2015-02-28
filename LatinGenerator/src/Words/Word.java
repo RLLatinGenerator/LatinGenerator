@@ -33,12 +33,11 @@ public class Word implements Comparable<Word>{
 		return chapterCompare;
 		} else {
 			try{
-			//System.out.println(definitions.get(0) + " compared to " + arg0.definitions.get(0));
-			return definitions.get(0).compareTo(arg0.definitions.get(0));
-			} catch (IndexOutOfBoundsException e){
-				if(definitions==null || definitions.size() == 0){
+			return this.toString().compareTo(arg0.toString());
+			} catch (NullPointerException e){
+				if(this == null || this.toString() == null){
 					return -1;
-				} else if(arg0.definitions == null || arg0.definitions.size() == 0){
+				} else if(arg0 == null || arg0.toString() == null ){
 					return 1;
 				} else {
 					System.err.println("Compare Error!");

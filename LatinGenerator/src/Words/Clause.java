@@ -5,7 +5,11 @@ public class Clause {
 	ConjugatedWord[] words;
 
 	public Clause(Clause[] subClauses){
-		this.words = appendClauses(subClauses).getWords();
+		this.words = concatenateClauses(subClauses).getWords();
+	}
+	
+	public Clause(ConjugatedWord word){
+		this(new ConjugatedWord[]{word});
 	}
 	
 	public Clause(){
@@ -63,7 +67,7 @@ public class Clause {
 		Clause conjugatedPredicate = Noun.getRandomNounClause(Purpose.NOUN_OBJECT, Values.CASE_NOMINATIVE, number, maxChapter);
 		ConjugatedVerb toBe = new ConjugatedVerb(Values.sum, number==Values.NUMBER_SINGULAR ? "est" : "sunt", Purpose.VERB_MAIN, Values.INDEX_TENSE_PRESENT, number, 3);
 		
-		return Clause.appendClauses(new Clause[]{conjugatedSubject, toBe.asClause(), conjugatedPredicate});
+		return Clause.concatenateClauses(new Clause[]{conjugatedSubject, toBe.asClause(), conjugatedPredicate});
 	}
 	
 	public static Clause makeSubjVerbSentence(int maxChapter, int tense){
@@ -74,10 +78,10 @@ public class Clause {
 		Clause predicateClause = Noun.getRandomNounClause(Purpose.NOUN_PREDICATE, Values.CASE_ACCUSATIVE, Util.getRandomPlurality(), maxChapter);
 		Verb verb = Verb.getRandomVerb(maxChapter);
 		ConjugatedVerb conjugatedVerb = Verb.getAgreeingVerb(conjugatedSubject, verb, tense);
-		return Clause.appendClauses(new Clause[]{subjectClause, conjugatedVerb.asClause(), predicateClause});
+		return Clause.concatenateClauses(new Clause[]{subjectClause, conjugatedVerb.asClause(), predicateClause});
 	}
 	
-	public static Clause appendClauses(Clause[] input){
+	public static Clause concatenateClauses(Clause[] input){
 		Clause output = null;
 		for(Clause current : input){
 			output = concatenateClauses(output, current);
