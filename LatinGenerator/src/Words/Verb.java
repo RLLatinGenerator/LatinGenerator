@@ -34,6 +34,17 @@ public class Verb extends Word{
 		String root = secondPP.substring(0, secondPP.length() - 3);
 		return new ConjugatedVerb(this, root + Values.CONJUGATION_VERBS[tense][conjugation][number][person], purpose, tense, number, person);
 	}
+	
+	public ConjugatedVerb presentPassiveSysConjugate(int conjugation, int purpose, int tense, int number, int person){
+		String root = secondPP.substring(0, secondPP.length() - 3);
+		return new ConjugatedVerb(this, root + Values.PASSIVE_CONJUGATION[tense][conjugation][number][person], purpose, tense, number, person);
+	}
+	
+	/*public ConjugatedVerb perfectPassiveSysConjugate(int purpose, int tense, int number, int person, int gender){
+		Adjective participle = getParticiple(tense);
+		ConjugatedAdjective conjugatedParticiple = participle.decline(Values.CASE_NOMINATIVE, number, gender, purpose);
+		return new ConjugatedVerb(this, participle + " " + Values.SUM_CONJUGATION[tense][number][person], purpose, tense, number, person);
+	}*/
 
 	public ConjugatedVerb perfectSysConjugate(int purpose, int tense, int number, int person){
 		String root = thirdPP.substring(0, thirdPP.length() - 1);

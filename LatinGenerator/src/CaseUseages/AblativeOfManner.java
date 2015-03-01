@@ -14,14 +14,14 @@ import Words.Purpose;
 import Words.Util;
 import Words.Values;
 
-public class AblativeOfMeans extends CaseUsage{
+public class AblativeOfManner extends CaseUsage{
 	
-	public AblativeOfMeans() { //I've made this as easy as I possible can to copy-paste. MAKE SURE TO ADD ANY NEW CASE USAGES TO VALUES.CASEUSAGES!
+	public AblativeOfManner() { //I've made this as easy as I possible can to copy-paste. MAKE SURE TO ADD ANY NEW CASE USAGES TO VALUES.CASEUSAGES!
 		//super(myCaseTaken, myChapter, new int[]{Values.WORD_TYPE_VERB}, new String[]{"by", "by means of"}, new Preposition[]{(Preposition) Values.getWord("ab"), (Preposition) Values.getWord("a")});
 		super.setCase(Values.CASE_ABLATIVE);
 		super.setChapter(20);
 		super.setTypesModified(new int[]{Values.WORD_TYPE_NOUN});
-		super.setTranslations(new HashSet<String>(Arrays.asList(new String[]{"with", "by means of"})));
+		super.setTranslations(new HashSet<String>(Arrays.asList(new String[]{"with"})));
 		//super.setIntroducedBy(new ArrayList<Preposition> (Arrays.asList(new Preposition[]{(Preposition) Values.getWord("ab"), (Preposition) Values.getWord("a")})));
 		//super.setPrepositionPurpose(Purpose.PREPOSITION_ABLATIVE_OF_MEANS);
 		super.setNounPurpose(Purpose.NOUN_ABLATIVE_OF_MEANS);

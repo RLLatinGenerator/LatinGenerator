@@ -1,7 +1,7 @@
 2	ad + acc.			to, toward, near
 2	cum + abl.			with
-2	a + abl				from, away from; (by)
-2	ab + abl			from, away from ; (by)
+2	a + abl				from, away from; by
+2	ab + abl			from, away from ; by
 5	de + abl			from; down from; about, concerning
 5	e + abl			from; out of; out from
 5	ex + abl			from; out of; out from

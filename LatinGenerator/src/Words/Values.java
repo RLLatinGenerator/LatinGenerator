@@ -158,11 +158,30 @@ public class Values {
 	public static String[][] FUTURE_PERFECT_CONJUGATION_THIRD_IO = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
 	public static String[][] FUTURE_PERFECT_CONJUGATION_FOURTH = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
 
-	public static String[][] PRESENT_PASSIVE_CONJUGATION_FIRST = new String[][]{{"or", "ris", "tur"}, {"mur", "mini", "ntur"}};
-	public static String[][] PRESENT_PASSIVE_CONJUGATION_SECOND = new String[][]{{"or", "ris", "tur"}, {"mur", "mini", "ntur"}};
+	public static String[][] PRESENT_PASSIVE_CONJUGATION_FIRST = new String[][]{{"or", "aris", "atur"}, {"amur", "amini", "antur"}};
+	public static String[][] PRESENT_PASSIVE_CONJUGATION_SECOND = new String[][]{{"or", "eris", "etur"}, {"emur", "emini", "entur"}};
 	public static String[][] PRESENT_PASSIVE_CONJUGATION_THIRD = new String[][]{{"or", "eris", "itur"}, {"imur", "imini", "untur"}};
 	public static String[][] PRESENT_PASSIVE_CONJUGATION_THIRD_IO = new String[][]{{"ior", "eris", "itur"}, {"imur", "imini", "iuntur"}};
-
+	public static String[][] PRESENT_PASSIVE_CONJUGATION_FOURTH = new String[][]{{"ior", "eris", "itur"}, {"imur", "imini", "iuntur"}};
+	
+	public static String[][] FUTURE_PASSIVE_CONJUGATION_FIRST = new String[][]{{"abor", "aberis", "abitur"}, {"abimur", "abimini", "abuntur"}};
+	public static String[][] FUTURE_PASSIVE_CONJUGATION_SECOND = new String[][]{{"ebor", "eberis", "ebitur"}, {"ebimur", "ebimini", "ebuntur"}};
+	public static String[][] FUTURE_PASSIVE_CONJUGATION_THIRD = new String[][]{{"ar", "eris", "etur"}, {"emur", "emini", "entur"}};
+	public static String[][] FUTURE_PASSIVE_CONJUGATION_THIRD_IO = new String[][]{{"iar", "ieris", "ietur"}, {"iemur", "iemini", "ientur"}};
+	public static String[][] FUTURE_PASSIVE_CONJUGATION_FOURTH = new String[][]{{"iar", "ieris", "ietur"}, {"iemur", "iemini", "ientur"}};
+	
+	public static String[][] IMPERFECT_PASSIVE_CONJUGATION_FIRST = new String[][]{{"abar", "abaris", "abatur"}, {"abamur", "abamini", "abantur"}};
+	public static String[][] IMPERFECT_PASSIVE_CONJUGATION_SECOND = new String[][]{{"ebar", "ebaris", "ebatur"}, {"ebamur", "ebamini", "ebantur"}};
+	public static String[][] IMPERFECT_PASSIVE_CONJUGATION_THIRD = new String[][]{{"iebar", "iebaris", "iebatur"}, {"iebamur", "iebamini", "iebantur"}};
+	public static String[][] IMPERFECT_PASSIVE_CONJUGATION_THIRD_IO = new String[][]{{"iebar", "iebaris", "iebatur"}, {"iebamur", "iebamini", "iebantur"}};
+	public static String[][] IMPERFECT_PASSIVE_CONJUGATION_FOURTH = new String[][]{{"iebiar", "iebaris", "iebatur"}, {"iebamur", "iebamini", "iebantur"}};
+	
+	public static String[][][] PRESENT_PASSIVE_CONJUGATION = new String[][][]{PRESENT_PASSIVE_CONJUGATION_FIRST, PRESENT_PASSIVE_CONJUGATION_SECOND, PRESENT_PASSIVE_CONJUGATION_THIRD, PRESENT_PASSIVE_CONJUGATION_THIRD_IO, PRESENT_PASSIVE_CONJUGATION_FOURTH};
+	public static String[][][] FUTURE_PASSIVE_CONJUGATION = new String[][][]{FUTURE_PASSIVE_CONJUGATION_FIRST, FUTURE_PASSIVE_CONJUGATION_SECOND, FUTURE_PASSIVE_CONJUGATION_THIRD, FUTURE_PASSIVE_CONJUGATION_THIRD_IO, FUTURE_PASSIVE_CONJUGATION_FOURTH};
+	public static String[][][] IMPERFECT_PASSIVE_CONJUGATION = new String[][][]{IMPERFECT_PASSIVE_CONJUGATION_FIRST, IMPERFECT_PASSIVE_CONJUGATION_SECOND, IMPERFECT_PASSIVE_CONJUGATION_THIRD, IMPERFECT_PASSIVE_CONJUGATION_THIRD_IO, IMPERFECT_PASSIVE_CONJUGATION_FOURTH};
+	
+	public static String[][][][] PASSIVE_CONJUGATION = new String [][][][]{PRESENT_PASSIVE_CONJUGATION, FUTURE_PASSIVE_CONJUGATION, IMPERFECT_PASSIVE_CONJUGATION};
+	
 	public static String[][] PERFECT_IRREGULAR_CONJUGATION = new String[][]{{"ii", "isti", "iit"}, {"iimus", "istis", "ierunt"}};
 
 	public static String[][][] PRESENT_CONJUGATION = new String[][][]{PRESENT_CONJUGATION_FIRST, PRESENT_CONJUGATION_SECOND, PRESENT_CONJUGATION_THIRD, PRESENT_CONJUGATION_THIRD_IO, PRESENT_CONJUGATION_FOURTH};
@@ -223,97 +242,97 @@ public class Values {
 
 
 
-	public static String[][][] SUM_DECLENSION = {{{"sum", "es", "est"}, {"sumus", "estis", "sunt"}},
+	public static String[][][] SUM_CONJUGATION = {{{"sum", "es", "est"}, {"sumus", "estis", "sunt"}},
 		{{"ero", "eris", "erit"}, {"erimus", "eritis", "erunt"}},
 		{{"eram", "eras", "erat"}, {"eramus", "eratis", "erant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] ABSUM_DECLENSION = {{{"absum", "abes", "abest"}, {"absumus", "abestis", "absunt"}},
+	public static String[][][] ABSUM_CONJUGATION = {{{"absum", "abes", "abest"}, {"absumus", "abestis", "absunt"}},
 		{{"abero", "aberis", "aberit"}, {"aberimus", "aberitis", "aberunt"}},
 		{{"aberam", "aberas", "aberat"}, {"aberamus", "aberatis", "aberant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] ADSUM_DECLENSION = {{{"adsum", "ades", "adest"}, {"adsumus", "adestis", "adsunt"}},
+	public static String[][][] ADSUM_CONJUGATION = {{{"adsum", "ades", "adest"}, {"adsumus", "adestis", "adsunt"}},
 		{{"adero", "aderis", "aderit"}, {"aderimus", "aderitis", "aderunt"}},
 		{{"aderam", "aderas", "aderat"}, {"aderamus", "aderatis", "aderant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] POSSUM_DECLENSION = {{{"possum", "potes", "potest"}, {"possumus", "potestis", "possunt"}},
+	public static String[][][] POSSUM_CONJUGATION = {{{"possum", "potes", "potest"}, {"possumus", "potestis", "possunt"}},
 		{{"potero", "poteris", "poterit"}, {"poterimus", "poteritis", "poterunt"}},
 		{{"poteram", "poteras", "poterat"}, {"poteramus", "poteratis", "poterant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] EO_DECLENSION = {{{"eo", "is", "it"}, {"imus", "itis", "eunt"}},
+	public static String[][][] EO_CONJUGATION = {{{"eo", "is", "it"}, {"imus", "itis", "eunt"}},
 		{{"ibo", "ibis", "ibit"}, {"ibimus", "ibitis", "ibunt"}},
 		{{"ibam", "ibas", "ibat"}, {"ibamus", "ibatis", "ibant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] EXEO_DECLENSION = {{{"exeo", "exis", "exit"}, {"eximus", "exitis", "exeunt"}},
+	public static String[][][] EXEO_CONJUGATION = {{{"exeo", "exis", "exit"}, {"eximus", "exitis", "exeunt"}},
 		{{"exibo", "exibis", "exibit"}, {"exibimus", "exibitis", "exibunt"}},
 		{{"exibam", "exibas", "exibat"}, {"exibamus", "exibatis", "exibant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] REDEO_DECLENSION = {{{"redeo", "redis", "redit"}, {"redimus", "reditis", "redeunt"}},
+	public static String[][][] REDEO_CONJUGATION = {{{"redeo", "redis", "redit"}, {"redimus", "reditis", "redeunt"}},
 		{{"redibo", "redibis", "redibit"}, {"redibimus", "redibitis", "redibunt"}},
 		{{"redibam", "redibas", "redibat"}, {"redibamus", "redibatis", "redibant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] ABEO_DECLENSION = {{{"abeo", "abis", "abit"}, {"abimus", "abitis", "abeunt"}},
+	public static String[][][] ABEO_CONJUGATION = {{{"abeo", "abis", "abit"}, {"abimus", "abitis", "abeunt"}},
 		{{"abibo", "abibis", "abibit"}, {"abibimus", "abibitis", "abibunt"}},
 		{{"abibam", "abibas", "abibat"}, {"abibamus", "abibatis", "abibant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] ADEO_DECLENSION = {{{"adeo", "adis", "adit"}, {"adimus", "aditis", "adeunt"}},
+	public static String[][][] ADEO_CONJUGATION = {{{"adeo", "adis", "adit"}, {"adimus", "aditis", "adeunt"}},
 		{{"adibo", "adibis", "adibit"}, {"adibimus", "adibitis", "adibunt"}},
 		{{"adibam", "adibas", "adibat"}, {"adibamus", "adibatis", "adibant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] INEO_DECLENSION = {{{"ineo", "inis", "init"}, {"inimus", "initis", "ineunt"}},
+	public static String[][][] INEO_CONJUGATION = {{{"ineo", "inis", "init"}, {"inimus", "initis", "ineunt"}},
 		{{"inibo", "inibis", "inibit"}, {"inibimus", "inibitis", "inibunt"}},
 		{{"inibam", "inibas", "inibat"}, {"inibamus", "inibatis", "inibant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] TRANSEO_DECLENSION = {{{"transeo", "transis", "transit"}, {"transimus", "transitis", "transeunt"}},
+	public static String[][][] TRANSEO_CONJUGATION = {{{"transeo", "transis", "transit"}, {"transimus", "transitis", "transeunt"}},
 		{{"transibo", "transibis", "transibit"}, {"transibimus", "transibitis", "transibunt"}},
 		{{"transibam", "transibas", "transibat"}, {"transibamus", "transibatis", "transibant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] FERO_DECLENSION = {{{"fero", "fers", "fert"}, {"ferimus", "fertis", "ferunt"}},
+	public static String[][][] FERO_CONJUGATION = {{{"fero", "fers", "fert"}, {"ferimus", "fertis", "ferunt"}},
 		{{"feram", "feres", "feret"}, {"feremus", "feretis", "ferent"}},
 		{{"ferebam", "ferebas", "ferebat"}, {"ferebamus", "ferebatis", "ferebant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] ADFERO_DECLENSION = {{{"adfero", "adfers", "adfert"}, {"adferimus", "adfertis", "adferunt"}},
+	public static String[][][] ADFERO_CONJUGATION = {{{"adfero", "adfers", "adfert"}, {"adferimus", "adfertis", "adferunt"}},
 		{{"adferam", "adferes", "adferet"}, {"adferemus", "adferetis", "adferent"}},
 		{{"adferebam", "adferebas", "adferebat"}, {"adferebamus", "adferebatis", "adferebant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] CONFERO_DECLENSION = {{{"confero", "confers", "confert"}, {"conferimus", "confertis", "conferunt"}},
+	public static String[][][] CONFERO_CONJUGATION = {{{"confero", "confers", "confert"}, {"conferimus", "confertis", "conferunt"}},
 		{{"conferam", "conferes", "conferet"}, {"conferemus", "conferetis", "conferent"}},
 		{{"conferebam", "conferebas", "conferebat"}, {"conferebamus", "conferebatis", "conferebant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] INFERO_DECLENSION = {{{"infero", "infers", "infert"}, {"inferimus", "infertis", "inferunt"}},
+	public static String[][][] INFERO_CONJUGATION = {{{"infero", "infers", "infert"}, {"inferimus", "infertis", "inferunt"}},
 		{{"inferam", "inferes", "inferet"}, {"inferemus", "inferetis", "inferent"}},
 		{{"inferebam", "inferebas", "inferebat"}, {"inferebamus", "inferebatis", "inferebant"}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}},
 		{{"", "", ""}, {"", "", ""}}};
-	public static String[][][] REFERO_DECLENSION = {{{"refero", "refers", "refert"}, {"referimus", "refertis", "referunt"}},
+	public static String[][][] REFERO_CONJUGATION = {{{"refero", "refers", "refert"}, {"referimus", "refertis", "referunt"}},
 		{{"referam", "referes", "referet"}, {"referemus", "referetis", "referent"}},
 		{{"referebam", "referebas", "referebat"}, {"referebamus", "referebatis", "referebant"}},
 		{{"", "", ""}, {"", "", ""}},
