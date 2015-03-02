@@ -1,4 +1,5 @@
 package Words;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.TreeSet;
@@ -20,6 +21,19 @@ public class Util {
 		}
 		
 		return output;
+	}
+	
+	public static void load(){
+		String OSName = System.getProperty("os.name");
+		System.out.println("Detected OS: " + OSName);
+		if(OSName.startsWith("Windows")){
+			FileParser.parseFromDirectory(new File("src/Data"));
+		} else {
+			FileParser.parseFromDirectory(new File("src\\Data"));
+		}
+		new Values();
+		
+		System.out.println("------------");
 	}
 	
 	public static int[] copyArray(int[] input){
