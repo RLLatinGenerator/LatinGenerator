@@ -40,15 +40,17 @@ public class AblativeAbsolute extends GrammaticalConstruction{
 		int typeOfAA = Values.random.nextInt(2);
 		int plurality = Values.random.nextInt(2)==1 ? Values.NUMBER_PLURAL : Values.NUMBER_SINGULAR;
 		if(typeOfAA == 0){
-			return generateNounNoun(Noun.getRandomNoun(maxChapter), Noun.getRandomNoun(maxChapter), plurality);
+			return generateNounNoun(plurality, maxChapter);
 		} else {
 			return null;//Need participles
 		}
 	}
 	
-	
+	public static Clause generateNounNoun(int plurality, int maxChapter){
+		return Clause.concatenateClauses(Noun.getRandomNounClause(Purpose.NOUN_ABLATIVE_ABSOLUTE_SUBJECT, Values.CASE_ABLATIVE, plurality, maxChapter), Noun.getRandomNounClause(Purpose.NOUN_ABLATIVE_ABSOLUTE_PREDICATE, Values.CASE_ABLATIVE, plurality, maxChapter));
+	}
 	public static Clause generateNounVerb(Noun subject, Verb participle, int plurality, int tense){
-		//add once we have participle generation.
+		return null;
 	}
 
 }
