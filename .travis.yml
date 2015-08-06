@@ -3,4 +3,3 @@ jdk:
   - oraclejdk7
 script:
   -pwd
-  -ant init
