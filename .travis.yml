@@ -1,5 +1,4 @@
 language: java
 jdk:
   - oraclejdk7
-script: ant init
-script: ant build
+script: ant main
