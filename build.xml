@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="LatinGenerator" default="main" basedir="./LatinGenerator">
+<project name="LatinGenerator" default="main" basedir=".">
   <!-- Sets variables which can later be used. -->
   <!-- The value of a property is accessed via ${} -->
   <property name="src.dir" location="src" />
