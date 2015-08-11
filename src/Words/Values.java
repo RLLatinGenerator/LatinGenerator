@@ -135,8 +135,8 @@ public class Values {
 	public static String[][] FUTURE_CONJUGATION_THIRD_IO = new String[][]{{"iam", "ies", "iet"}, {"iemus", "ietis", "ient"}};
 	public static String[][] FUTURE_CONJUGATION_FOURTH = new String[][]{{"iam", "ies", "iet"}, {"iemus", "ietis", "ient"}};
 
-	public static String[][] IMPERFECT_CONJUGATION_FIRST = new String[][]{{"bam", "bas", "bat"}, {"bamus", "batis", "bant"}};
-	public static String[][] IMPERFECT_CONJUGATION_SECOND = new String[][]{{"bam", "bas", "bat"}, {"bamus", "batis", "bant"}};
+	public static String[][] IMPERFECT_CONJUGATION_FIRST = new String[][]{{"abam", "abas", "abat"}, {"abamus", "abatis", "abant"}};
+	public static String[][] IMPERFECT_CONJUGATION_SECOND = new String[][]{{"ebam", "ebas", "ebat"}, {"ebamus", "ebatis", "ebant"}};
 	public static String[][] IMPERFECT_CONJUGATION_THIRD = new String[][]{{"ebam", "ebas", "ebat"}, {"ebamus", "ebatis", "ebant"}};
 	public static String[][] IMPERFECT_CONJUGATION_THIRD_IO = new String[][]{{"iebam", "iebas", "iebat"}, {"iebamus", "iebatis", "iebant"}};
 	public static String[][] IMPERFECT_CONJUGATION_FOURTH = new String[][]{{"iebam", "iebas", "iebat"}, {"iebamus", "iebatis", "iebant"}};
@@ -153,11 +153,11 @@ public class Values {
 	public static String[][] PLUPERFECT_CONJUGATION_THIRD_IO = new String[][]{{"eram", "eras", "erat"}, {"eramus", "eratis", "erant"}};
 	public static String[][] PLUPERFECT_CONJUGATION_FOURTH = new String[][]{{"eram", "eras", "erat"}, {"eramus", "eratis", "erant"}};
 
-	public static String[][] FUTURE_PERFECT_CONJUGATION_FIRST = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
-	public static String[][] FUTURE_PERFECT_CONJUGATION_SECOND = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
-	public static String[][] FUTURE_PERFECT_CONJUGATION_THIRD = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
-	public static String[][] FUTURE_PERFECT_CONJUGATION_THIRD_IO = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
-	public static String[][] FUTURE_PERFECT_CONJUGATION_FOURTH = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erunt"}};
+	public static String[][] FUTURE_PERFECT_CONJUGATION_FIRST = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erint"}};
+	public static String[][] FUTURE_PERFECT_CONJUGATION_SECOND = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erint"}};
+	public static String[][] FUTURE_PERFECT_CONJUGATION_THIRD = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erint"}};
+	public static String[][] FUTURE_PERFECT_CONJUGATION_THIRD_IO = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erint"}};
+	public static String[][] FUTURE_PERFECT_CONJUGATION_FOURTH = new String[][]{{"ero", "eris", "erit",}, {"erimus", "eritis", "erint"}};
 
 	public static String[][] PRESENT_PASSIVE_CONJUGATION_FIRST = new String[][]{{"or", "aris", "atur"}, {"amur", "amini", "antur"}};
 	public static String[][] PRESENT_PASSIVE_CONJUGATION_SECOND = new String[][]{{"or", "eris", "etur"}, {"emur", "emini", "entur"}};
@@ -212,8 +212,12 @@ public class Values {
 	public static final int INDEX_TENSE_FUTURE = 1;
 	public static final int INDEX_TENSE_IMPERFECT = 2;
 	public static final int INDEX_TENSE_PERFECT = 3;
-	public static final int INDEX_TENSE_FUTURE_PERFECT = 4;
-	public static final int INDEX_TENSE_PLUPERFECT = 5;
+	public static final int INDEX_TENSE_PLUPERFECT = 4;
+	public static final int INDEX_TENSE_FUTURE_PERFECT = 5;
+	
+	public static final int INDEX_PERSON_FIRST = 0;
+	public static final int INDEX_PERSON_SECOND = 1;
+	public static final int INDEX_PERSON_THIRD = 2;
 
 	public static final int INDEX_PARTICIPLE_PRESENT = 0;
 	public static final int INDEX_PARTICIPLE_FUTURE = 1;
