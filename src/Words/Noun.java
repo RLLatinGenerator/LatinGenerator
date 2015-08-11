@@ -23,6 +23,9 @@ public class Noun extends Word{
 		if(Case == Values.CASE_NOMINATIVE && number == Values.NUMBER_SINGULAR){
 			return new ConjugatedNoun(this, nominative, purpose, Values.NUMBER_SINGULAR, Values.CASE_NOMINATIVE, gender);
 		}
+		if(Values.DECLENSION_NOUNS[declension][number][Case].equals("")){
+			return new ConjugatedNoun(this, nominative, purpose, number, Values.CASE_NOMINATIVE, gender);
+		}
 		return new ConjugatedNoun(this, addEnding(Values.DECLENSION_NOUNS[declension][number][Case]), purpose, number, Case, gender);
 	}
 
