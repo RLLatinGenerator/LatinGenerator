@@ -30,7 +30,7 @@ public class Verb extends Word{
 	public String firstPP(){
 		return firstPP;
 	}
-	public ConjugatedVerb presentSysConjugate(int conjugation, int purpose, int tense, int number, int person){
+	public ConjugatedVerb presentSysConjugate(int purpose, int conjugation, int tense, int number, int person){
 		String root = secondPP.substring(0, secondPP.length() - 3);
 		return new ConjugatedVerb(this, root + Values.CONJUGATION_VERBS[tense][conjugation][number][person], purpose, tense, number, person);
 	}

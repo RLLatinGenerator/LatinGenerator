@@ -4,7 +4,7 @@ import org.junit.Test;
 import Words.Noun;
 import Words.Values;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
