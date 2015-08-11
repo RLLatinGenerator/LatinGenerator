@@ -12,7 +12,7 @@
 
   <!-- Define the classpath which includes the junit.jar and the classes after compiling-->
   <path id="junit.class.path">
-    <pathelement location="lib/junit.jar" />
+    <pathelement location="lib/junit-4.12.jar" />
     <pathelement location="${build.dir}" />
   </path>
 
