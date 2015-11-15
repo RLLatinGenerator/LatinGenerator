@@ -19,8 +19,8 @@ public class Values {
 		sumDefintions.add("will");
 		sum = new Verb("sum", "esse", "fui", "futurus", -1, 1, sumDefintions);
 		
-		grammaticalConstructions.add(AblativeOfMeans.class);
-		grammaticalConstructions.add(AblativeAbsolute.class);
+		//grammaticalConstructions.add(AblativeOfMeans.class);
+		//grammaticalConstructions.add(AblativeAbsolute.class);
 	}
 
 	//Noun land

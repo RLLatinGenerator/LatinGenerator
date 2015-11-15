@@ -25,6 +25,14 @@ public class Word implements Comparable<Word>{
 		
 		return output;
 	}
+	
+	public ArrayList<String> getDefinitions(){
+		return definitions;
+	}
+	
+	public int getChapter(){
+		return chapter;
+	}
 
 	@Override
 	public int compareTo(Word arg0) { //sort by chapter, and if the chapters are the same, by alphabetical order.
